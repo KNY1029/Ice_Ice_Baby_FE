@@ -1,0 +1,228 @@
+*{margin: 0px;padding:0 px;}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+/*header*/
+header{
+    height: 70px;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid brown;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index:1;
+}
+
+.name{
+    color:chocolate;
+    font-size: 18px;
+    font-weight:bold;
+}
+nav{
+    font-size: 12px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 2%;
+}
+nav li{
+    display: inline;
+    margin-left: 7px;
+}
+.nav-pills > .nav-item > .nav-link{
+    color:brown !important;
+}
+.nav-pills > .nav-item > .active{
+    color: white !important;
+    background-color: brown !important;
+}
+.dropdown-menu{
+    background-color: blanchedalmond !important;
+}
+.dropdown-item{
+    color:brown !important;
+}
+
+.floating-button{
+    z-index:1;
+}
+.floating-button > .btn-warning{
+    position: fixed;
+    bottom:3%;
+    right:5%;
+}
+.floating-button > .btn-group{
+    position: fixed;
+    top:80px;
+    right:5%;
+}
+.floating-button > .btn-group > .btn-secondary{
+    font-size: 13px;
+    padding: 10px;
+}
+
+footer{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+main{
+    position:absolute;
+    display:flex;
+    top:70px;
+    left:3%;
+    right:3%;
+}
+body{
+    background-color:ivory !important;
+    align-items: center;
+}
+
+.poster{
+    display: flex;
+    position:relative;
+    margin-top: 50px;
+}
+
+.combocard{
+    position:absolute;
+    margin-bottom:10px;
+}
+.alacard{
+    position:absolute;
+    margin-bottom:10px;
+    height:50px !important;
+}
+.combocard > .card-header{
+    font-size: 10px;
+    font-weight: bold;
+    background-color: yellowgreen !important;
+}
+.combocard-title{
+    position:absolute;
+    top:35px;
+}
+.combocard-title > h6{
+    font-size: 10px !important;
+}
+.alacard-title > h6{
+    font-size:10px !important;
+    font-weight: bold;
+    position:absolute;
+    top:10px;
+}
+.combocard-text{
+    font-size:10px;
+    position:absolute;
+    top:7px;
+    right:5%;
+}
+.alacard-text{
+    font-size:10px;
+    position:absolute;
+    top:25px;
+}
+.combocard > .card-body > .btn-primary,
+.alacard > .card-body > .btn-primary{
+    background-color: orange!important;
+    border-color:yellow !important;
+    position: absolute;
+    right:5%;
+    bottom:5%;
+}
+.btnala{
+    bottom:15%;
+}
+.menucards{
+    position:absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.category{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:white;
+    text-align: center;
+    background-color: skyblue;
+}
+
+.offcanvas-header{
+    position:static;
+    background-color: chocolate;
+}
+.offcanvas-price{
+    position: absolute;
+    right:50px;
+}
+.offcanvas{
+    background-color: rgb(246, 204, 19) !important;
+}
+.offcanvas-body{
+    margin-bottom: 60px;
+}
+/*.flavor > .btn-outline-primary,
+.topping > .btn-outline-primary {
+    background-color:blanchedalmond !important;
+    border-color: black !important;
+    color: black !important;
+}
+
+.flavor > .btn-check:active+.btn-outline-primary, 
+.flavor > .btn-check:checked+.btn-outline-primary, 
+.flavor > .btn-outline-primary.active, 
+.flavor > .btn-outline-primary.dropdown-toggle.show, 
+.flavor > .btn-outline-primary:active,
+.topping > .btn-check:active+.btn-outline-primary, 
+.topping > .btn-check:checked+.btn-outline-primary, 
+.topping > .btn-outline-primary.active, 
+.topping > .btn-outline-primary.dropdown-toggle.show, 
+.topping > .btn-outline-primary:active {
+    color: white !important;
+    background-color:cadetblue !important;
+}*/
+
+.addcart{
+    position:absolute;
+    bottom:10px;
+    height:50px;
+    left:15px;
+    right:15px;
+}
+
+.cartcard{
+    display: flex;
+    margin-top:3%;
+}
+.cartcard > .card-header > .btn-close{
+    position:absolute;
+    right:10px;
+}
+.cartcard > .card-header > .card-total{
+    position:absolute;
+    top:8px;
+    right:40px;
+    text-align:right;
+}
+.cartcard > .card-footer{
+    height:60px;
+}
+.numin{
+    position:absolute;
+    margin-bottom:0px;
+}
+.modal-dialog > .modal-content > .modal-footer > .modal-total{
+    position:absolute;
+    left:20px;
+    text-align:left;
+}
+.modal-dialog > .modal-content > .modal-footer > .modal-totalPrice{
+    position:absolute;
+    left:75px;
+    text-align:left;
+}

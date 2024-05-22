@@ -1,0 +1,1091 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Ice Baby</title>
+    <link rel="stylesheet" href="style.css">
+    <style></style>
+    <link rel="icon" href="Ice Ice Baby Logo.png"/>
+    <link rel="apple-touch-icon" href="Ice Ice Baby Logo.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <div id="logo">
+                <img src="Ice Ice Baby Logo.png" alt="logo" height="60">
+            </div>
+            <!--<div class="name">Ice Ice Baby</div>-->
+            <nav>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Main</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Event</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Ranking</a></li>
+                          <li><a class="dropdown-item" href="#">Bingo</a></li>
+                          <li><a class="dropdown-item" href="#">Coupon</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                  </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="row row-cols-1 row-cols-md-2 menucards">
+                <div class="col combocards">
+                    <div class="category">Combo Menu</div>
+                    <div class="row row-cols-2 row-cols-xl-3">
+                        <div class="col"><div class="card combocard" style="height:95px">
+                            <h5 class="card-header">Baby Ice</h5>
+                            <div class="card-body">
+                                <div class="card-title combocard-title">
+                                    <h6>1 Ice cream</h6>
+                                    <h6>1 Topping</h6>
+                                </div>
+                                <p class="card-text combocard-text">¥10</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#babyIceAdd" role="button" aria-controls="offcanvasBabyIce">
+                                    +
+                                </a>
+                                </div>
+                        </div></div>
+                        <div class="col"><div class="card combocard" style="height:95px">
+                            <h5 class="card-header">Ice Ice Baby</h5>
+                            <div class="card-body">
+                                <div class="card-title combocard-title">
+                                    <h6>2 Ice cream</h6>
+                                    <h6>2 Toppings</h6>
+                                </div>
+                                <p class="card-text combocard-text">¥20</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceIceBabyAdd" role="button" aria-controls="offcanvasIceIceBaby">
+                                    +
+                                </a>
+                            </div>
+                        </div></div>
+                        <div class="col"><div class="card combocard" style="height:95px">
+                            <h5 class="card-header">Ice Waffle Baby</h5>
+                            <div class="card-body">
+                                <div class="card-title combocard-title">
+                                    <h6>2 Ice cream</h6>
+                                    <h6>2 Toppings</h6>
+                                    <h6>Waffle</h6>
+                                </div>
+                                <p class="card-text combocard-text">¥35</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceWaffleBabyAdd" role="button" aria-controls="offcanvasIceWaffleBaby">
+                                    +
+                                </a>
+                            </div>
+                        </div></div>
+                        <div class="col"><div class="card combocard" style="height:95px">
+                            <h5 class="card-header">Ice Affogato Baby</h5>
+                            <div class="card-body">
+                                <div class="card-title combocard-title">
+                                    <h6>1 Ice cream</h6>
+                                    <h6>2 Toppings</h6>
+                                    <h6>Coffee</h6>
+                                </div>
+                                <p class="card-text combocard-text">¥20</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceAffogatoBabyAdd" role="button" aria-controls="offcanvasIceAffogatoBaby">
+                                    +
+                                </a>
+                            </div>
+                        </div></div>
+                        <div class="col"><div class="card combocard" style="height:95px">
+                            <h5 class="card-header">Big Ice Baby</h5>
+                            <div class="card-body">
+                                <div class="card-title combocard-title">
+                                    <h6>3 Ice cream</h6>
+                                    <h6>3 Toppings</h6>
+                                </div>
+                                <p class="card-text combocard-text">¥28</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#bigIceBabyAdd" role="button" aria-controls="offcanvasbigIceBaby">
+                                    +
+                                </a>
+                            </div>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="col alacards">
+                    <div class="category">Ala Carte</div>
+                    <div class="row row-cols-2 row-cols-xl-4">
+                        <div class="col"><div class="card alacard">
+                            <div class="card-body">
+                                <div class="card-title alacard-title">
+                                    <h6>1 Scoop Ice Cream</h6>
+                                </div>
+                                <p class="card-text alacard-text">¥8</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceAdd" role="button" aria-controls="offcanvasIce">
+                                    +
+                                </a>
+                            </div>
+                        </div></div>
+                        <div class="col"><div class="card alacard">
+                            <div class="card-body">
+                                <div class="card-title alacard-title">
+                                    <h6>Extra Topping</h6>
+                                </div>
+                                <p class="card-text alacard-text">¥3</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#topAdd" role="button" aria-controls="offcanvasTop">
+                                    +
+                                </a>
+                            </div>
+                        </div></div>
+                        <div class="col"><div class="card alacard">
+                            <div class="card-body">
+                                <div class="card-title alacard-title">
+                                    <h6>Water</h6>
+                                </div>
+                                <p class="card-text alacard-text">¥2</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#waterAdd" role="button" aria-controls="offcanvasWater">
+                                    +
+                                </a>
+                            </div>
+                        </div></div>
+                        <div class="col"><div class="card alacard">
+                            <div class="card-body">
+                                <div class="card-title alacard-title">
+                                    <h6>Coffee</h6>
+                                </div>
+                                <p class="card-text alacard-text">¥8</p>
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#coffeeAdd" role="button" aria-controls="offcanvasCoffee">
+                                    +
+                                </a>
+                            </div>
+                        </div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="babyIceAdd" aria-labelledby="babyIceLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="babyIceLabel">Baby Ice</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="was-validated"><div class="combomain">
+                        <div class="flavor">
+                            <h6>1 Ice cream</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor1">Flavor</label>
+                                <select class="form-select" id="flavor1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="topping">
+                            <h6>1 Topping</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping1">Type</label>
+                                <select class="form-select" id="topping1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-info addcart" type="submit">Add to Cart</button>
+                    </form>
+
+                    <div class="comboala">
+                        <h6>Ala Carte</h6>
+                        <div class="accordion" id="accordionice">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseice" aria-expanded="false" aria-controls="collapseice">
+                                        Extra Ice Cream
+                                    </button>
+                                </h2>
+                                <div id="collapseice" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alaice">
+                                        <div class="input-group mb-3 alaice1">
+                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
+                                        </div>
+                                        <div class="input-group mb-3 alaice2">
+                                            <label class="input-group-text" for="alafalvor2">Chocolate</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor2">
+                                        </div>
+                                        <div class="input-group mb-3 alaice3">
+                                            <label class="input-group-text" for="alafalvor3">Strawberry</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor3">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordiontop">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetop" aria-expanded="false" aria-controls="collapsetop">
+                                        Extra Topping
+                                    </button>
+                                </h2>
+                                <div id="collapsetop" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alatop">
+                                        <div class="input-group mb-3 alatopping1">
+                                            <label class="input-group-text" for="alatop1">Oreos</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop1">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping2">
+                                            <label class="input-group-text" for="alatop2">Sprinkle</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop2">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping3">
+                                            <label class="input-group-text" for="alatop3">Fudge Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop3">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping4">
+                                            <label class="input-group-text" for="alatop4">Caramel Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop4">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping5">
+                                            <label class="input-group-text" for="alatop5">Waffle Bit</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop5">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping6">
+                                            <label class="input-group-text" for="alatop6">Waffle Cone</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop6">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping7">
+                                            <label class="input-group-text" for="alatop7">Whipped Topping</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop7">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="iceIceBabyAdd" aria-labelledby="iceIceBabyLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="iceIceBabyLabel">Ice Ice Baby</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="was-validated"><div class="combomain">
+                        <div class="flavor">
+                            <h6>2 Ice cream</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor1">Flavor1</label>
+                                <select class="form-select" id="flavor1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor2">Flavor2</label>
+                                <select class="form-select" id="flavor2" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="topping">
+                            <h6>2 Toppings</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping1">Type1</label>
+                                <select class="form-select" id="topping1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping2">Type2</label>
+                                <select class="form-select" id="topping2" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-info addcart" type="submit">Add to Cart</button>
+                    </form>
+
+                    <div class="comboala">
+                        <h6>Ala Carte</h6>
+                        <div class="accordion" id="accordionice">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseicei" aria-expanded="false" aria-controls="collapseicei">
+                                        Extra Ice Cream
+                                    </button>
+                                </h2>
+                                <div id="collapseicei" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alaice">
+                                        <div class="input-group mb-3 alaice1">
+                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
+                                        </div>
+                                        <div class="input-group mb-3 alaice2">
+                                            <label class="input-group-text" for="alafalvor2">Chocolate</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor2">
+                                        </div>
+                                        <div class="input-group mb-3 alaice3">
+                                            <label class="input-group-text" for="alafalvor3">Strawberry</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor3">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordiontop">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopi" aria-expanded="false" aria-controls="collapsetopi">
+                                        Extra Topping
+                                    </button>
+                                </h2>
+                                <div id="collapsetopi" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alatop">
+                                        <div class="input-group mb-3 alatopping1">
+                                            <label class="input-group-text" for="alatop1">Oreos</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop1">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping2">
+                                            <label class="input-group-text" for="alatop2">Sprinkle</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop2">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping3">
+                                            <label class="input-group-text" for="alatop3">Fudge Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop3">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping4">
+                                            <label class="input-group-text" for="alatop4">Caramel Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop4">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping5">
+                                            <label class="input-group-text" for="alatop5">Waffle Bit</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop5">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping6">
+                                            <label class="input-group-text" for="alatop6">Waffle Cone</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop6">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping7">
+                                            <label class="input-group-text" for="alatop7">Whipped Topping</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop7">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="iceWaffleBabyAdd" aria-labelledby="iceWaffleBabyLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="iceWaffleBabyLabel">Ice Waffle Baby</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="was-validated"><div class="combomain">
+                        <div class="flavor">
+                            <h6>2 Ice cream</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor1">Flavor1</label>
+                                <select class="form-select" id="flavor1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor2">Flavor2</label>
+                                <select class="form-select" id="flavor2" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="topping">
+                            <h6>2 Toppings</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping1">Type1</label>
+                                <select class="form-select" id="topping1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping2">Type2</label>
+                                <select class="form-select" id="topping2" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="waffle">
+                            <h6>Waffle</h6>
+                        </div>
+                    </div>
+                    <button class="btn btn-info addcart" type="submit">Add to Cart</button>
+                    </form>
+
+                    <div class="comboala">
+                        <h6>Ala Carte</h6>
+                        <div class="accordion" id="accordionice">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseicew" aria-expanded="false" aria-controls="collapseicew">
+                                        Extra Ice Cream
+                                    </button>
+                                </h2>
+                                <div id="collapseicew" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alaice">
+                                        <div class="input-group mb-3 alaice1">
+                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
+                                        </div>
+                                        <div class="input-group mb-3 alaice2">
+                                            <label class="input-group-text" for="alafalvor2">Chocolate</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor2">
+                                        </div>
+                                        <div class="input-group mb-3 alaice3">
+                                            <label class="input-group-text" for="alafalvor3">Strawberry</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor3">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordiontop">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopw" aria-expanded="false" aria-controls="collapsetopw">
+                                        Extra Topping
+                                    </button>
+                                </h2>
+                                <div id="collapsetopw" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alatop">
+                                        <div class="input-group mb-3 alatopping1">
+                                            <label class="input-group-text" for="alatop1">Oreos</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop1">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping2">
+                                            <label class="input-group-text" for="alatop2">Sprinkle</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop2">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping3">
+                                            <label class="input-group-text" for="alatop3">Fudge Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop3">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping4">
+                                            <label class="input-group-text" for="alatop4">Caramel Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop4">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping5">
+                                            <label class="input-group-text" for="alatop5">Waffle Bit</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop5">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping6">
+                                            <label class="input-group-text" for="alatop6">Waffle Cone</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop6">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping7">
+                                            <label class="input-group-text" for="alatop7">Whipped Topping</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop7">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="iceAffogatoBabyAdd" aria-labelledby="iceAffogatoBabyLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="iceAffogatoBabyLabel">Ice Affogato Baby</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="was-validated"><div class="combomain">
+                        <div class="flavor">
+                            <h6>1 Ice cream</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor1">Flavor</label>
+                                <select class="form-select" id="flavor1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="topping">
+                            <h6>2 Toppings</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping1">Type1</label>
+                                <select class="form-select" id="topping1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping2">Type2</label>
+                                <select class="form-select" id="topping2" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                            <div class="coffee">
+                                <h6>Coffee</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-info addcart" type="submit">Add to Cart</button>
+                    </form>
+
+                    <div class="comboala">
+                        <h6>Ala Carte</h6>
+                        <div class="accordion" id="accordionice">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseicec" aria-expanded="false" aria-controls="collapseicec">
+                                        Extra Ice Cream
+                                    </button>
+                                </h2>
+                                <div id="collapseicec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alaice">
+                                        <div class="input-group mb-3 alaice1">
+                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
+                                        </div>
+                                        <div class="input-group mb-3 alaice2">
+                                            <label class="input-group-text" for="alafalvor2">Chocolate</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor2">
+                                        </div>
+                                        <div class="input-group mb-3 alaice3">
+                                            <label class="input-group-text" for="alafalvor3">Strawberry</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor3">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordiontop">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopc" aria-expanded="false" aria-controls="collapsetopc">
+                                        Extra Topping
+                                    </button>
+                                </h2>
+                                <div id="collapsetopc" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alatop">
+                                        <div class="input-group mb-3 alatopping1">
+                                            <label class="input-group-text" for="alatop1">Oreos</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop1">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping2">
+                                            <label class="input-group-text" for="alatop2">Sprinkle</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop2">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping3">
+                                            <label class="input-group-text" for="alatop3">Fudge Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop3">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping4">
+                                            <label class="input-group-text" for="alatop4">Caramel Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop4">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping5">
+                                            <label class="input-group-text" for="alatop5">Waffle Bit</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop5">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping6">
+                                            <label class="input-group-text" for="alatop6">Waffle Cone</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop6">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping7">
+                                            <label class="input-group-text" for="alatop7">Whipped Topping</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop7">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="bigIceBabyAdd" aria-labelledby="bigIceBabyLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="bigIceBabyLabel">Big Ice Baby</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="was-validated"><div class="combomain">
+                        <div class="flavor">
+                            <h6>3 Ice cream</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor1">Flavor1</label>
+                                <select class="form-select" id="flavor1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor2">Flavor2</label>
+                                <select class="form-select" id="flavor2" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="flavor3">Flavor3</label>
+                                <select class="form-select" id="flavor3" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Vanilla</option>
+                                    <option value="2">Chocolate</option>
+                                    <option value="3">Strawberry</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="topping">
+                            <h6>3 Toppings</h6>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping1">Type1</label>
+                                <select class="form-select" id="topping1" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping2">Type2</label>
+                                <select class="form-select" id="topping2" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="topping3">Type3</label>
+                                <select class="form-select" id="topping3" required>
+                                    <option selected disabled value="">Choose..</option>
+                                    <option value="1">Oreos</option>
+                                    <option value="2">Sprinkle</option>
+                                    <option value="3">Fudge Syrup</option>
+                                    <option value="4">Caramel Syrup</option>
+                                    <option value="5">Waffle Bit</option>
+                                    <option value="6">Waffle Cone</option>
+                                    <option value="7">Whipped Topping</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-info addcart" type="submit">Add to Cart</button>
+                    </form>
+
+                    <div class="comboala">
+                        <h6>Ala Carte</h6>
+                        <div class="accordion" id="accordionice">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseiceb" aria-expanded="false" aria-controls="collapseiceb">
+                                        Extra Ice Cream
+                                    </button>
+                                </h2>
+                                <div id="collapseiceb" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alaice">
+                                        <div class="input-group mb-3 alaice1">
+                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
+                                        </div>
+                                        <div class="input-group mb-3 alaice2">
+                                            <label class="input-group-text" for="alafalvor2">Chocolate</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor2">
+                                        </div>
+                                        <div class="input-group mb-3 alaice3">
+                                            <label class="input-group-text" for="alafalvor3">Strawberry</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor3">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion" id="accordiontop">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopb" aria-expanded="false" aria-controls="collapsetopb">
+                                        Extra Topping
+                                    </button>
+                                </h2>
+                                <div id="collapsetopb" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alatop">
+                                        <div class="input-group mb-3 alatopping1">
+                                            <label class="input-group-text" for="alatop1">Oreos</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop1">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping2">
+                                            <label class="input-group-text" for="alatop2">Sprinkle</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop2">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping3">
+                                            <label class="input-group-text" for="alatop3">Fudge Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop3">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping4">
+                                            <label class="input-group-text" for="alatop4">Caramel Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop4">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping5">
+                                            <label class="input-group-text" for="alatop5">Waffle Bit</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop5">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping6">
+                                            <label class="input-group-text" for="alatop6">Waffle Cone</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop6">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping7">
+                                            <label class="input-group-text" for="alatop7">Whipped Topping</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop7">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="iceAdd" aria-labelledby="iceLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="iceLabel">1 Scoop Ice Cream</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="alaice">
+                        <div class="input-group mb-3 alaice1">
+                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
+                        </div>
+                        <div class="input-group mb-3 alaice2">
+                            <label class="input-group-text" for="alafalvor2">Chocolate</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor2">
+                        </div>
+                        <div class="input-group mb-3 alaice3">
+                            <label class="input-group-text" for="alafalvor3">Strawberry</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor3">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-info addcart" type="button">Add to Cart</button>
+
+                    <div class="comboala">
+                        <h6>Ala Carte</h6>
+                        <div class="accordion" id="accordiontop">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopai" aria-expanded="false" aria-controls="collapsetopai">
+                                        Extra Topping
+                                    </button>
+                                </h2>
+                                <div id="collapsetopai" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="alatop">
+                                        <div class="input-group mb-3 alatopping1">
+                                            <label class="input-group-text" for="alatop1">Oreos</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop1">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping2">
+                                            <label class="input-group-text" for="alatop2">Sprinkle</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop2">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping3">
+                                            <label class="input-group-text" for="alatop3">Fudge Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop3">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping4">
+                                            <label class="input-group-text" for="alatop4">Caramel Syrup</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop4">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping5">
+                                            <label class="input-group-text" for="alatop5">Waffle Bit</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop5">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping6">
+                                            <label class="input-group-text" for="alatop6">Waffle Cone</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop6">
+                                        </div>
+                                        <div class="input-group mb-3 alatopping7">
+                                            <label class="input-group-text" for="alatop7">Whipped Topping</label>
+                                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop7">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="topAdd" aria-labelledby="topLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="topLabel">Extra Topping</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="alatop">
+                        <div class="input-group mb-3 alatopping1">
+                            <label class="input-group-text" for="alatop1">Oreos</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop1">
+                        </div>
+                        <div class="input-group mb-3 alatopping2">
+                            <label class="input-group-text" for="alatop2">Sprinkle</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop2">
+                        </div>
+                        <div class="input-group mb-3 alatopping3">
+                            <label class="input-group-text" for="alatop3">Fudge Syrup</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop3">
+                        </div>
+                        <div class="input-group mb-3 alatopping4">
+                            <label class="input-group-text" for="alatop4">Caramel Syrup</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop4">
+                        </div>
+                        <div class="input-group mb-3 alatopping5">
+                            <label class="input-group-text" for="alatop5">Waffle Bit</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop5">
+                        </div>
+                        <div class="input-group mb-3 alatopping6">
+                            <label class="input-group-text" for="alatop6">Waffle Cone</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop6">
+                        </div>
+                        <div class="input-group mb-3 alatopping7">
+                            <label class="input-group-text" for="alatop7">Whipped Topping</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alatop7">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-info addcart" type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="waterAdd" aria-labelledby="waterLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="waterLabel">Water</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="alawater">
+                        <div class="input-group mb-3 alawater1">
+                            <label class="input-group-text" for="alaw1">Quantity</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alaw1">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-info addcart" type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="coffeeAdd" aria-labelledby="coffeeLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="coffeeLabel">Coffee</h5>
+                  <h6 class="offcanvas-price">price</h6>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="alacoffee">
+                        <div class="input-group mb-3 alacoffee1">
+                            <label class="input-group-text" for="alac1">Hot Coffee</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alac1">
+                        </div>
+                        <div class="input-group mb-3 alacoffee2">
+                            <label class="input-group-text" for="alac2">Iced Coffee</label>
+                            <input type="number" class="form-control" min="0" step="1" value="0" id="alac2">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-info addcart" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="floating-button">
+            <div class="btn-group">
+                <a href="#" class="btn btn-secondary btn-sm active" aria-current="page">A</a>
+                <a href="#" class="btn btn-secondary btn-sm">한</a>
+                <a href="#" class="btn btn-secondary btn-sm">中</a>
+            </div>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#cartModal">
+                Cart
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                0
+            <span class="visually-hidden">unread messages</span>
+            </span></button>
+        </div>
+
+        <div class="modal fade cartModal" id="cartModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="cartModalLabel">Cart</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card cartcard">
+                            <div class="card-header">
+                                product title
+                                <p class="card-total">¥x</p><!--product total price-->
+                                <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close"></button>
+                            </div>
+                            <div class="card-body">
+                            <p class="card-text">product info</p><!--product info-->
+                            <p class="card-price">¥x</p><!--product price-->
+                            </div>
+                            <div class="input-group numin">
+                                <label class="input-group-text" for="quantity">Quantity</label>
+                                <input type="number" class="form-control" min="1" step="1" value="1" id="quantity">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <p class="modal-total">Total: ¥</p>
+                        <p class="modal-totalPrice">x</p><!--total price-->
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" data-bs-target="#purchaseModal" data-bs-toggle="modal">Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade purchaseModal" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-total">¥</p>
+                        <p class="modal-totalPrice">x</p><!--total price-->
+                        <img src="Ice Ice Baby Logo.png" alt="logo" height="60">
+                    </div>
+                    <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-target="#cartModal" data-bs-toggle="modal">Back to Cart</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
