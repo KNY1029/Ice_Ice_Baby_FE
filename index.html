@@ -21,13 +21,13 @@
             <!--<div class="name">Ice Ice Baby</div>-->
             <nav>
                 <ul class="nav nav-pills">
-                    <li class="nav-item">
+                    <li class="nav-item" id="main">
                       <a class="nav-link active" aria-current="page" href="index.html">Main</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="menu">
                       <a class="nav-link" href="menu.html">Menu</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" id="event">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Event</a>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">Ranking</a></li>
@@ -35,8 +35,12 @@
                           <li><a class="dropdown-item" href="#">Coupon</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                    <li class="nav-item dropdown" id="account">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">Login</a></li><!--login상태일 때는 log out-->
+                            <li><a class="dropdown-item disabled" href="#">잔액:</a></li>
+                        </ul>
                     </li>
                   </ul>
             </nav>
@@ -49,69 +53,11 @@
         <main> 
         </main>
 
-        <div class="floating-button">
-            <div class="btn-group">
+        <div id="floating-button">
+            <div class="btn-group" id="langButton">
                 <a href="#" class="btn btn-secondary btn-sm active" aria-current="page">A</a>
                 <a href="#" class="btn btn-secondary btn-sm">한</a>
                 <a href="#" class="btn btn-secondary btn-sm">中</a>
-            </div>
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#cartModal">
-                Cart
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                0
-            <span class="visually-hidden">unread messages</span>
-            </span></button>
-        </div>
-
-        <div class="modal fade cartModal" id="cartModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="cartModalLabel">Cart</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card cartcard">
-                            <div class="card-header">
-                                product title
-                                <p class="card-total">¥x</p><!--product total price-->
-                                <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close"></button>
-                            </div>
-                            <div class="card-body">
-                            <p class="card-text">product info</p><!--product info-->
-                            <p class="card-price">¥x</p><!--product price-->
-                            </div>
-                            <div class="input-group numin">
-                                <label class="input-group-text" for="quantity">Quantity</label>
-                                <input type="number" class="form-control" min="1" step="1" value="1" id="quantity">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <p class="modal-total">Total: ¥</p>
-                        <p class="modal-totalPrice">x</p><!--total price-->
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button class="btn btn-primary" data-bs-target="#purchaseModal" data-bs-toggle="modal">Purchase</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade purchaseModal" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                    <button class="btn btn-secondary" data-bs-target="#cartModal" data-bs-toggle="modal">Back to Cart</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirm</button>
-                    </div>
-                </div>
             </div>
         </div>
 

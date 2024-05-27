@@ -21,13 +21,13 @@
             <!--<div class="name">Ice Ice Baby</div>-->
             <nav>
                 <ul class="nav nav-pills">
-                    <li class="nav-item">
+                    <li class="nav-item" id="main">
                       <a class="nav-link" href="index.html">Main</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="menu">
                       <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" id="event">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Event</a>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">Ranking</a></li>
@@ -35,18 +35,25 @@
                           <li><a class="dropdown-item" href="#">Coupon</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
+                    <li class="nav-item dropdown" id="account">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">Login</a></li><!--login상태일 때는 log out-->
+                            <li><a class="dropdown-item disabled" href="#">잔액:</a></li>
+                        </ul>
                     </li>
                   </ul>
             </nav>
         </header>
 
         <main>
+            <!--메뉴 선택 표시-->
             <div class="row row-cols-1 row-cols-md-2 menucards">
+                <!--세트메뉴 표시-->
                 <div class="col combocards">
                     <div class="category">Combo Menu</div>
                     <div class="row row-cols-2 row-cols-xl-3">
+                        <!--baby ice 표시 칸-->
                         <div class="col"><div class="card combocard" style="height:95px">
                             <h5 class="card-header">Baby Ice</h5>
                             <div class="card-body">
@@ -55,11 +62,13 @@
                                     <h6>1 Topping</h6>
                                 </div>
                                 <p class="card-text combocard-text">¥10</p>
+                                <!--메뉴 추가 칸(babyIceAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#babyIceAdd" role="button" aria-controls="offcanvasBabyIce">
                                     +
                                 </a>
                                 </div>
                         </div></div>
+                        <!--ice ice baby 표시 칸-->
                         <div class="col"><div class="card combocard" style="height:95px">
                             <h5 class="card-header">Ice Ice Baby</h5>
                             <div class="card-body">
@@ -68,11 +77,13 @@
                                     <h6>2 Toppings</h6>
                                 </div>
                                 <p class="card-text combocard-text">¥20</p>
+                                <!--메뉴 추가 칸(iceIceBabyAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceIceBabyAdd" role="button" aria-controls="offcanvasIceIceBaby">
                                     +
                                 </a>
                             </div>
                         </div></div>
+                        <!--ice waffle baby 표시 칸-->
                         <div class="col"><div class="card combocard" style="height:95px">
                             <h5 class="card-header">Ice Waffle Baby</h5>
                             <div class="card-body">
@@ -82,11 +93,13 @@
                                     <h6>Waffle</h6>
                                 </div>
                                 <p class="card-text combocard-text">¥35</p>
+                                <!--메뉴 추가 칸(iceWaffleBabyAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceWaffleBabyAdd" role="button" aria-controls="offcanvasIceWaffleBaby">
                                     +
                                 </a>
                             </div>
                         </div></div>
+                        <!--ice affogato baby 표시 칸-->
                         <div class="col"><div class="card combocard" style="height:95px">
                             <h5 class="card-header">Ice Affogato Baby</h5>
                             <div class="card-body">
@@ -96,11 +109,13 @@
                                     <h6>Coffee</h6>
                                 </div>
                                 <p class="card-text combocard-text">¥20</p>
+                                <!--메뉴 추가 칸(iceAffogatoBabyAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceAffogatoBabyAdd" role="button" aria-controls="offcanvasIceAffogatoBaby">
                                     +
                                 </a>
                             </div>
                         </div></div>
+                        <!--big ice baby 표시 칸-->
                         <div class="col"><div class="card combocard" style="height:95px">
                             <h5 class="card-header">Big Ice Baby</h5>
                             <div class="card-body">
@@ -109,6 +124,7 @@
                                     <h6>3 Toppings</h6>
                                 </div>
                                 <p class="card-text combocard-text">¥28</p>
+                                <!--메뉴 추가 칸(bigIceBabyAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#bigIceBabyAdd" role="button" aria-controls="offcanvasbigIceBaby">
                                     +
                                 </a>
@@ -116,48 +132,57 @@
                         </div></div>
                     </div>
                 </div>
+                <!--추가 메뉴 표시-->
                 <div class="col alacards">
                     <div class="category">Ala Carte</div>
                     <div class="row row-cols-2 row-cols-xl-4">
+                        <!--아이스크림 표시 칸-->
                         <div class="col"><div class="card alacard">
                             <div class="card-body">
                                 <div class="card-title alacard-title">
-                                    <h6>1 Scoop Ice Cream</h6>
+                                    <h6>Extra Ice Cream</h6>
                                 </div>
                                 <p class="card-text alacard-text">¥8</p>
+                                <!--메뉴 추가 칸(iceAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceAdd" role="button" aria-controls="offcanvasIce">
                                     +
                                 </a>
                             </div>
                         </div></div>
+                        <!--토핑 표시 칸-->
                         <div class="col"><div class="card alacard">
                             <div class="card-body">
                                 <div class="card-title alacard-title">
                                     <h6>Extra Topping</h6>
                                 </div>
                                 <p class="card-text alacard-text">¥3</p>
+                                <!--메뉴 추가 칸(topAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#topAdd" role="button" aria-controls="offcanvasTop">
                                     +
                                 </a>
                             </div>
                         </div></div>
+                        <!--물 표시 칸-->
                         <div class="col"><div class="card alacard">
                             <div class="card-body">
                                 <div class="card-title alacard-title">
                                     <h6>Water</h6>
                                 </div>
                                 <p class="card-text alacard-text">¥2</p>
+                                <!--메뉴 추가 칸(waterAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#waterAdd" role="button" aria-controls="offcanvasWater">
                                     +
                                 </a>
                             </div>
                         </div></div>
+                        <!--커피 표시 칸-->
                         <div class="col"><div class="card alacard">
                             <div class="card-body">
                                 <div class="card-title alacard-title">
                                     <h6>Coffee</h6>
                                 </div>
                                 <p class="card-text alacard-text">¥8</p>
+                                <!--메뉴 추가 칸(coffeeAdd)으로-->
                                 <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#coffeeAdd" role="button" aria-controls="offcanvasCoffee">
                                     +
                                 </a>
@@ -167,13 +192,16 @@
                 </div>
             </div>
 
+            <!--메뉴 추가 표시-->
+            <!--baby ice 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="babyIceAdd" aria-labelledby="babyIceLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="babyIceLabel">Baby Ice</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(10) + 추가 가격(extra ice cream*8 + extra topping*3)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <form class="was-validated"><div class="combomain">
                         <div class="flavor">
                             <h6>1 Ice cream</h6>
@@ -204,9 +232,11 @@
                             </div>
                         </div>
                     </div>
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="submit">Add to Cart</button>
                     </form>
 
+                    <!--추가 메뉴-->
                     <div class="comboala">
                         <h6>Ala Carte</h6>
                         <div class="accordion" id="accordionice">
@@ -284,13 +314,15 @@
                 </div>
             </div>
 
+            <!--ice ice baby 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="iceIceBabyAdd" aria-labelledby="iceIceBabyLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="iceIceBabyLabel">Ice Ice Baby</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(20) + 추가 가격(extra ice cream*8 + extra topping*3)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <form class="was-validated"><div class="combomain">
                         <div class="flavor">
                             <h6>2 Ice cream</h6>
@@ -343,9 +375,11 @@
                             </div>
                         </div>
                     </div>
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="submit">Add to Cart</button>
                     </form>
 
+                    <!--추가 메뉴-->
                     <div class="comboala">
                         <h6>Ala Carte</h6>
                         <div class="accordion" id="accordionice">
@@ -423,13 +457,15 @@
                 </div>
             </div>
 
+            <!--ice waffle baby 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="iceWaffleBabyAdd" aria-labelledby="iceWaffleBabyLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="iceWaffleBabyLabel">Ice Waffle Baby</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(35) + 추가 가격(extra ice cream*8 + extra topping*3)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <form class="was-validated"><div class="combomain">
                         <div class="flavor">
                             <h6>2 Ice cream</h6>
@@ -485,9 +521,11 @@
                             <h6>Waffle</h6>
                         </div>
                     </div>
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="submit">Add to Cart</button>
                     </form>
 
+                    <!--추가 메뉴-->
                     <div class="comboala">
                         <h6>Ala Carte</h6>
                         <div class="accordion" id="accordionice">
@@ -565,13 +603,15 @@
                 </div>
             </div>
 
+            <!--ice affogato baby 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="iceAffogatoBabyAdd" aria-labelledby="iceAffogatoBabyLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="iceAffogatoBabyLabel">Ice Affogato Baby</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(20) + 추가 가격(extra ice cream*8 + extra topping*3)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <form class="was-validated"><div class="combomain">
                         <div class="flavor">
                             <h6>1 Ice cream</h6>
@@ -618,9 +658,11 @@
                             </div>
                         </div>
                     </div>
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="submit">Add to Cart</button>
                     </form>
-
+                    
+                    <!--추가 메뉴-->
                     <div class="comboala">
                         <h6>Ala Carte</h6>
                         <div class="accordion" id="accordionice">
@@ -698,13 +740,15 @@
                 </div>
             </div>
 
+            <!--big ice baby 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="bigIceBabyAdd" aria-labelledby="bigIceBabyLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="bigIceBabyLabel">Big Ice Baby</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(28) + 추가 가격(extra ice cream*8 + extra topping*3)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <form class="was-validated"><div class="combomain">
                         <div class="flavor">
                             <h6>3 Ice cream</h6>
@@ -779,9 +823,11 @@
                             </div>
                         </div>
                     </div>
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="submit">Add to Cart</button>
                     </form>
 
+                    <!--추가 메뉴-->
                     <div class="comboala">
                         <h6>Ala Carte</h6>
                         <div class="accordion" id="accordionice">
@@ -859,13 +905,15 @@
                 </div>
             </div>
 
+            <!--Extra Ice Cream 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="iceAdd" aria-labelledby="iceLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="iceLabel">1 Scoop Ice Cream</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h5 class="offcanvas-title" id="iceLabel">Extra Ice Cream</h5>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(extra ice cream*8) + 추가 가격(extra topping*3)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <div class="alaice">
                         <div class="input-group mb-3 alaice1">
                             <label class="input-group-text" for="alafalvor1">Vanila</label>
@@ -880,9 +928,10 @@
                             <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor3">
                         </div>
                     </div>
-
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="button">Add to Cart</button>
 
+                    <!--추가 메뉴-->
                     <div class="comboala">
                         <h6>Ala Carte</h6>
                         <div class="accordion" id="accordiontop">
@@ -932,13 +981,15 @@
                 </div>
             </div>
 
+            <!--Extra Topping Cream 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="topAdd" aria-labelledby="topLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="topLabel">Extra Topping</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(extra topping*3)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <div class="alatop">
                         <div class="input-group mb-3 alatopping1">
                             <label class="input-group-text" for="alatop1">Oreos</label>
@@ -969,36 +1020,40 @@
                             <input type="number" class="form-control" min="0" step="1" value="0" id="alatop7">
                         </div>
                     </div>
-
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="button">Add to Cart</button>
                 </div>
             </div>
 
+            <!--water 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="waterAdd" aria-labelledby="waterLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="waterLabel">Water</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(water*2)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <div class="alawater">
                         <div class="input-group mb-3 alawater1">
                             <label class="input-group-text" for="alaw1">Quantity</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="alaw1">
+                            <input type="number" class="form-control" min="1" step="1" value="1" id="alaw1">
                         </div>
                     </div>
-
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="button">Add to Cart</button>
                 </div>
             </div>
 
+            <!--coffee 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="coffeeAdd" aria-labelledby="coffeeLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="coffeeLabel">Coffee</h5>
-                  <h6 class="offcanvas-price">price</h6>
+                  <h6 class="offcanvas-price">¥price</h6><!--가격 표시 : ¥기본 가격(coffee*8)-->
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
+                    <!--기본 메뉴-->
                     <div class="alacoffee">
                         <div class="input-group mb-3 alacoffee1">
                             <label class="input-group-text" for="alac1">Hot Coffee</label>
@@ -1009,75 +1064,81 @@
                             <input type="number" class="form-control" min="0" step="1" value="0" id="alac2">
                         </div>
                     </div>
-
+                    <!--클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="button">Add to Cart</button>
                 </div>
             </div>
         </main>
 
-        <div class="floating-button">
-            <div class="btn-group">
+        <div id="floating-button">
+            <!--언어 설정 버튼-->
+            <div class="btn-group" id="langButton">
                 <a href="#" class="btn btn-secondary btn-sm active" aria-current="page">A</a>
                 <a href="#" class="btn btn-secondary btn-sm">한</a>
                 <a href="#" class="btn btn-secondary btn-sm">中</a>
             </div>
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#cartModal">
-                Cart
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                0
-            <span class="visually-hidden">unread messages</span>
-            </span></button>
-        </div>
-
-        <div class="modal fade cartModal" id="cartModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="cartModalLabel">Cart</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card cartcard">
-                            <div class="card-header">
-                                product title
-                                <p class="card-total">¥x</p><!--product total price-->
-                                <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close"></button>
-                            </div>
-                            <div class="card-body">
-                            <p class="card-text">product info</p><!--product info-->
-                            <p class="card-price">¥x</p><!--product price-->
-                            </div>
-                            <div class="input-group numin">
-                                <label class="input-group-text" for="quantity">Quantity</label>
-                                <input type="number" class="form-control" min="1" step="1" value="1" id="quantity">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <p class="modal-total">Total: ¥</p>
-                        <p class="modal-totalPrice">x</p><!--total price-->
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button class="btn btn-primary" data-bs-target="#purchaseModal" data-bs-toggle="modal">Purchase</button>
-                    </div>
-                </div>
+            <!--카트 추가 버튼-->
+            <div id="cartButton">
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    Cart
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="numAdded">
+                    0
+                <span class="visually-hidden">products in the cart</span>
+                </span></button>
             </div>
         </div>
 
-        <div class="modal fade purchaseModal" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div id="cart">
+            <div class="modal fade cartModal" id="cartModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="cartModalLabel">Cart</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card cartcard">
+                                <div class="card-header">
+                                    product title
+                                    <p class="card-total">¥x</p><!--product total price-->
+                                    <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close"></button>
+                                </div>
+                                <div class="card-body">
+                                <p class="card-text">product info</p><!--product info-->
+                                <p class="card-price">¥x</p><!--product price-->
+                                </div>
+                                <div class="input-group numin">
+                                    <label class="input-group-text" for="quantity">Quantity</label>
+                                    <input type="number" class="form-control" min="1" step="1" value="1" id="quantity">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <p class="modal-total">Total: ¥</p>
+                            <p class="modal-totalPrice">x</p><!--total price-->
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button class="btn btn-primary" data-bs-target="#purchaseModal" data-bs-toggle="modal">Purchase</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <p class="modal-total">¥</p>
-                        <p class="modal-totalPrice">x</p><!--total price-->
-                        <img src="Ice Ice Baby Logo.png" alt="logo" height="60">
-                    </div>
-                    <div class="modal-footer">
-                    <button class="btn btn-secondary" data-bs-target="#cartModal" data-bs-toggle="modal">Back to Cart</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirm</button>
+                </div>
+            </div>
+
+            <div class="modal fade purchaseModal" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="modal-finalPrice">가격</p>
+                            <p class="modal-left">잔액</p><!--total price-->
+                            QR image / Password / 돈 수령 -> 코드 생성, 전송 -> 사용자 입력 -> 주문 접수
+                        </div>
+                        <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-target="#cartModal" data-bs-toggle="modal">Back to Cart</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirm</button>
+                        </div>
                     </div>
                 </div>
             </div>

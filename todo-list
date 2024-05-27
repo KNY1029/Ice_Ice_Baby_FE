@@ -1,0 +1,15 @@
+record cart in cookie.
+
+결제설정
+login, logout, join
+language change
+
+header login, log out 전환
+잔액 표시
+
+event
+
+add to cart -> 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가, 기본 menu page로 복귀 후 해당 메뉴 설정 초기화
+수량이 0일 시 주문 불가
+update cart button #numAdded
+calculate, update price in offcanvas and cartModal
