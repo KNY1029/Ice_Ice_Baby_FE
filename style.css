@@ -4,7 +4,7 @@ a{text-decoration: none;}
 
 /*header*/
 header{
-    height: 70px;
+    height: 60px;
     background-color: bisque;
     display: flex;
     align-items: center;
@@ -19,13 +19,16 @@ header{
 }
 
 /*header*/
+#logo{
+    margin-left:5px;
+}
 .name{
     color:chocolate;
     font-size: 18px;
     font-weight:bold;
 }
 nav{
-    font-size: 12px;
+    font-size: 11px;
     display: flex;
     margin-left: auto;
     margin-right: 2%;
@@ -62,7 +65,7 @@ nav li{
 }
 #langButton{
     position: fixed;
-    top:80px;
+    top:65px;
     right:5%;
 }
 #langButton .btn-secondary{
@@ -79,7 +82,7 @@ footer{
 main{
     position:absolute;
     display:flex;
-    top:70px;
+    top:60px;
     left:3%;
     right:3%;
 }
