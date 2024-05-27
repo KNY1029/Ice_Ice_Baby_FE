@@ -38,11 +38,22 @@ function searchAccount(id,pw){
  * @param {String} id 
  * @param {Object} query query to update
  */
-function updateAccount(id,query){
+function updateAccount(id,pw,query){
   fetch(url+"/updateAccount",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({id:id,query:JSON.stringify(query)})
+    body:JSON.stringify({id:id,pw:pw,query:JSON.stringify(query)})
+  })
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+    .catch(err=>console.log(err));
+}
+
+function deleteAccount(id,pw) {
+  fetch(url+"/deleteAccount",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({id:id,pw:pw})
   })
     .then(res=>res.json())
     .then(data=>console.log(data))
