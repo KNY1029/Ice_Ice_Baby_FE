@@ -160,6 +160,8 @@ body{
     color:white;
     text-align: center;
     background-color: skyblue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /*adding menu page*/
@@ -237,14 +239,14 @@ body{
     left:75px;
     text-align:left;
 }
-.modal-body{
-    background-color:lightblue;
-}
 .modal-header{
-    background-color: antiquewhite;
+    background-color: peru;
+}
+.modal-body{
+    background-color:antiquewhite;
 }
 .modal-footer{
-    background-color: blueviolet !important;
+    background-color: pink !important;
 }
 
 /*login*/
