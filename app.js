@@ -32,3 +32,19 @@ function searchAccount(id,pw){
     .then(data=>console.log(data))
     .catch(err=>console.log(err));
 }
+
+/**
+ * Update account.
+ * @param {String} id 
+ * @param {Object} query query to update
+ */
+function updateAccount(id,query){
+  fetch(url+"/updateAccount",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({id:id,query:JSON.stringify(query)})
+  })
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+    .catch(err=>console.log(err));
+}
