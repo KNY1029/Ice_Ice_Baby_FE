@@ -34,7 +34,7 @@ function searchAccount(id,pw){
 }
 
 /**
- * Update account.
+ * Update account, if pw is correct.
  * @param {String} id 
  * @param {Object} query query to update
  */
@@ -49,6 +49,11 @@ function updateAccount(id,pw,query){
     .catch(err=>console.log(err));
 }
 
+/**
+ * Delete account, if pw is correct.
+ * @param {String} id 
+ * @param {String} pw
+ */
 function deleteAccount(id,pw) {
   fetch(url+"/deleteAccount",{
     method:"POST",
