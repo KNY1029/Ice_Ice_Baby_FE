@@ -18,7 +18,7 @@
             <div id="logo">
                 <img src="Ice_Ice_Baby_Logo.png" alt="logo" height="50">
             </div>
-            <!--<div class="name">Ice Ice Baby</div>-->
+            <div class="name">Ice Ice Baby</div><!--requirement: 큰화면일때만 표시-->
             <nav>
                 <ul class="nav nav-pills">
                     <li class="nav-item" id="main">
@@ -38,8 +38,8 @@
                     <li class="nav-item dropdown" id="account">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Account</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="login.html">Login</a></li><!--login상태일 때는 log out-->
-                            <li><a class="dropdown-item disabled" href="#">잔액:</a></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li><!--requirement: login상태일 때는 log out으로 표시-->
+                            <li><a class="dropdown-item disabled" href="#">잔액:</a></li><!--requirement: 쿠폰 사용 시 잔액 표시-->
                         </ul>
                     </li>
                   </ul>
@@ -54,10 +54,76 @@
         </main>
 
         <div id="floating-button">
+            <!--언어 설정 버튼--><!--requirement: 언어 변경, active 변경-->
             <div class="btn-group" id="langButton">
                 <a href="#" class="btn btn-secondary btn-sm active" aria-current="page">A</a>
                 <a href="#" class="btn btn-secondary btn-sm">한</a>
                 <a href="#" class="btn btn-secondary btn-sm">中</a>
+            </div>
+            <!--카트 추가 버튼-->
+            <div id="cartButton">
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    Cart
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="numAdded">
+                    0<!--requirement: 주문 수량 표시-->
+                <span class="visually-hidden">products in the cart</span>
+                </span></button>
+            </div>
+        </div>
+
+        <div id="cart">
+            <div class="modal fade cartModal" id="cartModal" tabindex="-1" aria-labelledby="cartModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="cartModalLabel">Cart</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card cartcard"><!--requirement: offcanvas의 addcart버튼 클릭시 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
+                                <div class="card-header">
+                                    product title
+                                    <p class="card-total">¥x</p><!--product total price--><!--requirement: 1개 가격*quantity-->
+                                    <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close"></button>
+                                </div>
+                                <div class="card-body">
+                                <p class="card-text">product info</p><!--product info-->
+                                <p class="card-price">¥x</p><!--product price-->
+                                </div>
+                                <div class="input-group numin">
+                                    <label class="input-group-text" for="quantity">Quantity</label>
+                                    <input type="number" class="form-control" min="1" step="1" value="1" id="quantity">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <p class="modal-total">Total: ¥</p>
+                            <p class="modal-totalPrice">x</p><!--total price--><!--requirement: 전체 가격 표시-->
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button class="btn btn-primary" data-bs-target="#purchaseModal" data-bs-toggle="modal">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade purchaseModal" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModal" aria-hidden="true"><!--requirement: 계산 정보-->
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="modal-finalPrice">가격</p>
+                            <p class="modal-left">잔액</p><!--total price-->
+                            QR image -> Password / 돈 수령 -> 코드 생성, 전송 -> 사용자 입력 -> 주문 접수
+                        </div>
+                        <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-target="#cartModal" data-bs-toggle="modal">Back to Cart</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirm</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

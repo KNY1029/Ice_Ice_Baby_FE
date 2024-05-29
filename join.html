@@ -18,7 +18,7 @@
             <div id="logo">
                 <img src="Ice_Ice_Baby_Logo.png" alt="logo" height="50">
             </div>
-            <!--<div class="name">Ice Ice Baby</div>-->
+            <div class="name">Ice Ice Baby</div><!--requirement: 큰화면일때만 표시-->
             <nav>
                 <ul class="nav nav-pills">
                     <li class="nav-item" id="main">
@@ -38,8 +38,8 @@
                     <li class="nav-item dropdown" id="account">
                         <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page" href="#" role="button" aria-expanded="false">Account</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="login.html">Login</a></li><!--login상태일 때는 log out-->
-                            <li><a class="dropdown-item disabled" href="#">잔액:</a></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li><!--requirement: login상태일 때는 log out으로 표시되게-->
+                            <li><a class="dropdown-item disabled" href="#">잔액:</a></li><!--requirement: 쿠폰 사용 시 잔액 표시-->
                         </ul>
                     </li>
                   </ul>
@@ -47,7 +47,7 @@
         </header>
 
         <main> 
-            <form action="login.html" id="signup">
+            <form action="login.html" id="signup"><!--requirement: 아이디 중복 불가, password&confirm password 일치 -> 계정 생성-->
                 <table id="jointable">
                 <tr>
                     <td><h2>Create Account</h2></td>
@@ -56,7 +56,7 @@
                 <tr><td><input type="text" class="text"></td></tr>
                 <tr><td>Password</td></tr>
                 <tr><td><input type="password" class="text"></td></tr>
-                <tr><td>비밀번호 확인</td></tr>
+                <tr><td>Confirm Password</td></tr>
                 <tr><td><input type="password" class="text"></td></tr>
                 <tr><td id="joinsubmit"><input type="submit" value="Create Account" class="btn" onclick="alert('Signed up!')"></td></tr>
                 </table>
@@ -64,6 +64,7 @@
         </main>
 
         <div id="floating-button">
+            <!--언어 설정 버튼--><!--requirement: 언어 변경, active 변경-->
             <div class="btn-group" id="langButton">
                 <a href="#" class="btn btn-secondary btn-sm active" aria-current="page">A</a>
                 <a href="#" class="btn btn-secondary btn-sm">한</a>
