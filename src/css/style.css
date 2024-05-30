@@ -235,8 +235,7 @@ body{
     font-family: 'April16th-Life';
     font-size: 20px;
 }
-.row.row-cols-2.row-cols-xl-3,
-.row.row-cols-2.row-cols-xl-4 {
+.row.row-cols-2{
     margin-right: 3px;
 }
 
