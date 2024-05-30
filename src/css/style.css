@@ -350,6 +350,9 @@ body{
 .modal-footer{
     background-color: pink !important;
 }
+.card-body > .card{
+    margin-bottom:10px;
+}
 
 /*login*/
 #signin{
