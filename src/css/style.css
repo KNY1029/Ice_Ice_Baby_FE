@@ -124,7 +124,7 @@ nav li{
 #langButton{
     position: fixed;
     top:65px;
-    right:5%;
+    right:3%;
 }
 #langButton .btn-secondary{
     font-size: 13px;
