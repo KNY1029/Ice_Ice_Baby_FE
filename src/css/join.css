@@ -1,0 +1,45 @@
+/*join*/
+#signup{
+    display: flex;
+    width: 94%;
+    align-self: center;
+    font-family: 'Ownglyph_eunbyul21-Rg';
+    margin-top:10px;
+}
+#jointable {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    font-size: 15px;
+}
+.text {
+    width: 250px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233,233,233);
+}
+#joinsubmit > .btn {
+    margin-top:10px;
+    width: 250px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(164, 199, 255);
+}
+#joinsubmit > .btn:active {
+    width: 262px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(61, 135, 255);
+}

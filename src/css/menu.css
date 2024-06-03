@@ -1,0 +1,195 @@
+#cartButton > .btn-info{
+    position: fixed;
+    bottom:3%;
+    right:5%;
+}
+
+/*menu page*/
+.row>*{
+    padding-right:0px !important;
+}
+.combocard{
+    position:absolute;
+    margin-bottom: 10px;
+}
+.alacard{
+    position:absolute;
+    height:50px !important;
+    margin-bottom: 10px;
+}
+.combocard > .card-header{
+    font-size: 9px;
+    font-family: 'TTHakgyoansimTtwimteulR';
+    background-color: yellowgreen !important;
+}
+.combocard-title{
+    font-size: 6px;
+    position:absolute;
+    top:35px;
+}
+.combocard-title > h6{
+    font-size: 10px !important;
+}
+.alacard-title > h6{
+    font-family: 'TTHakgyoansimTtwimteulR';
+    font-size:8px !important;
+    position:absolute;
+    top:10px;
+}
+.combocard-text{
+    font-size:8px;
+    position:absolute;
+    top:7px;
+    right:5%;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.alacard-text{
+    font-size:8px;
+    position:absolute;
+    top:25px;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.combocard > .card-body > .btn-primary,
+.alacard > .card-body > .btn-primary{
+    background-color: orange!important;
+    border-color:yellow !important;
+    position: absolute;
+    right:5%;
+    bottom:5%;
+}
+.btnala{
+    bottom:15%;
+}
+.menucards{
+    position:absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.category{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:white;
+    text-align: center;
+    background-color: skyblue;
+    border-radius: 10px;
+    font-family: 'April16th-Life';
+    font-size: 20px;
+}
+.row.row-cols-2{
+    margin-right: 3px;
+}
+
+/*adding menu page*/
+.offcanvas-header{
+    position:static;
+    background-color: chocolate;
+    font-family: 'TTHakgyoansimTtwimteulR';
+}
+.offcanvas-price{
+    position: absolute;
+    top: 20px;
+    right:50px;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.offcanvas{
+    background-color: rgb(246, 204, 19) !important;
+}
+.offcanvas-body{
+    margin-bottom: 60px;
+}
+.comboala{
+    background-color:goldenrod;
+    padding:10px;
+    border-radius: 5px;
+}
+/*.flavor > .btn-outline-primary,
+.topping > .btn-outline-primary {
+    background-color:blanchedalmond !important;
+    border-color: black !important;
+    color: black !important;
+}
+
+.flavor > .btn-check:active+.btn-outline-primary, 
+.flavor > .btn-check:checked+.btn-outline-primary, 
+.flavor > .btn-outline-primary.active, 
+.flavor > .btn-outline-primary.dropdown-toggle.show, 
+.flavor > .btn-outline-primary:active,
+.topping > .btn-check:active+.btn-outline-primary, 
+.topping > .btn-check:checked+.btn-outline-primary, 
+.topping > .btn-outline-primary.active, 
+.topping > .btn-outline-primary.dropdown-toggle.show, 
+.topping > .btn-outline-primary:active {
+    color: white !important;
+    background-color:cadetblue !important;
+}*/
+
+/*cart*/
+.addcart{
+    position:absolute;
+    bottom:10px;
+    height:50px;
+    left:15px;
+    right:15px;
+}
+.cartcard{
+    display: flex;
+    margin-top:3%;
+    font-family: 'KCC-Hanbit';
+}
+.cartcard > .card-header{
+    font-family: 'TTHakgyoansimTtwimteulR';
+    background-color: aquamarine;
+}
+.cartcard > .card-header > .btn-close{
+    position:absolute;
+    right:10px;
+}
+.cartcard > .card-header > .card-total{
+    position:absolute;
+    top:8px;
+    right:40px;
+    text-align:right;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.cartcard > .card-body{
+    background-color:mintcream
+}
+.cartcard > .card-body > .card-price{
+    font-family: 'PyeongChangPeace-Bold';
+}
+.numin{
+    position:absolute;
+    margin-bottom:0px;
+}
+.numin > .input-group-text{
+    background-color: turquoise;
+}
+.numin > input{
+    background-color: whitesmoke;
+}
+.modal-total{
+    position:absolute;
+    left:20px;
+    text-align:left;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.modal-totalPrice{
+    position:absolute;
+    left:70px;
+    text-align:left;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.modal-header{
+    background-color: peru;
+    font-family: 'TTHakgyoansimTtwimteulR';
+}
+.modal-body{
+    background-color:antiquewhite;
+}
+.modal-footer{
+    background-color: pink !important;
+}
+.card-body > .card{
+    margin-bottom:10px;
+}

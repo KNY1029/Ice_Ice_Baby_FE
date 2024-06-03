@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Ice Baby</title>
     <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/menu.css">
     <style></style>
     <link rel="icon" href="/src/assets/img/favicon.png"/>
     <link rel="apple-touch-icon" href="/src/assets/img/favicon.png"/>
@@ -53,7 +54,7 @@
                 <!--세트메뉴 표시-->
                 <div class="col combocards">
                     <div class="category">Combo Menu</div>
-                    <div class="row row-cols-2 row-cols-xl-3">
+                    <div class="row row-cols-2">
                         <!--baby ice 표시 칸-->
                         <div class="col"><div class="card combocard" style="height:95px">
                             <h5 class="card-header">Baby Ice</h5>
@@ -136,7 +137,7 @@
                 <!--추가 메뉴 표시-->
                 <div class="col alacards">
                     <div class="category">Ala Carte</div>
-                    <div class="row row-cols-2 row-cols-xl-4">
+                    <div class="row row-cols-2">
                         <!--아이스크림 표시 칸-->
                         <div class="col"><div class="card alacard">
                             <div class="card-body">
@@ -251,7 +252,7 @@
                                 <div class="accordion-body">
                                     <div class="alaice">
                                         <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <label class="input-group-text" for="alafalvor1">Vanilla</label>
                                             <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
                                         </div>
                                         <div class="input-group mb-3 alaice2">
@@ -394,7 +395,7 @@
                                 <div class="accordion-body">
                                     <div class="alaice">
                                         <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <label class="input-group-text" for="alafalvor1">Vanilla</label>
                                             <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
                                         </div>
                                         <div class="input-group mb-3 alaice2">
@@ -540,7 +541,7 @@
                                 <div class="accordion-body">
                                     <div class="alaice">
                                         <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <label class="input-group-text" for="alafalvor1">Vanilla</label>
                                             <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
                                         </div>
                                         <div class="input-group mb-3 alaice2">
@@ -677,7 +678,7 @@
                                 <div class="accordion-body">
                                     <div class="alaice">
                                         <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <label class="input-group-text" for="alafalvor1">Vanilla</label>
                                             <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
                                         </div>
                                         <div class="input-group mb-3 alaice2">
@@ -842,7 +843,7 @@
                                 <div class="accordion-body">
                                     <div class="alaice">
                                         <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                                            <label class="input-group-text" for="alafalvor1">Vanilla</label>
                                             <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
                                         </div>
                                         <div class="input-group mb-3 alaice2">
@@ -917,7 +918,7 @@
                     <!--기본 메뉴-->
                     <div class="alaice">
                         <div class="input-group mb-3 alaice1">
-                            <label class="input-group-text" for="alafalvor1">Vanila</label>
+                            <label class="input-group-text" for="alafalvor1">Vanilla</label>
                             <input type="number" class="form-control" min="0" step="1" value="0" id="alafalvor1">
                         </div>
                         <div class="input-group mb-3 alaice2">
@@ -1105,14 +1106,49 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close"></button>
                                 </div>
                                 <div class="card-body">
-                                <p class="card-text">product info
-                                    x=0->숨기기
-                                    Ice Cream Vanilla:x Chocolate:x Strawberry:x
-                                    Topping Oreos:x Sprinkle:x FudgeSyrup:x CaramelSyrup:x WaffleBit:x WaffleCone:x WhippedTopping:x
-                                    Waffle
-                                    Coffee
-                                    Water
-                                </p><!--product info-->
+                                    <div class="card" id="producticecream">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Ice Cream</h5>
+                                            <div class="row row-cols-2 row-cols-md-3">
+                                            <div class="col"><p class="card-text" id="productflavor1">Vanilla: x</p></div>
+                                            <div class="col"><p class="card-text" id="productflavor2">Chocolate: x</p></div>
+                                            <div class="col"><p class="card-text" id="productflavor3">Strawberry: x</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="producttoppings">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Toppings</h5>
+                                            <div class="row">
+                                            <div class="col-6 col-md-4"><p class="card-text" id="producttop1">Oreos: x</p></div>
+                                            <div class="col-6 col-md-4"><p class="card-text" id="producttop2">Sprinkle: x</p></div>
+                                            <div class="col-6 col-md-4"><p class="card-text" id="producttop3">Fudge Syrup: x</p></div>
+                                            <div class="col-6 col-md-4"><p class="card-text" id="producttop4">Caramel Syrup: x</p></div>
+                                            <div class="col-6 col-md-4"><p class="card-text" id="producttop5">Waffle Bit: x</p></div>
+                                            <div class="col-6 col-md-4"><p class="card-text" id="producttop6">Waffle Cone: x</p></div>
+                                            <div class="col-12 col-md-8"><p class="card-text" id="producttop7">Whipped Topping: x</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="productwaffle">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="productwaffle1">Waffle: x</h5>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="productcoffee">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Coffee</h5>
+                                            <div class="row row-cols-2">
+                                            <div class="col"><p class="card-text" id="productcoffee1">Hot Coffee: x</p></div>
+                                            <div class="col"><p class="card-text" id="productcoffee2">Iced Coffee: x</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card" id="productwater">
+                                        <div class="card-body">
+                                            <h5 class="card-title" id="productwater1">Water: x</h5>
+                                        </div>
+                                    </div>
                                 <p class="card-price">¥x</p><!--product price-->
                                 </div>
                                 <div class="input-group numin">
@@ -1145,7 +1181,7 @@
                         </div>
                         <div class="modal-footer">
                         <button class="btn btn-secondary" data-bs-target="#cartModal" data-bs-toggle="modal">Back to Cart</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirm</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirm</button><!--requirement: 클릭시 뒷자리 입력 요구-->
                         </div>
                     </div>
                 </div>
