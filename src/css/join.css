@@ -46,3 +46,6 @@
 :disabled{
     opacity: 0.4;
 }
+#id-msg{
+    align-self:  right !important;
+}
