@@ -1,49 +1,70 @@
-var id=document.getElementById("id");
-var pw=document.getElementById("pw");
-var pw2=document.getElementById("pw2");
-var submit = document.getElementById("submit");
+window.onload=()=>{
+  var id=document.getElementById("id");
+  var pw=document.getElementById("pw");
+  var pw2=document.getElementById("pw2");
+  var submit = document.getElementById("submit");
 
+  id.addEventListener("change",()=>{checkID(id.value);});
+  pw.addEventListener("change",()=>{
+    pw2.value="";
+    if(validPW(pw.value)){
+      pw2.disabled=false;
+    }else{
+      disable(2);
+    }
+  });
+  pw2.addEventListener("change",()=>{
+    checkPW()
+  });
 
-id.addEventListener("onchange",()=>{
-  if(checkID(id.value)){
-    pw.disabled=false;
-    document.getElementById("id-bulb").style.color="green";
+  submit.addEventListener('click',()=>{
+    createAccount(id.value,pw.value);
+  })
+}
+function checkID(i){
+  if(/^[A-Za-z][A-Za-z0-9_]*$/.test(i) && i.length>=4){
+    fetch(url+"/checkID",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({id:i})
+    })
+      .then(res=>res.json())
+      .then(data=>{
+        if(data){
+          pw.disabled=false;
+          document.getElementById("id-msg").textContent=""
+        }else{
+          disable(1);
+          document.getElementById("id-msg").innerHTML=" user already exists."
+        }
+      })
+      .catch(err=>{console.log(err);disable(0);document.getElementById("id-msg").innerHTML=" unknown error please contact front desk."});
   }else{
-    pw.disabled=true;
-    pw2pw.disabled=true;
-    document.getElementById("id-bulb").style.color="red";
-    
+    disable(1);
+    document.getElementById("id-msg").innerHTML=" invalid id.";
   }
-});
-pw.addEventListener("onchange",()=>{
-  if(validPW(pw.value)){
-    pw2.display=false;
-    document.getElementById("pw-bulb").style.color="green";
-    
+}
+
+function validPW(){
+  if(/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,15}$/.test(i) && i.length>=8){
+    document.getElementById("pw-msg").innerHTML=""
+    return true;
   }else{
-    pw2.disabled=true;
-    document.getElementById("pw-bulb").style.color="red";
+    document.getElementById("pw-msg").innerHTML="invalid password.";
+    return false;
   }
-});
-pw2.addEventListener("onchange",()=>{
-  if(checkPW(pw.value)){
-    document.getElementById("pw2-bulb").style.color="green";
-  }else{
-    document.getElementById("pw2-bulb").style.color="red";
-  }
-});
-
-
-
-submit.addEventListener('click',()=>{
-  createAccount(id.value,);
-})
-
-
+}
 function checkPW(){
   if(pw.value==pw2.value&&checkID(id.value)){
     submit.disabled=false;
   }else{
-    submit.disabled=true;
+    disable(3)
+    document.getElementById("pw2-msg").innerHTML=" incorrect password."
   }
+}
+function disable(i,q=true){
+  if(i<1)id.disabled=q;//0
+  if(i<2)pw.disabled=q;//1
+  if(i<3)pw2.disabled=q;//2
+  if(i<4)submit.disabled=q;//3
 }

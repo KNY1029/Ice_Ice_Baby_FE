@@ -4,13 +4,12 @@ const url = "http://localhost:8080";
  * create an account with give id and password.
  * @param {String} id required,unique,trim
  * @param {String} pw required,trim
- * @param {String} username required
  */
-function createAccount(id,pw,username){
+function createAccount(id,pw){
   fetch(url+"/createAccount",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({id:id,pw:pw,username:username})
+    body:JSON.stringify({id:id,pw:pw})
   })
     .then(res=>res.json())
     .then(data=>console.log(data))

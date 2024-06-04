@@ -43,3 +43,6 @@
     padding-left: 10px;
     background-color: rgb(61, 135, 255);
 }
+:disabled{
+    opacity: 0.4;
+}
