@@ -45,7 +45,7 @@ function checkID(i){
   }
 }
 
-function validPW(){
+function validPW(i){
   if(/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,15}$/.test(i) && i.length>=8){
     document.getElementById("pw-msg").innerHTML=""
     return true;
@@ -55,7 +55,7 @@ function validPW(){
   }
 }
 function checkPW(){
-  if(pw.value==pw2.value&&checkID(id.value)){
+  if(pw.value==pw2.value){
     submit.disabled=false;
   }else{
     disable(3)
