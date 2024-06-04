@@ -24,6 +24,12 @@
 .card-body > .card{
     margin-bottom:10px;
 }*/
+@media (max-width:600px){
+    .name{
+        display: none;
+    }
+}
+
 .cartcard{
     display: flex;
     font-family: 'KCC-Hanbit';
@@ -66,13 +72,27 @@
     background-color: whitesmoke;
 }
 
-
+main{
+    justify-content:center;
+}
 .card{
     width: 100%;
 }
 .ordered{
     margin-top:10px;
-    max-width: 450px;
+    max-width: 900px;
+}
+@media (max-width:990px){
+    .ordered{
+        max-width: 450px !important;
+    }
+}
+.ordered > .card-header{
+    height: 50px;
+}
+.cartcard{
+    max-width: 420px;
+    margin-bottom:10px;
 }
 .card-title{
     font-size: 14px;
@@ -80,12 +100,33 @@
 .card-text{
     font-size: 13px;
 }
-.infocol{
-    align-content: center;
+#infoi{
+    position: absolute;
+    top:5px;
+    left:10px;
+}
+#infop{
+    position: absolute;
+    top:5px;
+    left:100px;
+}
+#infot{
+    font-size: 10px;
+    position: absolute;
+    top:30px;
+    left:10px;
+}
+#infopaid{
+    position: absolute;
+    right:100px;
+    top:15px;
+    font-size: 12px !important;
 }
 #infocompleted > .btn{
     font-size: 12px !important;
 }
-#infot{
-    font-size: 10px;
+#infocompleted{
+    position: absolute;
+    right:10px;
+    top:10px;
 }
