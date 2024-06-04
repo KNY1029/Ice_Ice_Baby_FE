@@ -1,0 +1,91 @@
+/*.addcart{
+    position:absolute;
+    bottom:10px;
+    height:50px;
+    left:15px;
+    right:15px;
+}
+.modal-total{
+    position:absolute;
+    left:20px;
+    text-align:left;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.modal-totalPrice{
+    position:absolute;
+    left:70px;
+    text-align:left;
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+.modal-footer{
+    background-color: pink !important;
+}
+.card-body > .card{
+    margin-bottom:10px;
+}*/
+.cartcard{
+    display: flex;
+    font-family: 'KCC-Hanbit';
+}
+.ordered > .card-header{
+    background-color:mistyrose !important;
+}
+.ordered > .card-body{
+    background-color:cornsilk;
+}
+.cartcard > .card-header{
+    font-family: 'TTHakgyoansimTtwimteulR';
+    background-color: aquamarine;
+}
+.cartcard > .card-header > .btn-close{
+    position:absolute;
+    right:10px;
+}
+.cartcard > .card-header > .card-total{
+    position:absolute;
+    top:8px;
+    right:40px;
+    text-align:right;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.cartcard > .card-body{
+    background-color:mintcream
+}
+.cartcard > .card-body > .card-price{
+    font-family: 'PyeongChangPeace-Bold';
+}
+.numin{
+    position:absolute;
+    margin-bottom:0px;
+}
+.numin > .input-group-text{
+    background-color: turquoise;
+}
+.numin > input{
+    background-color: whitesmoke;
+}
+
+
+.card{
+    width: 100%;
+}
+.ordered{
+    margin-top:10px;
+    max-width: 450px;
+}
+.card-title{
+    font-size: 14px;
+}
+.card-text{
+    font-size: 13px;
+}
+.infocol{
+    align-content: center;
+}
+#infocompleted > .btn{
+    font-size: 12px !important;
+}
+#infot{
+    font-size: 10px;
+}
