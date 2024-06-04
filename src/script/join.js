@@ -22,7 +22,8 @@ window.onload=()=>{
   })
 }
 function checkID(i){
-  if(/^[A-Za-z][A-Za-z0-9_]*$/.test(i) && i.length>=4){
+  document.getElementById("id-msg").textContent="pending..."
+  if(/^[A-Za-z][A-Za-z0-9_]{3,9}$/.test(i)){
     fetch(url+"/checkID",{
       method:"POST",
       headers:{"Content-Type":"application/json"},
