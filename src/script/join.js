@@ -35,13 +35,13 @@ function checkID(i){
           document.getElementById("id-msg").textContent=""
         }else{
           disable(1);
-          document.getElementById("id-msg").innerHTML=" user already exists."
+          document.getElementById("id-msg").innerHTML="user already exists."
         }
       })
       .catch(err=>{console.log(err);disable(0);document.getElementById("id-msg").innerHTML=" unknown error please contact front desk."});
   }else{
     disable(1);
-    document.getElementById("id-msg").innerHTML=" invalid id.";
+    document.getElementById("id-msg").innerHTML="invalid id.";
   }
 }
 
@@ -59,7 +59,7 @@ function checkPW(){
     submit.disabled=false;
   }else{
     disable(3)
-    document.getElementById("pw2-msg").innerHTML=" incorrect password."
+    document.getElementById("pw2-msg").innerHTML="incorrect password."
   }
 }
 function disable(i,q=true){
