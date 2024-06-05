@@ -149,6 +149,9 @@
         --bs-btn-padding-y:0px;
         --bs-btn-padding-x:0px;
     }
+    .category{
+        font-size: 30px;
+    }
 }
 
 /*adding menu page*/
