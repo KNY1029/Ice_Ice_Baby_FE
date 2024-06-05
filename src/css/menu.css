@@ -11,7 +11,7 @@
 .combocard{
     position:absolute;
     margin-bottom: 10px;
-    height:100px !important;
+    height:110px !important;
 }
 .alacard{
     position:absolute;
@@ -25,7 +25,7 @@
 }
 .combocard-title{
     position:absolute;
-    top:35px;
+    top:40px;
 }
 .combocard-title > h6{/*product info*/
     font-size: 12px !important;
