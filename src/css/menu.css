@@ -11,40 +11,40 @@
 .combocard{
     position:absolute;
     margin-bottom: 10px;
+    height:100px !important;
 }
 .alacard{
     position:absolute;
     height:50px !important;
     margin-bottom: 10px;
 }
-.combocard > .card-header{
-    font-size: 9px;
+.combocard > .card-header{/*product name*/
+    font-size: 12px;
     font-family: 'TTHakgyoansimTtwimteulR';
     background-color: yellowgreen !important;
 }
 .combocard-title{
-    font-size: 6px;
     position:absolute;
     top:35px;
 }
-.combocard-title > h6{
-    font-size: 10px !important;
+.combocard-title > h6{/*product info*/
+    font-size: 12px !important;
 }
-.alacard-title > h6{
-    font-family: 'TTHakgyoansimTtwimteulR';
-    font-size:8px !important;
+.combocard-text{/*product price*/
+    font-size:10px;
     position:absolute;
-    top:10px;
-}
-.combocard-text{
-    font-size:8px;
-    position:absolute;
-    top:7px;
+    top:8px;
     right:5%;
     font-family: 'PyeongChangPeace-Bold';
 }
-.alacard-text{
-    font-size:8px;
+.alacard-title > h6{/*product name*/
+    font-family: 'TTHakgyoansimTtwimteulR';
+    font-size:12px !important;
+    position:absolute;
+    top:10px;
+}
+.alacard-text{/*product price*/
+    font-size:10px;
     position:absolute;
     top:25px;
     font-family: 'PyeongChangPeace-Bold';
@@ -56,6 +56,11 @@
     position: absolute;
     right:5%;
     bottom:5%;
+    font-size: 20px;
+    height:30px;
+    width: 30px;
+    --bs-btn-padding-y:0px;
+    --bs-btn-padding-x:0px;
 }
 .btnala{
     bottom:15%;
@@ -78,6 +83,72 @@
 }
 .row.row-cols-2{
     margin-right: 3px;
+}
+@media (max-width:480px){/*작은 화면*/
+    .combocard{
+        height:95px !important;
+    }
+    .alacard{
+        height:50px !important;
+    }
+    .combocard > .card-header{/*product name*/
+        font-size: 9px;
+    }
+    .combocard-title > h6{/*product info*/
+        font-size: 9px !important;
+    }
+    .combocard-text{/*product price*/
+        font-size:8px;
+    }
+    .alacard-title > h6{/*product name*/
+        font-size:8px !important;
+    }
+    .alacard-text{/*product price*/
+        font-size:8px;
+    }
+    .combocard > .card-body > .btn-primary,
+    .alacard > .card-body > .btn-primary{
+        font-size: 15px;
+        height:25px;
+        width: 25px;
+        --bs-btn-padding-y:0px;
+        --bs-btn-padding-x:0px;
+    }
+}
+@media (min-width:1200px){/*큰화면*/
+    .combocard{
+        height:130px !important;
+    }
+    .alacard{
+        height:60px !important;
+    }
+    .combocard > .card-header{/*product name*/
+        font-size: 15px;
+    }
+    .combocard-title > h6{/*product info*/
+        font-size: 15px !important;
+    }
+    .combocard-title{
+        top:45px;
+    }
+    .combocard-text{/*product price*/
+        font-size:15px;
+    }
+    .alacard-title > h6{/*product name*/
+        font-size:15px !important;
+    }
+    .alacard-text{/*product price*/
+        top:30px;
+        font-size:15px;
+    }
+    .combocard > .card-body > .btn-primary,
+    .alacard > .card-body > .btn-primary{
+        font-size: 25px;
+        height:40px;
+        width: 40px;
+        --bs-btn-padding-y:0px;
+        --bs-btn-padding-x:0px;
+    }
 }
 
 /*adding menu page*/
