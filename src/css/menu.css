@@ -152,6 +152,9 @@
     .category{
         font-size: 30px;
     }
+    #cartButton > .btn-info{
+        font-size: 30px !important;
+    }
 }
 
 /*adding menu page*/
@@ -176,6 +179,13 @@
     background-color:goldenrod;
     padding:10px;
     border-radius: 5px;
+}
+.combomain{
+    background-color:rgb(220, 189, 14);
+    padding:10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 /*.flavor > .btn-outline-primary,
 .topping > .btn-outline-primary {
