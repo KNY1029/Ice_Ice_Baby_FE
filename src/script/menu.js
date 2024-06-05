@@ -49,4 +49,67 @@ coffeePrice ¥
 
 waterPrice ¥
 water1*2
+*/
 
+/*
+babyicebutton, iceicebabybutton, icewafflebabybutton, iceaffogatobabybutton, bigicebabybutton, icebutton, topbutton, coffeebutton, waterbutton 클릭 시
+
+해당 id가 없으면 0
+값이 0이면 숨기기
+메뉴이름 babyice, iceicebaby, icewafflebaby, iceaffogatobaby, bigicebaby, ice, top, coffee, water
+
+product title
+
+productflavor1
+ Vanilla: ([메뉴이름]flavor1-1) ([메뉴이름]flavor1가 1일 때 +1) ([메뉴이름]flavor2가 1일 때 +1) ([소문자메뉴이름]flavor3가 1일 때 +1)
+productflavor2
+ Chocolate: ([메뉴이름]flavor1-2) ([메뉴이름]flavor1가 2일 때 +1) ([메뉴이름]flavor2가 2일 때 +1) ([소문자메뉴이름]flavor3가 2일 때 +1)
+productflavor3
+ Strawberry: ([메뉴이름]flavor1-3) ([메뉴이름]flavor1가 3일 때 +1) ([메뉴이름]flavor2가 3일 때 +1) ([소문자메뉴이름]flavor3가 3일 때 +1)
+
+producttop1
+ Oreos: ([메뉴이름]topping1-1) ([메뉴이름]topping1가 1일 때 +1) ([메뉴이름]topping2가 1일 때 +1) ([소문자메뉴이름]topping3가 1일 때 +1)
+producttop2
+ Sprinkle: ([메뉴이름]topping1-2) ([메뉴이름]topping1가 2일 때 +1) ([메뉴이름]topping2가 2일 때 +1) ([소문자메뉴이름]topping3가 2일 때 +1)
+producttop3
+ Fudge Syrup: ([메뉴이름]topping1-3) ([메뉴이름]topping1가 3일 때 +1) ([메뉴이름]topping2가 3일 때 +1) ([소문자메뉴이름]topping3가 3일 때 +1)
+producttop4
+ Caramel Syrup: ([메뉴이름]topping1-4) ([메뉴이름]topping1가 4일 때 +1) ([메뉴이름]topping2가 4일 때 +1) ([소문자메뉴이름]topping3가 4일 때 +1)
+producttop5
+ Waffle Bit: ([메뉴이름]topping1-5) ([메뉴이름]topping1가 5일 때 +1) ([메뉴이름]topping2가 5일 때 +1) ([소문자메뉴이름]topping3가 5일 때 +1)
+producttop6
+ Waffle Cone: ([메뉴이름]topping1-6) ([메뉴이름]topping1가 6일 때 +1) ([메뉴이름]topping2가 6일 때 +1) ([소문자메뉴이름]topping3가 6일 때 +1)
+producttop7
+ Whipped Topping: ([메뉴이름]topping1-7) ([메뉴이름]topping1가 7일 때 +1) ([메뉴이름]topping2가 7일 때 +1) ([소문자메뉴이름]topping3가 7일 때 +1)
+
+productwaffle1
+ Waffle: (ice waffle baby 선택 시 +1)
+
+productcoffee1
+ Hot Coffee: (coffee1-1) (ice affogato baby 선택 시 +1)
+productcoffee2
+ Iced Coffee: (coffee1-2)
+
+productwater1
+ Water: water1
+
+card-price
+ ¥([메뉴이름]Price*quantity)
+
+card-header
+ [메뉴이름]Label
+
+로 cartcards에 cartcard 추가
+*/
+
+/*
+modal-totalPrice
+ ¥(card-price 합)
+
+productclose 클릭 시 해당 cartcard 삭제 (주문 취소)
+*/
+
+/*
+modal-finalPrice
+ modal-totalPrice
+*/
