@@ -1027,26 +1027,6 @@
                 </div>
             </div>
 
-            <!--water 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="waterAdd" aria-labelledby="waterLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="waterLabel">Water</h5>
-                  <h6 class="offcanvas-price" id="waterPrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(water*2)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <div class="alawater">
-                        <div class="input-group mb-3 alawater1">
-                            <label class="input-group-text" for="water1">Quantity</label>
-                            <input type="number" class="form-control" min="1" step="1" value="1" id="water1">
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="button" id="waterbutton">Add to Cart</button>
-                </div>
-            </div>
-
             <!--coffee 추가 칸-->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="coffeeAdd" aria-labelledby="coffeeLabel">
                 <div class="offcanvas-header">
@@ -1068,6 +1048,26 @@
                     </div>
                     <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
                     <button class="btn btn-info addcart" type="button" id="coffeebutton">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!--water 추가 칸-->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="waterAdd" aria-labelledby="waterLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="waterLabel">Water</h5>
+                  <h6 class="offcanvas-price" id="waterPrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(water*2)-->
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!--기본 메뉴-->
+                    <div class="alawater">
+                        <div class="input-group mb-3 alawater1">
+                            <label class="input-group-text" for="water1">Quantity</label>
+                            <input type="number" class="form-control" min="1" step="1" value="1" id="water1">
+                        </div>
+                    </div>
+                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
+                    <button class="btn btn-info addcart" type="button" id="waterbutton">Add to Cart</button>
                 </div>
             </div>
         </main>
