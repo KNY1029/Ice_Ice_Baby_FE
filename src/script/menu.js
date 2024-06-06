@@ -65,48 +65,48 @@ function showAdd(btn) {
   switch (btn) {
     case "addBI":
       document.getElementById('Label').textContent = "Baby Ice";
-      defaultPrice = 10; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 10; document.getElementById('Price').textContent = defaultPrice;
       ["combomain", "flavor", "topping", "icecream-1", "topping-1", "combala", "accordionice"].forEach(e => show(e));
       break;
     case "addIIB":
       document.getElementById('Label').textContent = "Ice Ice Baby";
-      defaultPrice = 20; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 20; document.getElementById('Price').textContent = defaultPrice;
       ["combomain", "flavor", "topping", "icecream-1", "icecream-2", "topping-1", "topping-2", "combala", "accordionice"].forEach(e => show(e));
       break;
     case "addIWB":
       document.getElementById('Label').textContent = "Ice Waffle Baby";
-      defaultPrice = 32; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 32; document.getElementById('Price').textContent = defaultPrice;
       ["combomain", "flavor", "topping", "icecream-1", "icecream-2", "topping-1", "topping-2", "waffle", "combala", "accordionice"].forEach(e => show(e));
       break;
     case "addIAB":
       document.getElementById('Label').textContent = "Ice Affogato Baby";
-      defaultPrice = 18; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 18; document.getElementById('Price').textContent = defaultPrice;
       ["combomain", "flavor", "topping", "icecream-1", "topping-1", "topping-2", "coffee", "combala", "accordionice"].forEach(e => show(e));
       break;
     case "addBIB":
       document.getElementById('Label').textContent = "Big Ice Baby";
-      defaultPrice = 30; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 30; document.getElementById('Price').textContent = defaultPrice;
       ["combomain", "flavor", "topping", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "combala", "accordionice"].forEach(e => show(e));
       break;
     case "addEI":
       document.getElementById('Label').textContent = "Extra Ice Cream";
-      defaultPrice = 9; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 9; document.getElementById('Price').textContent = defaultPrice;
       ["alaice", "combala"].forEach(e => show(e));
       ["accordionice"].forEach(e => hide(e));
       break;
     case "addET":
       document.getElementById('Label').textContent = "Extra Topping";
-      defaultPrice = 3; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 3; document.getElementById('Price').textContent = defaultPrice;
       ["alatop"].forEach(e => show(e));
       break;
     case "addC":
       document.getElementById('Label').textContent = "Coffee";
-      defaultPrice = 8; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 8; document.getElementById('Price').textContent = defaultPrice;
       ["alacoffee"].forEach(e => show(e));
       break;
     case "addW":
       document.getElementById('Label').textContent = "Water";
-      defaultPrice = 2; document.getElementById('Price').textContent = "¥"+defaultPrice;
+      defaultPrice = 2; document.getElementById('Price').textContent = defaultPrice;
       ["alawater"].forEach(e => show(e));
       break;
     default:
