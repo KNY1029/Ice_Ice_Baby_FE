@@ -65,7 +65,7 @@ function showAdd(btn) {
   switch (btn) {
     case "addBI":
       document.getElementById('Label').textContent = "Baby Ice";
-      defaultPrice = 10; document.getElementById('Label').textContent = defaultPrice;
+      defaultPrice = 10; document.getElementById('Price').textContent = "¥"+defaultPrice;
       ["combomain", "icecream-1", "topping-1", "combala"].forEach(e => show(e));
       break;
     /*
