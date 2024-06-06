@@ -59,22 +59,17 @@ window.onload = () => {
   [/*value가 바뀔때  setPrice function 실행*/].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
 }
 function showAdd(btn) {
-  ["combomain", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "alaice", "alatop", "alacoffee", "alawater", "combala"].forEach(e => hide(e));
+  ["combomain", "flavor", "topping", "waffle", "coffee", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "alaice", "alatop", "alacoffee", "alawater", "combala"].forEach(e => hide(e));
   [/*value를 0으로 초기화할 obj*/].forEach(e => setVal(e, 0));
   [/*value를 "Choose로 초기화할 obj" */].forEach(e => setVal(e, "Choose"));
   switch (btn) {
     case "addBI":
       document.getElementById('Label').textContent = "Baby Ice";
-      defaultPrice = 10; document.getElementById('Label').textContent = defaultPrice;
-      ["combomain", "icecream-1", "topping-1", "combala"].forEach(e => show(e));
+      document.getElementById('icecream-num').textContent = 1;
+      document.getElementById('topping-num').textContent = 1;
+      defaultPrice = 10; document.getElementById('Price').textContent = defaultPrice;
+      ["combomain", "flavor","topping","icecream-1", "topping-1", "combala"].forEach(e => show(e));
       break;
-    /*
-    case "{id}":
-      document.getElemntById('Label').textContent = "{메뉴이름}";
-      defaultPrice = 기본 가격; document.getElementById('Label').textContent = defaultPrice;
-      [{보여줄 목록}].forEach(e => show(e));
-      break;
-    */
     default:
       break;
   }
