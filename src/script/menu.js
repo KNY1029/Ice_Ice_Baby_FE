@@ -65,10 +65,14 @@ function showAdd(btn) {
   switch (btn) {
     case "addBI":
       document.getElementById('Label').textContent = "Baby Ice";
-      document.getElementById('icecream-num').textContent = 1;
-      document.getElementById('topping-num').textContent = 1;
-      defaultPrice = 10; document.getElementById('Price').textContent = defaultPrice;
-      ["combomain", "flavor","topping","icecream-1", "topping-1", "combala"].forEach(e => show(e));
+      defaultPrice = 10; document.getElementById('Label').textContent = defaultPrice;
+      ["combomain", "icecream-1", "topping-1", "combala"].forEach(e => show(e));
+      break;
+    /*
+    case "{id}":
+      document.getElemntById('Label').textContent = "{메뉴이름}";
+      defaultPrice = 기본 가격; document.getElementById('Label').textContent = defaultPrice;
+      [{보여줄 목록}].forEach(e => show(e));
       break;
     default:
       break;
