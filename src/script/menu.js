@@ -60,8 +60,14 @@ window.onload = () => {
 }
 function showAdd(btn) {
   ["combomain", "flavor", "topping", "waffle", "coffee", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "alaice", "alatop", "alacoffee", "alawater", "combala"].forEach(e => hide(e));
+<<<<<<< HEAD
   [/*value를 0으로 초기화할 obj*/].forEach(e => setVal(e, 0));
   [/*value를 "Choose로 초기화할 obj" */"flavor1","flavor2","flavor3","topping1","topping2","topping3"].forEach(e => setVal(e, "Choose"));
+=======
+  [/*초기화할 obj*/].forEach(e => {
+    if (e.options == undefined) { e.value = 0; } else { e.options.selectedIndex = 0; }
+  });
+>>>>>>> c9d9b6c888aa332f69fef8bbebc9fc8622609c47
   switch (btn) {
     case "addBI":
       document.getElementById('Label').textContent = "Baby Ice";
@@ -116,7 +122,6 @@ function showAdd(btn) {
 function setPrice() { price = ""; document.getElementById("Price").textContent = price; }
 function show(id) { document.getElementById(id).style.display = ""; }
 function hide(id) { document.getElementById(id).style.display = "none"; }
-function setVal(id, val) { document.getElementById(id).value = val; }
 /*
 
 babyicebutton, iceicebabybutton, icewafflebabybutton, iceaffogatobabybutton, bigicebabybutton, icebutton, topbutton, coffeebutton, waterbutton 클릭 시
