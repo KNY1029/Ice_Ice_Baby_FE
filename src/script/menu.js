@@ -68,12 +68,6 @@ function showAdd(btn) {
       defaultPrice = 10; document.getElementById('Label').textContent = defaultPrice;
       ["combomain", "icecream-1", "topping-1", "combala"].forEach(e => show(e));
       break;
-    /*
-    case "{id}":
-      document.getElemntById('Label').textContent = "{메뉴이름}";
-      defaultPrice = 기본 가격; document.getElementById('Label').textContent = defaultPrice;
-      [{보여줄 목록}].forEach(e => show(e));
-      break;
     default:
       break;
   }
