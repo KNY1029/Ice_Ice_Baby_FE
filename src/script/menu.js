@@ -60,14 +60,8 @@ window.onload = () => {
 }
 function showAdd(btn) {
   ["combomain", "flavor", "topping", "waffle", "coffee", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "alaice", "alatop", "alacoffee", "alawater", "combala"].forEach(e => hide(e));
-<<<<<<< HEAD
-  [/*value를 0으로 초기화할 obj*/].forEach(e => setVal(e, 0));
-  [/*value를 "Choose로 초기화할 obj" */"flavor1","flavor2","flavor3","topping1","topping2","topping3"].forEach(e => setVal(e, "Choose"));
-=======
-  [/*초기화할 obj*/].forEach(e => {
-    if (e.options == undefined) { e.value = 0; } else { e.options.selectedIndex = 0; }
-  });
->>>>>>> c9d9b6c888aa332f69fef8bbebc9fc8622609c47
+  ["iceflavor1-1","iceflavor1-2","iceflavor1-3","toptopping1-1","toptopping1-2","toptopping1-3","toptopping1-4","toptopping1-5","toptopping1-6","toptopping1-7","flavor1-1","flavor1-2","flavo1-3","topping1-1","topping1-2","topping1-3","topping1-4","topping1-5","topping1-6","topping1-7","coffee1-1","coffee1-2","water1"].forEach(e => document.getElementById(e).e.value = 0);
+  ["flavor1","flavor2","flavor3","topping1","topping2","topping3"].forEach(e => document.getElementById(e).options.selectedIndex = 0);
   switch (btn) {
     case "addBI":
       document.getElementById('Label').textContent = "Baby Ice";
