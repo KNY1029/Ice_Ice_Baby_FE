@@ -59,9 +59,8 @@ window.onload = () => {
   [/*value가 바뀔때  setPrice function 실행*/].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
 }
 function showAdd(btn) {
+  document.querySelector('form').reset();
   ["combomain", "flavor", "topping", "waffle", "coffee", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "alaice", "alatop", "alacoffee", "alawater", "combala"].forEach(e => hide(e));
-  ["iceflavor1-1","iceflavor1-2","iceflavor1-3","toptopping1-1","toptopping1-2","toptopping1-3","toptopping1-4","toptopping1-5","toptopping1-6","toptopping1-7","flavor1-1","flavor1-2","flavo1-3","topping1-1","topping1-2","topping1-3","topping1-4","topping1-5","topping1-6","topping1-7","coffee1-1","coffee1-2","water1"].forEach(e => document.getElementById(e).value = 0);
-  ["flavor1","flavor2","flavor3","topping1","topping2","topping3"].forEach(e => document.getElementById(e).options.selectedIndex = 0);
   switch (btn) {
     case "addBI":
       document.getElementById('Label').textContent = "Baby Ice";
