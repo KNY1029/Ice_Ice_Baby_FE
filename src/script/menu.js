@@ -55,14 +55,14 @@ water1*2
 
 var defaultPrice = 0, price = 0;
 window.onload = () => {
-  // ["addBI", "addIIB", "addIWB", "addIAB", "addBIB", "addEI", "addET", "addC", "addW"].forEach(e => { document.getElementById(e).addEventListener('click', () => showAdd(e)); });
+  ["addBI", "addIIB", "addIWB", "addIAB", "addBIB", "addEI", "addET", "addC", "addW"].forEach(e => { document.getElementById(e).addEventListener('click', () => showAdd(e)); });
   [/*value가 바뀔때  setPrice function 실행*/].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
 }
 function showAdd(btn) {
   ["combomain", "flavor", "topping", "waffle", "coffee", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "alaice", "alatop", "alacoffee", "alawater", "combala"].forEach(e => hide(e));
   [/*초기화할 obj*/].forEach(e => {
-    if(e.options==undefined){e.value=0;}else{e.options.selectedIndex=0;}
-});
+    if (e.options == undefined) { e.value = 0; } else { e.options.selectedIndex = 0; }
+  });
   switch (btn) {
     case "addBI":
       document.getElementById('Label').textContent = "Baby Ice";
