@@ -1,9 +1,3 @@
-function getVal(id,n){
-    var total = 0;
-    for (let i = 1; i <= n; i++) {total+=document.getElementById(id+"-"+i).value;}
-    return total
-}
-
 /*
 babyIcePrice ¥
 10
@@ -11,11 +5,6 @@ babyIcePrice ¥
 +(babyicetopping1-1 + babyicetopping1-2 + babyicetopping1-3 + babyicetopping1-4
     + babyicetopping1-5 + babyicetopping1-6 + babyicetopping1-7)*3
 */
-function setBIprice(){document.getElementById('babyIcePrice').textContent = 10+9*getVal('babyiceflavor1',3)+3*getVal('babyicetopping1',7);}
-function setIIBprice(){document.getElementById('bigIceBabyPrice').textContent = 20+9*getVal('bigicebabyflavor1',3)+3*getVal('bigicebabytopping1',7);}
-function setIWBprice(){document.getElementById('iceWaffleBabyPrice').textContent = 30+9*getVal('icewafflebabyflavor1',3)+3*getVal('icewafflebabytopping1',7);}
-function setIABprice(){document.getElementById('iceAffogatoBabyPrice').textContent = 32+9*getVal('iceaffogatobabyflavor1',3)+3*getVal('iceaffogatobabytopping1',7);}
-
 /*
 
 iceIceBabyPrice ¥
@@ -64,10 +53,36 @@ waterPrice ¥
 water1*2
 */
 
-
-[babyicebutton, iceicebabybutton, icewafflebabybutton, iceaffogatobabybutton, bigicebabybutton, icebutton, topbutton, coffeebutton, waterbutton].forEach(e => {
-    document.getElementById(e).addEventListener('click',eval(e+"()"));
-});
+var defaultPrice = 0, price = 0;
+window.onload = () => {
+  ["addBI", "addIIB", "addIWB", "addIAB", "addBIB", "addEI", "addET", "addC", "addW"].forEach(e => { document.getElementById(e).addEventListener('click', () => showAdd(e)); });
+  [/*value가 바뀔때  setPrice function 실행*/].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
+}
+function showAdd(btn) {
+  ["combomain", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "alaice", "alatop", "alacoffee", "alawater", "combala"].forEach(e => hide(e));
+  [/*value를 0으로 초기화할 obj*/].forEach(e => setVal(e, 0));
+  [/*value를 "Choose로 초기화할 obj" */].forEach(e => setVal(e, "Choose"));
+  switch (btn) {
+    case "addBI":
+      document.getElementById('Label').textContent = "Baby Ice";
+      defaultPrice = 10; document.getElementById('Label').textContent = defaultPrice;
+      ["combomain", "icecream-1", "topping-1", "combala"].forEach(e => show(e));
+      break;
+    /*
+    case "{id}":
+      document.getElemntById('Label').textContent = "{메뉴이름}";
+      defaultPrice = 기본 가격; document.getElementById('Label').textContent = defaultPrice;
+      [{보여줄 목록}].forEach(e => show(e));
+      break;
+    */
+    default:
+      break;
+  }
+}
+function setPrice() { price = ""; document.getElementById("Price").textContent = price; }
+function show(id) { document.getElementById(id).style.display = ""; }
+function hide(id) { document.getElementById(id).style.display = "none"; }
+function setVal(id, val) { document.getElementById(id).value = val; }
 /*
 
 babyicebutton, iceicebabybutton, icewafflebabybutton, iceaffogatobabybutton, bigicebabybutton, icebutton, topbutton, coffeebutton, waterbutton 클릭 시
@@ -77,8 +92,8 @@ babyicebutton, iceicebabybutton, icewafflebabybutton, iceaffogatobabybutton, big
 메뉴이름 babyice, iceicebaby, icewafflebaby, iceaffogatobaby, bigicebaby, ice, top, coffee, water
 
 */
-var list = new 
-document.getElementById('cartcards').appendChild()
+// var list = new 
+// document.getElementById('cartcards').appendChild()
 /*product title
 
 productflavor1
