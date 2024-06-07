@@ -56,7 +56,7 @@ water1*2
 var defaultPrice = 0, price = 0;
 window.onload = () => {
   ["addBI", "addIIB", "addIWB", "addIAB", "addBIB", "addEI", "addET", "addC", "addW"].forEach(e => { document.getElementById(e).addEventListener('click', () => showAdd(e)); });
-  [/*value가 바뀔때  setPrice function 실행*/].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
+  [/*value가 바뀔때  setPrice function 실행*/"iceflavor1-1","iceflavor1-2","iceflavor1-3","toptopping1-1","toptopping1-2","toptopping1-3","toptopping1-3","toptopping1-5","toptopping1-6","toptopping1-7","coffee1-1","coffee1-2","water1","flavor1-1","flavor1-2","flavor1-3","topping1-1","topping1-2","topping1-3","topping1-4","topping1-5","topping1-6","topping1-7"].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
 }
 function showAdd(btn) {
   document.querySelector('form').reset();
