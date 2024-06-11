@@ -65,3 +65,20 @@ function setPrice() { price = defaultPrice
   ; document.getElementById("Price").textContent = price; }
 function show(id) { document.getElementById(id).style.display = ""; }
 function hide(id) { document.getElementById(id).style.display = "none"; }
+
+function Order(type,iceNum,topNum,iceAdd,topAdd,price) {
+  this.type = type;
+  this.iceNum = iceNum;
+  this.topNum = topNum;
+  this.iceAdd = iceAdd;
+  this.topAdd = topAdd;
+  this.price = price;
+}
+
+function addCart(order){
+  const div = document.createElement('div');
+  div.innerHTML = `
+
+  `;
+  document.getElementById('').append(div);
+}
