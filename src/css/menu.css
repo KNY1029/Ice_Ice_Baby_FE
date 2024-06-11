@@ -11,7 +11,7 @@
 .combocard{
     position:absolute;
     margin-bottom: 10px;
-    height:100px !important;
+    height:110px !important;
 }
 .alacard{
     position:absolute;
@@ -25,7 +25,7 @@
 }
 .combocard-title{
     position:absolute;
-    top:35px;
+    top:40px;
 }
 .combocard-title > h6{/*product info*/
     font-size: 12px !important;
@@ -152,6 +152,9 @@
     .category{
         font-size: 30px;
     }
+    #cartButton > .btn-info{
+        font-size: 30px !important;
+    }
 }
 
 /*adding menu page*/
@@ -176,6 +179,13 @@
     background-color:goldenrod;
     padding:10px;
     border-radius: 5px;
+}
+.combomain{
+    background-color:rgb(220, 189, 14);
+    padding:10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 /*.flavor > .btn-outline-primary,
 .topping > .btn-outline-primary {
@@ -266,4 +276,10 @@
 }
 .card-body > .card{
     margin-bottom:10px;
+}
+
+.form-control.is-valid, .was-validated .form-control:valid{
+    border-color: #dee2e6 !important;
+    padding: .375rem .75rem !important;
+    background-image: none !important;
 }
