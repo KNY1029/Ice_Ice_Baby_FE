@@ -89,34 +89,39 @@ function showAdd(btn) {
       break;
     case "addEI":
       document.getElementById('Label').textContent = "Extra Ice Cream";
-      defaultPrice = 9; document.getElementById('Price').textContent = defaultPrice;
+      defaultPrice = 0; document.getElementById('Price').textContent = 0;
       ["alaice", "combala"].forEach(e => show(e));
       ["accordionice"].forEach(e => hide(e));
       break;
     case "addET":
       document.getElementById('Label').textContent = "Extra Topping";
-      defaultPrice = 3; document.getElementById('Price').textContent = defaultPrice;
+      defaultPrice = 0; document.getElementById('Price').textContent = 0;
       ["alatop"].forEach(e => show(e));
       break;
     case "addC":
       document.getElementById('Label').textContent = "Coffee";
-      defaultPrice = 8; document.getElementById('Price').textContent = defaultPrice;
+      defaultPrice = 0; document.getElementById('Price').textContent = 0;
       ["alacoffee"].forEach(e => show(e));
       break;
     case "addW":
       document.getElementById('Label').textContent = "Water";
-      defaultPrice = 2; document.getElementById('Price').textContent = defaultPrice;
+      defaultPrice = 0; document.getElementById('Price').textContent = 0;
       ["alawater"].forEach(e => show(e));
       break;
     default:
       break;
   }
 }
-function setPrice() { price = ""; document.getElementById("Price").textContent = price; }
+function setPrice() { price = defaultPrice
+  + (Number(document.getElementById("flavor1-1").value)+Number(document.getElementById("flavor1-2").value)+Number(document.getElementById("flavor1-3").value) + Number(document.getElementById("iceflavor1-1").value)+Number(document.getElementById("iceflavor1-2").value)+Number(document.getElementById("iceflavor1-3").value))*9
+  + (Number(document.getElementById("topping1-1").value)+Number(document.getElementById("topping1-2").value)+Number(document.getElementById("topping1-3").value)+Number(document.getElementById("topping1-4").value)+Number(document.getElementById("topping1-5").value)+Number(document.getElementById("topping1-6").value)+Number(document.getElementById("topping1-7").value) + Number(document.getElementById("toptopping1-1").value)+Number(document.getElementById("toptopping1-2").value)+Number(document.getElementById("toptopping1-3").value)+Number(document.getElementById("toptopping1-4").value)+Number(document.getElementById("toptopping1-5").value)+Number(document.getElementById("toptopping1-6").value)+Number(document.getElementById("toptopping1-7").value))*3
+  + (Number(document.getElementById("coffee1-1").value)+Number(document.getElementById("coffee1-2").value))*8
+  + (Number(document.getElementById("water1").value))*2
+  ; document.getElementById("Price").textContent = price; }
 function show(id) { document.getElementById(id).style.display = ""; }
 function hide(id) { document.getElementById(id).style.display = "none"; }
 /*
-
+(document.getElementById("flavor1-2")+document.getElementById("flavor1-3"))*9+(document.getElementById("topping1-1")+document.getElementById("topping1-2")+document.getElementById("topping1-3")+document.getElementById("topping1-4")+document.getElementById("topping1-5")+document.getElementById("topping1-6")+document.getElementById("topping1-7"))*3
 babyicebutton, iceicebabybutton, icewafflebabybutton, iceaffogatobabybutton, bigicebabybutton, icebutton, topbutton, coffeebutton, waterbutton 클릭 시
 
 해당 id가 없으면 0
