@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="/src/css/menu.css">
     <style></style>
+    <script type="text/javascript" src="/src/script/menu.js"></script>
     <link rel="icon" href="/src/assets/img/favicon.png"/>
     <link rel="apple-touch-icon" href="/src/assets/img/favicon.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -65,7 +66,7 @@
                                 </div>
                                 <p class="card-text combocard-text">¥10</p>
                                 <!--메뉴 추가 칸(babyIceAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#babyIceAdd" role="button" aria-controls="offcanvasBabyIce">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" aria-controls="offcanvasBabyIce" id="addBI">
                                     +
                                 </a>
                                 </div>
@@ -80,7 +81,7 @@
                                 </div>
                                 <p class="card-text combocard-text">¥20</p>
                                 <!--메뉴 추가 칸(iceIceBabyAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceIceBabyAdd" role="button" aria-controls="offcanvasIceIceBaby">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" aria-controls="offcanvasIceIceBaby" id="addIIB">
                                     +
                                 </a>
                             </div>
@@ -96,7 +97,7 @@
                                 </div>
                                 <p class="card-text combocard-text">¥32</p>
                                 <!--메뉴 추가 칸(iceWaffleBabyAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceWaffleBabyAdd" role="button" aria-controls="offcanvasIceWaffleBaby">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" id="addIWB" aria-controls="offcanvasIceWaffleBaby">
                                     +
                                 </a>
                             </div>
@@ -112,7 +113,7 @@
                                 </div>
                                 <p class="card-text combocard-text">¥18</p>
                                 <!--메뉴 추가 칸(iceAffogatoBabyAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceAffogatoBabyAdd" role="button" aria-controls="offcanvasIceAffogatoBaby">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" id="addIAB" aria-controls="offcanvasIceAffogatoBaby">
                                     +
                                 </a>
                             </div>
@@ -127,7 +128,7 @@
                                 </div>
                                 <p class="card-text combocard-text">¥30</p>
                                 <!--메뉴 추가 칸(bigIceBabyAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#bigIceBabyAdd" role="button" aria-controls="offcanvasbigIceBaby">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" aria-controls="offcanvasIceIceBaby" id="addBIB">
                                     +
                                 </a>
                             </div>
@@ -146,7 +147,7 @@
                                 </div>
                                 <p class="card-text alacard-text">¥9</p>
                                 <!--메뉴 추가 칸(iceAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#iceAdd" role="button" aria-controls="offcanvasIce">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" aria-controls="offcanvasIce" id="addEI">
                                     +
                                 </a>
                             </div>
@@ -159,7 +160,7 @@
                                 </div>
                                 <p class="card-text alacard-text">¥3</p>
                                 <!--메뉴 추가 칸(topAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#topAdd" role="button" aria-controls="offcanvasTop">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" aria-controls="offcanvasTop" id="addET">
                                     +
                                 </a>
                             </div>
@@ -172,7 +173,7 @@
                                 </div>
                                 <p class="card-text alacard-text">¥8</p>
                                 <!--메뉴 추가 칸(coffeeAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#coffeeAdd" role="button" aria-controls="offcanvasCoffee">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" aria-controls="offcanvasCoffee" id="addC">
                                     +
                                 </a>
                             </div>
@@ -185,7 +186,7 @@
                                 </div>
                                 <p class="card-text alacard-text">¥2</p>
                                 <!--메뉴 추가 칸(waterAdd)으로-->
-                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#waterAdd" role="button" aria-controls="offcanvasWater">
+                                <a class="btn btn-primary btn-sm" data-bs-toggle="offcanvas" href="#Add" role="button" aria-controls="offcanvasWater" id="addW">
                                     +
                                 </a>
                             </div>
@@ -195,879 +196,239 @@
             </div>
 
             <!--메뉴 추가 표시-->
-            <!--baby ice 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="babyIceAdd" aria-labelledby="babyIceLabel">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="Add" aria-labelledby="Label">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="babyiceLabel">Baby Ice</h5>
-                  <h6 class="offcanvas-price" id="babyicePrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(10) + 추가 가격(extra ice cream*9 + extra topping*3)-->
+                  <h5 class="offcanvas-title" id="Label">Name</h5>
+                  <h6 class="offcanvas-price">¥<span id="Price"></span></h6>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <!--기본 메뉴-->
-                    <form class="was-validated"><div class="combomain">
-                        <div class="flavor">
-                            <h6>1 Ice cream</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="babyiceflavor1">Flavor</label>
-                                <select class="form-select" id="babyiceflavor1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="topping">
-                            <h6>1 Topping</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="babyicetopping1">Type</label>
-                                <select class="form-select" id="babyicetopping1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="submit" id="babyicebutton">Add to Cart</button>
-                    </form>
-
-                    <!--추가 메뉴-->
-                    <div class="comboala">
-                        <h6>Ala Carte</h6>
-                        <div class="accordion" id="accordionice">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseice" aria-expanded="false" aria-controls="collapseice">
-                                        Extra Ice Cream
-                                    </button>
-                                </h2>
-                                <div id="collapseice" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alaice">
-                                        <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="babyiceflavor1-1">Vanilla</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyiceflavor1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alaice2">
-                                            <label class="input-group-text" for="babyiceflavor1-2">Chocolate</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyiceflavor1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alaice3">
-                                            <label class="input-group-text" for="babyiceflavor1-3">Strawberry</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyiceflavor1-2">
-                                        </div>
-                                    </div>
+                    <form class="was-validated">
+                        <div class="combomain" id="combomain"><!--baby ice, ice ice baby, ice waffle baby, ice affogato baby, big ice baby-->
+                            <div class="flavor" id="flavor">
+                                <h6><span id="icecream-num"></span> Ice cream</h6>
+                                <div class="input-group mb-3" id="icecream-1"><!--baby ice, ice ice baby, ice waffle baby, ice affogato baby, big ice baby-->
+                                    <label class="input-group-text" for="flavor1">Flavor1</label>
+                                    <select class="form-select" id="flavor1" required>
+                                        <option selected disabled value="">Choose..</option>
+                                        <option value="1">Vanilla</option>
+                                        <option value="2">Chocolate</option>
+                                        <option value="3">Strawberry</option>
+                                    </select>
                                 </div>
+                                <div class="input-group mb-3" id="icecream-2"><!--ice ice baby, ice waffle baby, big ice baby-->
+                                    <label class="input-group-text" for="flavor2">Flavor2</label>
+                                    <select class="form-select" id="flavor2" required>
+                                        <option selected disabled value="">Choose..</option>
+                                        <option value="1">Vanilla</option>
+                                        <option value="2">Chocolate</option>
+                                        <option value="3">Strawberry</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3" id="icecream-3"><!--big ice baby-->
+                                    <label class="input-group-text" for="flavor3">Flavor3</label>
+                                    <select class="form-select" id="flavor3" required>
+                                        <option selected disabled value="">Choose..</option>
+                                        <option value="1">Vanilla</option>
+                                        <option value="2">Chocolate</option>
+                                        <option value="3">Strawberry</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="accordion" id="accordiontop">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetop" aria-expanded="false" aria-controls="collapsetop">
-                                        Extra Topping
-                                    </button>
-                                </h2>
-                                <div id="collapsetop" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alatop">
-                                        <div class="input-group mb-3 alatopping1">
-                                            <label class="input-group-text" for="babyicetopping1-1">Oreos</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyicetopping1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping2">
-                                            <label class="input-group-text" for="babyicetopping1-2">Sprinkle</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyicetopping1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping3">
-                                            <label class="input-group-text" for="babyicetopping1-3">Fudge Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyicetopping1-3">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping4">
-                                            <label class="input-group-text" for="babyicetopping1-4">Caramel Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyicetopping1-4">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping5">
-                                            <label class="input-group-text" for="babyicetopping1-5">Waffle Bit</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyicetopping1-5">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping6">
-                                            <label class="input-group-text" for="babyicetopping1-6">Waffle Cone</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyicetopping1-6">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping7">
-                                            <label class="input-group-text" for="babyicetopping1-7">Whipped Topping</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="babyicetopping1-7">
-                                        </div>
-                                    </div>
+                            <div class="topping" id="topping">
+                                <h6><span id="topping-num"></span> Toppings</h6>
+                                <div class="input-group mb-3" id="topping-1"><!--baby ice, ice ice baby, ice waffle baby, ice affogato baby, big ice baby-->
+                                    <label class="input-group-text" for="topping1">Type1</label>
+                                    <select class="form-select" id="topping1" required>
+                                        <option selected disabled value="">Choose..</option>
+                                        <option value="1">Oreos</option>
+                                        <option value="2">Sprinkle</option>
+                                        <option value="3">Fudge Syrup</option>
+                                        <option value="4">Caramel Syrup</option>
+                                        <option value="5">Waffle Bit</option>
+                                        <option value="6">Waffle Cone</option>
+                                        <option value="7">Whipped Topping</option>
+                                    </select>
                                 </div>
+                                <div class="input-group mb-3" id="topping-2"><!--ice ice baby, ice waffle baby, ice affogato baby, big ice baby-->
+                                    <label class="input-group-text" for="topping2">Type2</label>
+                                    <select class="form-select" id="topping2" required>
+                                        <option selected disabled value="">Choose..</option>
+                                        <option value="1">Oreos</option>
+                                        <option value="2">Sprinkle</option>
+                                        <option value="3">Fudge Syrup</option>
+                                        <option value="4">Caramel Syrup</option>
+                                        <option value="5">Waffle Bit</option>
+                                        <option value="6">Waffle Cone</option>
+                                        <option value="7">Whipped Topping</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3" id="topping-3"><!--big ice baby-->
+                                    <label class="input-group-text" for="topping3">Type3</label>
+                                    <select class="form-select" id="topping3" required>
+                                        <option selected disabled value="">Choose..</option>
+                                        <option value="1">Oreos</option>
+                                        <option value="2">Sprinkle</option>
+                                        <option value="3">Fudge Syrup</option>
+                                        <option value="4">Caramel Syrup</option>
+                                        <option value="5">Waffle Bit</option>
+                                        <option value="6">Waffle Cone</option>
+                                        <option value="7">Whipped Topping</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--ice ice baby 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="iceIceBabyAdd" aria-labelledby="iceIceBabyLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="iceicebabyLabel">Ice Ice Baby</h5>
-                  <h6 class="offcanvas-price"><span>¥</span><span id="iceicebabyPrice"></span></h6><!--requirement: 가격 표시; ¥기본 가격(20) + 추가 가격(extra ice cream*9 + extra topping*3)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <form class="was-validated"><div class="combomain">
-                        <div class="flavor">
-                            <h6>2 Ice cream</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="iceicebabyflavor1">Flavor1</label>
-                                <select class="form-select" id="iceicebabyflavor1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
+                            <div class="waffle" id="waffle"><!--ice waffle baby-->
+                                <h6>Waffle</h6>
                             </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="iceicebabyflavor2">Flavor2</label>
-                                <select class="form-select" id="iceicebabyflavor2" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="topping">
-                            <h6>2 Toppings</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="iceicebabytopping1">Type1</label>
-                                <select class="form-select" id="iceicebabytopping1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="iceicebabytopping2">Type2</label>
-                                <select class="form-select" id="iceicebabytopping2" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="submit" id="iceicebabybutton">Add to Cart</button>
-                    </form>
-
-                    <!--추가 메뉴-->
-                    <div class="comboala">
-                        <h6>Ala Carte</h6>
-                        <div class="accordion" id="accordionice">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseicei" aria-expanded="false" aria-controls="collapseicei">
-                                        Extra Ice Cream
-                                    </button>
-                                </h2>
-                                <div id="collapseicei" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alaice">
-                                        <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="iceicebabyflavor1-1">Vanilla</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabyflavor1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alaice2">
-                                            <label class="input-group-text" for="iceicebabyflavor1-2">Chocolate</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabyflavor1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alaice3">
-                                            <label class="input-group-text" for="iceicebabyflavor1-3">Strawberry</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabyflavor1-3">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion" id="accordiontop">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopi" aria-expanded="false" aria-controls="collapsetopi">
-                                        Extra Topping
-                                    </button>
-                                </h2>
-                                <div id="collapsetopi" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alatop">
-                                        <div class="input-group mb-3 alatopping1">
-                                            <label class="input-group-text" for="iceicebabytopping1-1">Oreos</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabytopping1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping2">
-                                            <label class="input-group-text" for="iceicebabytopping1-2">Sprinkle</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabytopping1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping3">
-                                            <label class="input-group-text" for="iceicebabytopping1-3">Fudge Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabytopping1-3">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping4">
-                                            <label class="input-group-text" for="iceicebabytopping1-4">Caramel Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabytopping1-4">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping5">
-                                            <label class="input-group-text" for="iceicebabytopping1-5">Waffle Bit</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabytopping1-5">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping6">
-                                            <label class="input-group-text" for="iceicebabytopping1-6">Waffle Cone</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabytopping1-6">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping7">
-                                            <label class="input-group-text" for="iceicebabytopping1-7">Whipped Topping</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceicebabytopping1-7">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--ice waffle baby 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="iceWaffleBabyAdd" aria-labelledby="iceWaffleBabyLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="icewafflebabyLabel">Ice Waffle Baby</h5>
-                  <h6 class="offcanvas-price" id="icewafflebabyPrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(32) + 추가 가격(extra ice cream*9 + extra topping*3)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <form class="was-validated"><div class="combomain">
-                        <div class="flavor">
-                            <h6>2 Ice cream</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="icewafflebabyflavor1">Flavor1</label>
-                                <select class="form-select" id="icewafflebabyflavor1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="icewafflebabyflavor2">Flavor2</label>
-                                <select class="form-select" id="icewafflebabyflavor2" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="topping">
-                            <h6>2 Toppings</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="icewafflebabytopping1">Type1</label>
-                                <select class="form-select" id="icewafflebabytopping1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="icewafflebabytopping2">Type2</label>
-                                <select class="form-select" id="icewafflebabytopping2" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="waffle">
-                            <h6>Waffle</h6>
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="submit" id="icewafflebabybutton">Add to Cart</button>
-                    </form>
-
-                    <!--추가 메뉴-->
-                    <div class="comboala">
-                        <h6>Ala Carte</h6>
-                        <div class="accordion" id="accordionice">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseicew" aria-expanded="false" aria-controls="collapseicew">
-                                        Extra Ice Cream
-                                    </button>
-                                </h2>
-                                <div id="collapseicew" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alaice">
-                                        <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="icewafflebabyflavor1-1">Vanilla</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabyflavor1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alaice2">
-                                            <label class="input-group-text" for="icewafflebabyflavor1-2">Chocolate</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabyflavor1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alaice3">
-                                            <label class="input-group-text" for="icewafflebabyflavor1-3">Strawberry</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabyflavor1-3">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion" id="accordiontop">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopw" aria-expanded="false" aria-controls="collapsetopw">
-                                        Extra Topping
-                                    </button>
-                                </h2>
-                                <div id="collapsetopw" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alatop">
-                                        <div class="input-group mb-3 alatopping1">
-                                            <label class="input-group-text" for="icewafflebabytopping1-1">Oreos</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabytopping1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping2">
-                                            <label class="input-group-text" for="icewafflebabytopping1-2">Sprinkle</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabytopping1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping3">
-                                            <label class="input-group-text" for="icewafflebabytopping1-3">Fudge Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabytopping1-3">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping4">
-                                            <label class="input-group-text" for="icewafflebabytopping1-4">Caramel Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabytopping1-4">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping5">
-                                            <label class="input-group-text" for="icewafflebabytopping1-5">Waffle Bit</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabytopping1-5">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping6">
-                                            <label class="input-group-text" for="icewafflebabytopping1-6">Waffle Cone</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabytopping1-6">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping7">
-                                            <label class="input-group-text" for="icewafflebabytopping1-7">Whipped Topping</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icewafflebabytopping1-7">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--ice affogato baby 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="iceAffogatoBabyAdd" aria-labelledby="iceAffogatoBabyLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="iceaffogatobabyLabel">Ice Affogato Baby</h5>
-                  <h6 class="offcanvas-price" id="iceaffogatobabyPrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(18) + 추가 가격(extra ice cream*9 + extra topping*3)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <form class="was-validated"><div class="combomain">
-                        <div class="flavor">
-                            <h6>1 Ice cream</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="iceaffogatobabyflavor1">Flavor</label>
-                                <select class="form-select" id="iceaffogatobabyflavor1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="topping">
-                            <h6>2 Toppings</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="iceaffogatobabytopping1">Type1</label>
-                                <select class="form-select" id="iceaffogatobabytopping1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="iceaffogatobabytopping2">Type2</label>
-                                <select class="form-select" id="iceaffogatobabytopping2" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                            <div class="coffee">
+                            <div class="coffee" id="coffee"><!--ice affogato baby-->
                                 <h6>Coffee</h6>
                             </div>
                         </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="submit" id="iceaffogatobabybutton">Add to Cart</button>
+
+                        <div class="alaice" id="alaice"><!--extra ice cream-->
+                            <div class="input-group mb-3 alaice1">
+                                <label class="input-group-text" for="iceflavor1-1">Vanilla</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="iceflavor1-1">
+                            </div>
+                            <div class="input-group mb-3 alaice2">
+                                <label class="input-group-text" for="iceflavor1-2">Chocolate</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="iceflavor1-2">
+                            </div>
+                            <div class="input-group mb-3 alaice3">
+                                <label class="input-group-text" for="iceflavor1-3">Strawberry</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="iceflavor1-3">
+                            </div>
+                        </div>
+    
+                        <div class="alatop" id="alatop"><!--extra topping-->
+                            <div class="input-group mb-3 alatopping1">
+                                <label class="input-group-text" for="toptopping1-1">Oreos</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-1">
+                            </div>
+                            <div class="input-group mb-3 alatopping2">
+                                <label class="input-group-text" for="toptopping1-2">Sprinkle</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-2">
+                            </div>
+                            <div class="input-group mb-3 alatopping3">
+                                <label class="input-group-text" for="toptopping1-3">Fudge Syrup</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-3">
+                            </div>
+                            <div class="input-group mb-3 alatopping4">
+                                <label class="input-group-text" for="toptopping1-4">Caramel Syrup</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-4">
+                            </div>
+                            <div class="input-group mb-3 alatopping5">
+                                <label class="input-group-text" for="toptopping1-5">Waffle Bit</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-5">
+                            </div>
+                            <div class="input-group mb-3 alatopping6">
+                                <label class="input-group-text" for="toptopping1-6">Waffle Cone</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-6">
+                            </div>
+                            <div class="input-group mb-3 alatopping7">
+                                <label class="input-group-text" for="toptopping1-7">Whipped Topping</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-7">
+                            </div>
+                        </div>
+    
+                        <div class="alacoffee" id="alacoffee"><!--coffee-->
+                            <div class="input-group mb-3 alacoffee1">
+                                <label class="input-group-text" for="coffee1-1">Hot Coffee</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="coffee1-1">
+                            </div>
+                            <div class="input-group mb-3 alacoffee2">
+                                <label class="input-group-text" for="coffee1-2">Iced Coffee</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="coffee1-2">
+                            </div>
+                        </div>
+    
+                        <div class="alawater" id="alawater"><!--water-->
+                            <div class="input-group mb-3 alawater1">
+                                <label class="input-group-text" for="water1">Quantity</label>
+                                <input type="number" class="form-control" min="0" step="1" value="0" id="water1">
+                            </div>
+                        </div>
+    
+                        <!--추가 메뉴-->
+                        <div class="comboala" id="combala"><!--baby ice, ice ice baby, ice waffle baby, ice affogato baby, big ice baby, extra ice cream-->
+                            <h6>Ala Carte</h6>
+                            <div class="accordion" id="accordionice"><!--baby ice, ice ice baby, ice waffle baby, ice affogato baby, big ice baby-->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseice" aria-expanded="false" aria-controls="collapseice">
+                                            Extra Ice Cream
+                                        </button>
+                                    </h2>
+                                    <div id="collapseice" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="alaice">
+                                            <div class="input-group mb-3 alaice1">
+                                                <label class="input-group-text" for="flavor1-1">Vanilla</label>
+                                                <input type="number" class="form-control" min="0" step="1" value="0" id="flavor1-1" >
+                                            </div>
+                                            <div class="input-group mb-3 alaice2">
+                                                <label class="input-group-text" for="flavor1-2">Chocolate</label>
+                                                <input type="number" class="form-control" min="0" step="1" value="0" id="flavor1-2">
+                                            </div>
+                                            <div class="input-group mb-3 alaice3">
+                                                <label class="input-group-text" for="flavor1-3">Strawberry</label>
+                                                <input type="number" class="form-control" min="0" step="1" value="0" id="flavor1-3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="accordion" id="accordiontop"><!--baby ice, ice ice baby, ice waffle baby, ice affogato baby, big ice baby, extra ice cream-->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetop" aria-expanded="false" aria-controls="collapsetop">
+                                            Extra Topping
+                                        </button>
+                                    </h2>
+                                    <div id="collapsetop" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="alatop">
+                                                <div class="input-group mb-3 alatopping1">
+                                                    <label class="input-group-text" for="topping1-1">Oreos</label>
+                                                    <input type="number" class="form-control" min="0" step="1" value="0" id="topping1-1">
+                                                </div>
+                                                <div class="input-group mb-3 alatopping2">
+                                                    <label class="input-group-text" for="topping1-2">Sprinkle</label>
+                                                    <input type="number" class="form-control" min="0" step="1" value="0" id="topping1-2">
+                                                </div>
+                                                <div class="input-group mb-3 alatopping3">
+                                                    <label class="input-group-text" for="topping1-3">Fudge Syrup</label>
+                                                    <input type="number" class="form-control" min="0" step="1" value="0" id="topping1-3">
+                                                </div>
+                                                <div class="input-group mb-3 alatopping4">
+                                                    <label class="input-group-text" for="topping1-4">Caramel Syrup</label>
+                                                    <input type="number" class="form-control" min="0" step="1" value="0" id="topping1-4">
+                                                </div>
+                                                <div class="input-group mb-3 alatopping5">
+                                                    <label class="input-group-text" for="topping1-5">Waffle Bit</label>
+                                                    <input type="number" class="form-control" min="0" step="1" value="0" id="topping1-5">
+                                                </div>
+                                                <div class="input-group mb-3 alatopping6">
+                                                    <label class="input-group-text" for="topping1-6">Waffle Cone</label>
+                                                    <input type="number" class="form-control" min="0" step="1" value="0" id="topping1-6">
+                                                </div>
+                                                <div class="input-group mb-3 alatopping7">
+                                                    <label class="input-group-text" for="topping1-7">Whipped Topping</label>
+                                                    <input type="number" class="form-control" min="0" step="1" value="0" id="topping1-7">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
+                        <button class="btn btn-info addcart" type="submit" id="button">Add to Cart</button>
                     </form>
-                    
-                    <!--추가 메뉴-->
-                    <div class="comboala">
-                        <h6>Ala Carte</h6>
-                        <div class="accordion" id="accordionice">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseicec" aria-expanded="false" aria-controls="collapseicec">
-                                        Extra Ice Cream
-                                    </button>
-                                </h2>
-                                <div id="collapseicec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alaice">
-                                        <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="iceaffogatobabyflavor1-1">Vanilla</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabyflavor1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alaice2">
-                                            <label class="input-group-text" for="iceaffogatobabyflavor1-2">Chocolate</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabyflavor1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alaice3">
-                                            <label class="input-group-text" for="iceaffogatobabyflavor1-3">Strawberry</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabyflavor1-3">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion" id="accordiontop">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopc" aria-expanded="false" aria-controls="collapsetopc">
-                                        Extra Topping
-                                    </button>
-                                </h2>
-                                <div id="collapsetopc" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alatop">
-                                        <div class="input-group mb-3 alatopping1">
-                                            <label class="input-group-text" for="iceaffogatobabytopping1-1">Oreos</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabytopping1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping2">
-                                            <label class="input-group-text" for="iceaffogatobabytopping1-2">Sprinkle</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabytopping1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping3">
-                                            <label class="input-group-text" for="iceaffogatobabytopping1-3">Fudge Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabytopping1-3">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping4">
-                                            <label class="input-group-text" for="iceaffogatobabytopping1-4">Caramel Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabytopping1-4">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping5">
-                                            <label class="input-group-text" for="iceaffogatobabytopping1-5">Waffle Bit</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabytopping1-5">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping6">
-                                            <label class="input-group-text" for="iceaffogatobabytopping1-6">Waffle Cone</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabytopping1-6">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping7">
-                                            <label class="input-group-text" for="iceaffogatobabytopping1-7">Whipped Topping</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceaffogatobabytopping1-7">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--big ice baby 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="bigIceBabyAdd" aria-labelledby="bigIceBabyLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="bigicebabyLabel">Big Ice Baby</h5>
-                  <h6 class="offcanvas-price" id="bigicebabyPrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(30) + 추가 가격(extra ice cream*9 + extra topping*3)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <form class="was-validated"><div class="combomain">
-                        <div class="flavor">
-                            <h6>3 Ice cream</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="bigicebabyflavor1">Flavor1</label>
-                                <select class="form-select" id="bigicebabyflavor1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="bigicebabyflavor2">Flavor2</label>
-                                <select class="form-select" id="bigicebabyflavor2" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="bigicebabyflavor3">Flavor3</label>
-                                <select class="form-select" id="bigicebabyflavor3" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Vanilla</option>
-                                    <option value="2">Chocolate</option>
-                                    <option value="3">Strawberry</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="topping">
-                            <h6>3 Toppings</h6>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="bigicebabytopping1">Type1</label>
-                                <select class="form-select" id="bigicebabytopping1" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="bigicebabytopping2">Type2</label>
-                                <select class="form-select" id="bigicebabytopping2" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <label class="input-group-text" for="bigicebabytopping3">Type3</label>
-                                <select class="form-select" id="bigicebabytopping3" required>
-                                    <option selected disabled value="">Choose..</option>
-                                    <option value="1">Oreos</option>
-                                    <option value="2">Sprinkle</option>
-                                    <option value="3">Fudge Syrup</option>
-                                    <option value="4">Caramel Syrup</option>
-                                    <option value="5">Waffle Bit</option>
-                                    <option value="6">Waffle Cone</option>
-                                    <option value="7">Whipped Topping</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="submit" id="bigicebabybutton">Add to Cart</button>
-                    </form>
-
-                    <!--추가 메뉴-->
-                    <div class="comboala">
-                        <h6>Ala Carte</h6>
-                        <div class="accordion" id="accordionice">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseiceb" aria-expanded="false" aria-controls="collapseiceb">
-                                        Extra Ice Cream
-                                    </button>
-                                </h2>
-                                <div id="collapseiceb" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alaice">
-                                        <div class="input-group mb-3 alaice1">
-                                            <label class="input-group-text" for="bigicebabyflavor1-1">Vanilla</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabyflavor1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alaice2">
-                                            <label class="input-group-text" for="bigicebabyflavor1-2">Chocolate</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabyflavor1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alaice3">
-                                            <label class="input-group-text" for="bigicebabyflavor1-3">Strawberry</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabyflavor1-3">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion" id="accordiontop">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopb" aria-expanded="false" aria-controls="collapsetopb">
-                                        Extra Topping
-                                    </button>
-                                </h2>
-                                <div id="collapsetopb" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alatop">
-                                        <div class="input-group mb-3 alatopping1">
-                                            <label class="input-group-text" for="bigicebabytopping1-1">Oreos</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabytopping1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping2">
-                                            <label class="input-group-text" for="bigicebabytopping1-2">Sprinkle</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabytopping1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping3">
-                                            <label class="input-group-text" for="bigicebabytopping1-3">Fudge Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabytopping1-3">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping4">
-                                            <label class="input-group-text" for="bigicebabytopping1-4">Caramel Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabytopping1-4">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping5">
-                                            <label class="input-group-text" for="bigicebabytopping1-5">Waffle Bit</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabytopping1-5">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping6">
-                                            <label class="input-group-text" for="bigicebabytopping1-6">Waffle Cone</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabytopping1-6">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping7">
-                                            <label class="input-group-text" for="bigicebabytopping1-7">Whipped Topping</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="bigicebabytopping1-7">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Extra Ice Cream 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="iceAdd" aria-labelledby="iceLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="iceLabel">Extra Ice Cream</h5>
-                  <h6 class="offcanvas-price" id="icePrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(extra ice cream*9) + 추가 가격(extra topping*3)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <div class="alaice">
-                        <div class="input-group mb-3 alaice1">
-                            <label class="input-group-text" for="iceflavor1-1">Vanilla</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceflavor1-1">
-                        </div>
-                        <div class="input-group mb-3 alaice2">
-                            <label class="input-group-text" for="iceflavor1-2">Chocolate</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceflavor1-2">
-                        </div>
-                        <div class="input-group mb-3 alaice3">
-                            <label class="input-group-text" for="iceflavor1-3">Strawberry</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="iceflavor1-3">
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="button" id="icebutton">Add to Cart</button>
-
-                    <!--추가 메뉴-->
-                    <div class="comboala">
-                        <h6>Ala Carte</h6>
-                        <div class="accordion" id="accordiontop">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetopai" aria-expanded="false" aria-controls="collapsetopai">
-                                        Extra Topping
-                                    </button>
-                                </h2>
-                                <div id="collapsetopai" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="alatop">
-                                        <div class="input-group mb-3 alatopping1">
-                                            <label class="input-group-text" for="icetopping1-1">Oreos</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icetopping1-1">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping2">
-                                            <label class="input-group-text" for="icetopping1-2">Sprinkle</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icetopping1-2">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping3">
-                                            <label class="input-group-text" for="icetopping1-3">Fudge Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icetopping1-3">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping4">
-                                            <label class="input-group-text" for="icetopping1-4">Caramel Syrup</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icetopping1-4">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping5">
-                                            <label class="input-group-text" for="icetopping1-5">Waffle Bit</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icetopping1-5">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping6">
-                                            <label class="input-group-text" for="icetopping1-6">Waffle Cone</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icetopping1-6">
-                                        </div>
-                                        <div class="input-group mb-3 alatopping7">
-                                            <label class="input-group-text" for="icetopping1-7">Whipped Topping</label>
-                                            <input type="number" class="form-control" min="0" step="1" value="0" id="icetopping1-7">
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Extra Topping Cream 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="topAdd" aria-labelledby="topLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="topLabel">Extra Topping</h5>
-                  <h6 class="offcanvas-price" id="topPrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(extra topping*3)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <div class="alatop">
-                        <div class="input-group mb-3 alatopping1">
-                            <label class="input-group-text" for="toptopping1-1">Oreos</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-1">
-                        </div>
-                        <div class="input-group mb-3 alatopping2">
-                            <label class="input-group-text" for="toptopping1-2">Sprinkle</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-2">
-                        </div>
-                        <div class="input-group mb-3 alatopping3">
-                            <label class="input-group-text" for="toptopping1-3">Fudge Syrup</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-3">
-                        </div>
-                        <div class="input-group mb-3 alatopping4">
-                            <label class="input-group-text" for="toptopping1-4">Caramel Syrup</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-4">
-                        </div>
-                        <div class="input-group mb-3 alatopping5">
-                            <label class="input-group-text" for="toptopping1-5">Waffle Bit</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-5">
-                        </div>
-                        <div class="input-group mb-3 alatopping6">
-                            <label class="input-group-text" for="toptopping1-6">Waffle Cone</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-6">
-                        </div>
-                        <div class="input-group mb-3 alatopping7">
-                            <label class="input-group-text" for="toptopping1-7">Whipped Topping</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="toptopping1-7">
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="button" id="topbutton">Add to Cart</button>
-                </div>
-            </div>
-
-            <!--coffee 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="coffeeAdd" aria-labelledby="coffeeLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="coffeeLabel">Coffee</h5>
-                  <h6 class="offcanvas-price" id="coffeePrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(coffee*8)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <div class="alacoffee">
-                        <div class="input-group mb-3 alacoffee1">
-                            <label class="input-group-text" for="coffee1-1">Hot Coffee</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="coffee1-1">
-                        </div>
-                        <div class="input-group mb-3 alacoffee2">
-                            <label class="input-group-text" for="coffee1-2">Iced Coffee</label>
-                            <input type="number" class="form-control" min="0" step="1" value="0" id="coffee1-2">
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="button" id="coffeebutton">Add to Cart</button>
-                </div>
-            </div>
-            
-            <!--water 추가 칸-->
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="waterAdd" aria-labelledby="waterLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="waterLabel">Water</h5>
-                  <h6 class="offcanvas-price" id="waterPrice">¥price</h6><!--requirement: 가격 표시; ¥기본 가격(water*2)-->
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <!--기본 메뉴-->
-                    <div class="alawater">
-                        <div class="input-group mb-3 alawater1">
-                            <label class="input-group-text" for="water1">Quantity</label>
-                            <input type="number" class="form-control" min="1" step="1" value="1" id="water1">
-                        </div>
-                    </div>
-                    <!--requirement: 클릭 시 cartcard에 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-                    <button class="btn btn-info addcart" type="button" id="waterbutton">Add to Cart</button>
                 </div>
             </div>
         </main>
