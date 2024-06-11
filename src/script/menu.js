@@ -74,7 +74,10 @@ function Order(type,iceNum,topNum,iceAdd,topAdd,price) {
   this.topAdd = topAdd;
   this.price = price;
 }
-
+/**
+ * addCart(new Order("IceIceBaby",[0,1,1],[3,4],[0,2,1],[1,0,0,1,0,0,0],53));
+ * @param {Order} order 
+ */
 function addCart(order){
   const div = document.createElement('div');
   div.innerHTML = `
