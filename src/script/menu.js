@@ -5,6 +5,7 @@ window.onload = () => {
   document.querySelector('form').addEventListener('submit', e => {
     e.preventDefault();
     for (i = 1; i <= temp.num; i++) { temp.iceNum[document.getElementById("flavor" + i).options.selectedIndex - 1]++; temp.topNum[document.getElementById("topping" + i).options.selectedIndex - 1]++; };
+    if(temp.type == "Ice Affogato Baby")temp.topNum[document.getElementById("topping2").options.selectedIndex - 1]++;
     for (i = 0; i < 3; i++) { temp.iceAdd[i] = Number(document.getElementById("flavor1-" + (i + 1)).value) };
     for (i = 0; i < 7; i++) { temp.topAdd[i] = Number(document.getElementById("topping1-" + (i + 1)).value) };
 
@@ -87,6 +88,7 @@ function showAdd(btn) {
       break;
   }
   for (i = 1; i <= temp.num; i++) { document.getElementById("flavor" + i).setAttribute('required', true); document.getElementById("topping" + i).setAttribute('required', true); };
+  if(temp.type == "Ice Affogato Baby")document.getElementById("topping2").setAttribute('required', true);
 }
 function setPrice() {
   price = defaultPrice
