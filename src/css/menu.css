@@ -156,6 +156,92 @@
         font-size: 30px !important;
     }
 }
+@media (min-height:750px) and (min-width:1000px){/*아이패드화면*/
+    .combocard{
+        height:180px !important;
+    }
+    .alacard{
+        height:80px !important;
+    }
+    .combocard > .card-header{/*product name*/
+        font-size: 20px;
+        height:70px;
+    }
+    .combocard-title > h6{/*product info*/
+        font-size: 20px !important;
+    }
+    .combocard-title{
+        top:80px;
+    }
+    .combocard-text{/*product price*/
+        font-size:20px;
+        margin-top: 25px;
+    }
+    .alacard-title > h6{/*product name*/
+        font-size:18px !important;
+    }
+    .alacard-text{/*product price*/
+        top:40px;
+        font-size:18px;
+    }
+    .combocard > .card-body > .btn-primary,
+    .alacard > .card-body > .btn-primary{
+        font-size: 25px;
+        height:40px;
+        width: 40px;
+        --bs-btn-padding-y:0px;
+        --bs-btn-padding-x:0px;
+    }
+    .category{
+        font-size: 40px;
+    }
+    #cartButton > .btn-info{
+        font-size: 30px !important;
+    }
+}
+@media (min-height:1000px) and (min-width:1000px){/*아이패드큰화면*/
+    .combocard{
+        height:250px !important;
+    }
+    .alacard{
+        height:100px !important;
+    }
+    .combocard > .card-header{/*product name*/
+        font-size: 30px;
+        height:90px;
+    }
+    .combocard-title > h6{/*product info*/
+        font-size: 30px !important;
+    }
+    .combocard-title{
+        top:100px;
+    }
+    .combocard-text{/*product price*/
+        font-size:30px;
+        margin-top: 30px;
+    }
+    .alacard-title > h6{/*product name*/
+        font-size:25px !important;
+    }
+    .alacard-text{/*product price*/
+        top:40px;
+        font-size:25px;
+    }
+    .combocard > .card-body > .btn-primary,
+    .alacard > .card-body > .btn-primary{
+        font-size: 35px;
+        height:50px;
+        width: 50px;
+        --bs-btn-padding-y:0px;
+        --bs-btn-padding-x:0px;
+    }
+    .category{
+        font-size: 60px;
+    }
+    #cartButton > .btn-info{
+        font-size: 40px !important;
+    }
+}
 
 /*adding menu page*/
 .offcanvas-header{

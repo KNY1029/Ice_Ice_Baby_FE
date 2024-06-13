@@ -143,13 +143,13 @@ function addCart(order) {
         <h5 class="card-title">Toppings</h5>
         <div class="row">
     `:''}
-          ${menu.topNum[0]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop1">Oreos: <span id="productTop1">${menu.topNum[0]}</span></p></div>`:''}
-          ${menu.topNum[1]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop2">Sprinkle: <span id="productTop2">${menu.topNum[1]}</span></p></div>`:''}
-          ${menu.topNum[2]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop3">Fudge Syrup: <span id="productTop3">${menu.topNum[2]}</span></p></div>`:''}
-          ${menu.topNum[3]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop4">Caramel Syrup: <span id="productTop4">${menu.topNum[3]}</span></p></div>`:''}
-          ${menu.topNum[4]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop5">Waffle Bit: <span id="productTop5">${menu.topNum[4]}</span></p></div>`:''}
-          ${menu.topNum[5]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop6">Waffle Cone: <span id="productTop6">${menu.topNum[5]}</span></p></div>`:''}
-          ${menu.topNum[6]!=0?`<div class="col-12 col-md-8"><p class="card-text" id="producttop7">Whipped Topping: <span id="productTop7">${menu.topNum[6]}</span></p></div>`:''}
+          ${menu.topNum[0]!=0?`<div class="col-6"><p class="card-text" id="producttop1">Oreos: <span id="productTop1">${menu.topNum[0]}</span></p></div>`:''}
+          ${menu.topNum[1]!=0?`<div class="col-6"><p class="card-text" id="producttop2">Sprinkle: <span id="productTop2">${menu.topNum[1]}</span></p></div>`:''}
+          ${menu.topNum[2]!=0?`<div class="col-6"><p class="card-text" id="producttop3">Fudge Syrup: <span id="productTop3">${menu.topNum[2]}</span></p></div>`:''}
+          ${menu.topNum[3]!=0?`<div class="col-6"><p class="card-text" id="producttop4">Caramel Syrup: <span id="productTop4">${menu.topNum[3]}</span></p></div>`:''}
+          ${menu.topNum[4]!=0?`<div class="col-6"><p class="card-text" id="producttop5">Waffle Bit: <span id="productTop5">${menu.topNum[4]}</span></p></div>`:''}
+          ${menu.topNum[5]!=0?`<div class="col-6"><p class="card-text" id="producttop6">Waffle Cone: <span id="productTop6">${menu.topNum[5]}</span></p></div>`:''}
+          ${menu.topNum[6]!=0?`<div class="col-12"><p class="card-text" id="producttop7">Whipped Topping: <span id="productTop7">${menu.topNum[6]}</span></p></div>`:''}
     ${menu.topNum[0]+menu.topNum[1]+menu.topNum[2]+menu.topNum[3]+menu.topNum[4]+menu.topNum[5]+menu.topNum[6]!=0?`
         </div>
       </div>
