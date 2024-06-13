@@ -214,3 +214,5 @@ function addCart(order){
   `;
   document.getElementById('cartcards').append(div);
 }
+
+//document.getElementById("flavor1").options.selectedIndex
