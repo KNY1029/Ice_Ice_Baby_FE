@@ -205,7 +205,7 @@ function totalMenu(p=0) {
 }
 
 function send(){
-  fetch(url+"/purchase",{
+  fetch(url+"/order",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({order:orders})
