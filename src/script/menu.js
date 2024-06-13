@@ -15,7 +15,6 @@ window.onload = () => {
     if(orders[orders.length-1].type=="Extra Topping"){for (i = 0; i < 7; i++) { orders[orders.length-1].topAdd[i] = Number(document.getElementById("toptopping1-" + (i + 1)).value)};}
     orders[orders.length-1].price = price;
     addCart(menu);
-    console.log(2)
   });
   ["iceflavor1-1", "iceflavor1-2", "iceflavor1-3", "toptopping1-1", "toptopping1-2", "toptopping1-3", "toptopping1-3", "toptopping1-5", "toptopping1-6", "toptopping1-7", "coffee1-1", "coffee1-2", "water1", "flavor1-1", "flavor1-2", "flavor1-3", "topping1-1", "topping1-2", "topping1-3", "topping1-4", "topping1-5", "topping1-6", "topping1-7"].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
 }
@@ -195,9 +194,10 @@ ${orders[orders.length-1].iceNum[0]+orders[orders.length-1].iceNum[1]+orders[ord
 `;
   document.getElementById('cartcards').append(div);
   document.querySelector('form').reset();
-  totalMenu(1, orders[orders.length-1].price);
+  totalMenu(orders[orders.length-1].price);
+  document.getElementById('canvas_close').click();
 }
-function totalMenu(i, p) {
-  num += i; document.getElementById('numAdded').textContent = num;
+function totalMenu(p) {
+  document.getElementById('numAdded').textContent = orders.length;
   totalPrice += p; document.getElementById('totalPrice').textContent = totalPrice;
 }
