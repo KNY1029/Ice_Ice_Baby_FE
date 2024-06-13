@@ -145,7 +145,7 @@ function addCart(order) {
                 </div>
                 <div class="card" id="productwaffle">
                 <div class="card-body">
-                    <h5 class="card-title" id="productwaffle1">Waffle: span <span id="productWaffle1">x</span></h5>
+                    <h5 class="card-title" id="productwaffle1">Waffle: <span id="productWaffle1">x</span></h5>
                 </div>
                 </div>
                 <div class="card" id="productcoffee">
