@@ -4,16 +4,16 @@ window.onload = () => {
   ["addBI", "addIIB", "addIWB", "addIAB", "addBIB", "addEI", "addET", "addC", "addW"].forEach(e => { document.getElementById(e).addEventListener('click', () => showAdd(e)); });
   document.querySelector('form').addEventListener('submit', e => {
     e.preventDefault();
-    for (i = 1; i <= menu.num; i++) { menu.iceNum[document.getElementById("flavor" + i).options.selectedIndex - 1]++; menu.topNum[document.getElementById("topping" + i).options.selectedIndex - 1]++; };
-    for (i = 0; i < 3; i++) { menu.iceAdd[i] = Number(document.getElementById("flavor1-" + (i + 1)).value)};
-    for (i = 0; i < 7; i++) { menu.topAdd[i] = Number(document.getElementById("topping1-" + (i + 1)).value)};
+    for (i = 1; i <= orders[orders.length-1].num; i++) { orders[orders.length-1].iceNum[document.getElementById("flavor" + i).options.selectedIndex - 1]++; orders[orders.length-1].topNum[document.getElementById("topping" + i).options.selectedIndex - 1]++; };
+    for (i = 0; i < 3; i++) { orders[orders.length-1].iceAdd[i] = Number(document.getElementById("flavor1-" + (i + 1)).value)};
+    for (i = 0; i < 7; i++) { orders[orders.length-1].topAdd[i] = Number(document.getElementById("topping1-" + (i + 1)).value)};
     
-    if(menu.type=="Ice Waffle Baby"){menu.waffleAdd = 1;} else{menu.waffleAdd = 0;}
-    if(menu.type=="Ice Affogato Baby"){menu.coffeeAdd = [1,0];} else{for (i = 0; i < 2; i++) { menu.coffeeAdd[i] = Number(document.getElementById("coffee1-" + (i + 1)).value); };};
-    menu.waterAdd = Number(document.getElementById("water1").value);
-    if(menu.type=="Extra Ice Cream"){for (i = 0; i < 3; i++) { menu.iceAdd[i] = Number(document.getElementById("iceflavor1-" + (i + 1)).value)};}
-    if(menu.type=="Extra Topping"){for (i = 0; i < 7; i++) { menu.topAdd[i] = Number(document.getElementById("toptopping1-" + (i + 1)).value)};}
-    menu.price = price;
+    if(orders[orders.length-1].type=="Ice Waffle Baby"){orders[orders.length-1].waffleAdd = 1;} else{orders[orders.length-1].waffleAdd = 0;}
+    if(orders[orders.length-1].type=="Ice Affogato Baby"){orders[orders.length-1].coffeeAdd = [1,0];} else{for (i = 0; i < 2; i++) { orders[orders.length-1].coffeeAdd[i] = Number(document.getElementById("coffee1-" + (i + 1)).value); };};
+    orders[orders.length-1].waterAdd = Number(document.getElementById("water1").value);
+    if(orders[orders.length-1].type=="Extra Ice Cream"){for (i = 0; i < 3; i++) { orders[orders.length-1].iceAdd[i] = Number(document.getElementById("iceflavor1-" + (i + 1)).value)};}
+    if(orders[orders.length-1].type=="Extra Topping"){for (i = 0; i < 7; i++) { orders[orders.length-1].topAdd[i] = Number(document.getElementById("toptopping1-" + (i + 1)).value)};}
+    orders[orders.length-1].price = price;
     addCart(menu);
     console.log(2)
   });
@@ -122,7 +122,7 @@ function Order(type, num, price, iceNum = zeros(3), topNum = zeros(7), iceAdd = 
 function addCart(order) {
   const div = document.createElement('div');
   div.innerHTML = `
-${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]+menu.iceAdd[0]+menu.iceAdd[1]+menu.iceAdd[2]+menu.topNum[0]+menu.topNum[1]+menu.topNum[2]+menu.topNum[3]+menu.topNum[4]+menu.topNum[5]+menu.topNum[6]+menu.topAdd[0]+menu.topAdd[1]+menu.topAdd[2]+menu.topAdd[3]+menu.topAdd[4]+menu.topAdd[5]+menu.topAdd[6]+menu.waffleAdd+menu.coffeeAdd[0]+menu.coffeeAdd[1]+menu.waterAdd!=0?`
+${orders[orders.length-1].iceNum[0]+orders[orders.length-1].iceNum[1]+orders[orders.length-1].iceNum[2]+orders[orders.length-1].iceAdd[0]+orders[orders.length-1].iceAdd[1]+orders[orders.length-1].iceAdd[2]+orders[orders.length-1].topNum[0]+orders[orders.length-1].topNum[1]+orders[orders.length-1].topNum[2]+orders[orders.length-1].topNum[3]+orders[orders.length-1].topNum[4]+orders[orders.length-1].topNum[5]+orders[orders.length-1].topNum[6]+orders[orders.length-1].topAdd[0]+orders[orders.length-1].topAdd[1]+orders[orders.length-1].topAdd[2]+orders[orders.length-1].topAdd[3]+orders[orders.length-1].topAdd[4]+orders[orders.length-1].topAdd[5]+orders[orders.length-1].topAdd[6]+orders[orders.length-1].waffleAdd+orders[orders.length-1].coffeeAdd[0]+orders[orders.length-1].coffeeAdd[1]+orders[orders.length-1].waterAdd!=0?`
 <div class="card cartcard"><!--requirement: offcanvas의 addcart버튼 클릭시 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
   <div class="card-header">
     ${orders[orders.length-1].type}
@@ -130,34 +130,34 @@ ${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]+menu.iceAdd[0]+menu.iceAdd[1]+men
     <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close" id="productclose" onclick="javasript:this.parentNode.parentNode.remove();totalMenu(-1*Number(this.parentNode.parentNode.querySelector('span').textContent));"></button>
   </div>
   <div class="card-body">
-    ${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]!=0?`
+    ${orders[orders.length-1].iceNum[0]+orders[orders.length-1].iceNum[1]+orders[orders.length-1].iceNum[2]!=0?`
     <div class="card" id="producticecream">
       <div class="card-body">
         <h5 class="card-title">Ice Cream</h5>
         <div class="row">
     `:''}
-          ${menu.iceNum[0]!=0?`<div class="col"><p class="card-text" id="productflavor1">Vanilla: <span id="productFlavor1">${menu.iceNum[0]}</span></p></div>`:''}
-          ${menu.iceNum[1]!=0?`<div class="col"><p class="card-text" id="productflavor2">Chocolate: <span id="productFlavor2">${menu.iceNum[1]}</span></p></div>`:''}
-          ${menu.iceNum[2]!=0?`<div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">${menu.iceNum[2]}</span></p></div>`:''}
-    ${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]!=0?`
+          ${orders[orders.length-1].iceNum[0]!=0?`<div class="col"><p class="card-text" id="productflavor1">Vanilla: <span id="productFlavor1">${orders[orders.length-1].iceNum[0]}</span></p></div>`:''}
+          ${orders[orders.length-1].iceNum[1]!=0?`<div class="col"><p class="card-text" id="productflavor2">Chocolate: <span id="productFlavor2">${orders[orders.length-1].iceNum[1]}</span></p></div>`:''}
+          ${orders[orders.length-1].iceNum[2]!=0?`<div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">${orders[orders.length-1].iceNum[2]}</span></p></div>`:''}
+    ${orders[orders.length-1].iceNum[0]+orders[orders.length-1].iceNum[1]+orders[orders.length-1].iceNum[2]!=0?`
         </div>
       </div>
     </div>
     `:''}
-    ${menu.topNum[0]+menu.topNum[1]+menu.topNum[2]+menu.topNum[3]+menu.topNum[4]+menu.topNum[5]+menu.topNum[6]!=0?`
+    ${orders[orders.length-1].topNum[0]+orders[orders.length-1].topNum[1]+orders[orders.length-1].topNum[2]+orders[orders.length-1].topNum[3]+orders[orders.length-1].topNum[4]+orders[orders.length-1].topNum[5]+orders[orders.length-1].topNum[6]!=0?`
     <div class="card" id="producttoppings">
       <div class="card-body">
         <h5 class="card-title">Toppings</h5>
         <div class="row">
     `:''}
-          ${menu.topNum[0]!=0?`<div class="col-6"><p class="card-text" id="producttop1">Oreos: <span id="productTop1">${menu.topNum[0]}</span></p></div>`:''}
-          ${menu.topNum[1]!=0?`<div class="col-6"><p class="card-text" id="producttop2">Sprinkle: <span id="productTop2">${menu.topNum[1]}</span></p></div>`:''}
-          ${menu.topNum[2]!=0?`<div class="col-6"><p class="card-text" id="producttop3">Fudge Syrup: <span id="productTop3">${menu.topNum[2]}</span></p></div>`:''}
-          ${menu.topNum[3]!=0?`<div class="col-6"><p class="card-text" id="producttop4">Caramel Syrup: <span id="productTop4">${menu.topNum[3]}</span></p></div>`:''}
-          ${menu.topNum[4]!=0?`<div class="col-6"><p class="card-text" id="producttop5">Waffle Bit: <span id="productTop5">${menu.topNum[4]}</span></p></div>`:''}
-          ${menu.topNum[5]!=0?`<div class="col-6"><p class="card-text" id="producttop6">Waffle Cone: <span id="productTop6">${menu.topNum[5]}</span></p></div>`:''}
-          ${menu.topNum[6]!=0?`<div class="col-12"><p class="card-text" id="producttop7">Whipped Topping: <span id="productTop7">${menu.topNum[6]}</span></p></div>`:''}
-    ${menu.topNum[0]+menu.topNum[1]+menu.topNum[2]+menu.topNum[3]+menu.topNum[4]+menu.topNum[5]+menu.topNum[6]!=0?`
+          ${orders[orders.length-1].topNum[0]!=0?`<div class="col-6"><p class="card-text" id="producttop1">Oreos: <span id="productTop1">${orders[orders.length-1].topNum[0]}</span></p></div>`:''}
+          ${orders[orders.length-1].topNum[1]!=0?`<div class="col-6"><p class="card-text" id="producttop2">Sprinkle: <span id="productTop2">${orders[orders.length-1].topNum[1]}</span></p></div>`:''}
+          ${orders[orders.length-1].topNum[2]!=0?`<div class="col-6"><p class="card-text" id="producttop3">Fudge Syrup: <span id="productTop3">${orders[orders.length-1].topNum[2]}</span></p></div>`:''}
+          ${orders[orders.length-1].topNum[3]!=0?`<div class="col-6"><p class="card-text" id="producttop4">Caramel Syrup: <span id="productTop4">${orders[orders.length-1].topNum[3]}</span></p></div>`:''}
+          ${orders[orders.length-1].topNum[4]!=0?`<div class="col-6"><p class="card-text" id="producttop5">Waffle Bit: <span id="productTop5">${orders[orders.length-1].topNum[4]}</span></p></div>`:''}
+          ${orders[orders.length-1].topNum[5]!=0?`<div class="col-6"><p class="card-text" id="producttop6">Waffle Cone: <span id="productTop6">${orders[orders.length-1].topNum[5]}</span></p></div>`:''}
+          ${orders[orders.length-1].topNum[6]!=0?`<div class="col-12"><p class="card-text" id="producttop7">Whipped Topping: <span id="productTop7">${orders[orders.length-1].topNum[6]}</span></p></div>`:''}
+    ${orders[orders.length-1].topNum[0]+orders[orders.length-1].topNum[1]+orders[orders.length-1].topNum[2]+orders[orders.length-1].topNum[3]+orders[orders.length-1].topNum[4]+orders[orders.length-1].topNum[5]+orders[orders.length-1].topNum[6]!=0?`
         </div>
       </div>
     </div>
@@ -195,7 +195,7 @@ ${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]+menu.iceAdd[0]+menu.iceAdd[1]+men
 `;
   document.getElementById('cartcards').append(div);
   document.querySelector('form').reset();
-  totalMenu(1, menu.price);
+  totalMenu(1, orders[orders.length-1].price);
 }
 function totalMenu(i, p) {
   num += i; document.getElementById('numAdded').textContent = num;
