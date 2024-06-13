@@ -7,6 +7,8 @@ window.onload = () => {
     for (i = 1; i <= menu.num; i++) { menu.iceNum[document.getElementById("flavor" + i).options.selectedIndex - 1]++; menu.topNum[document.getElementById("topping" + i).options.selectedIndex - 1]++; };
     for (i = 0; i < 3; i++) { menu.iceAdd[i] = Number(document.getElementById("flavor1-" + (i + 1)).value); };
     for (i = 0; i < 7; i++) { menu.topAdd[i] = Number(document.getElementById("topping1-" + (i + 1)).value); };
+    for (i = 0; i < 2; i++) { menu.coffeeAdd[i] = Number(document.getElementById("coffee1-" + (i + 1)).value); };
+    if(menu.type=="Ice Waffle Baby"){menu.waffleAdd = 1;}else{menu.waffleAdd = 0;}
     menu.price = price;
     addCart(menu);
     console.log(2)
@@ -57,7 +59,7 @@ function showAdd(btn) {
     case "addEI":
       label = "Extra Ice Cream";
       document.getElementById('Label').textContent = label;
-      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').text = 0;
+      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').textContent = price;
       ["alaice", "combala"].forEach(e => show(e));
       ["accordionice"].forEach(e => hide(e));
       menu = new Order(label, 0, price);
@@ -65,21 +67,21 @@ function showAdd(btn) {
     case "addET":
       label = "Extra Topping";
       document.getElementById('Label').textContent = label;
-      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').text = 0;
+      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').textContent = price;
       ["alatop"].forEach(e => show(e));
       menu = new Order(label, 0, price);
       break;
     case "addC":
       label = "Coffee";
       document.getElementById('Label').textContent = label;
-      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').text = 0;
+      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').textContent = price;
       ["alacoffee"].forEach(e => show(e));
       menu = new Order(label, 0, price);
       break;
     case "addW":
       label = "Water";
       document.getElementById('Label').textContent = label;
-      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').text = 0;
+      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').textContent = price;
       ["alawater"].forEach(e => show(e));
       menu = new Order(label, 0, price);
     default:
