@@ -1,3 +1,5 @@
+const url = "http://localhost:8080";
+
 var defaultPrice = 0, price = defaultPrice; totalPrice = 0;
 var temp; var orders = []; orderIndex = 0;
 window.onload = () => {
@@ -8,7 +10,7 @@ window.onload = () => {
     if(temp.type == "Ice Affogato Baby")temp.topNum[document.getElementById("topping2").options.selectedIndex - 1]++;
     for (i = 0; i < 3; i++) { temp.iceAdd[i] = Number(document.getElementById("flavor1-" + (i + 1)).value) };
     for (i = 0; i < 7; i++) { temp.topAdd[i] = Number(document.getElementById("topping1-" + (i + 1)).value) };
-
+    
     if (temp.type == "Ice Waffle Baby") { temp.waffleAdd = 1; } else { temp.waffleAdd = 0; }
     if (temp.type == "Ice Affogato Baby") { temp.coffeeAdd = [1, 0]; } else { for (i = 0; i < 2; i++) { temp.coffeeAdd[i] = Number(document.getElementById("coffee1-" + (i + 1)).value); }; };
     temp.waterAdd = Number(document.getElementById("water1").value);
@@ -16,14 +18,15 @@ window.onload = () => {
     if (temp.type == "Extra Topping") { for (i = 0; i < 7; i++) { temp.topAdd[i] = Number(document.getElementById("toptopping1-" + (i + 1)).value) }; }
     temp.price = price;
     addCart(menu);
-  });
-  ["iceflavor1-1", "iceflavor1-2", "iceflavor1-3", "toptopping1-1", "toptopping1-2", "toptopping1-3", "toptopping1-3", "toptopping1-5", "toptopping1-6", "toptopping1-7", "coffee1-1", "coffee1-2", "water1", "flavor1-1", "flavor1-2", "flavor1-3", "topping1-1", "topping1-2", "topping1-3", "topping1-4", "topping1-5", "topping1-6", "topping1-7"].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
-}
-function addOrder(label, num, price) {
-  temp = new Order(label, num, price);
-}
-function showAdd(btn) {
-  document.querySelector('form').reset();
+    });
+    ["iceflavor1-1", "iceflavor1-2", "iceflavor1-3", "toptopping1-1", "toptopping1-2", "toptopping1-3", "toptopping1-3", "toptopping1-5", "toptopping1-6", "toptopping1-7", "coffee1-1", "coffee1-2", "water1", "flavor1-1", "flavor1-2", "flavor1-3", "topping1-1", "topping1-2", "topping1-3", "topping1-4", "topping1-5", "topping1-6", "topping1-7"].forEach(e => { document.getElementById(e).addEventListener('change', () => setPrice(e)); });
+  document.getElementById("confirm_button").addEventListener('click', () => send());
+    }
+    function addOrder(label, num, price) {
+      temp = new Order(label, num, price);
+      }
+      function showAdd(btn) {
+        document.querySelector('form').reset();
   for (i = 1; i <= 3; i++) { document.getElementById("flavor" + i).removeAttribute('required'); };
   for (i = 1; i <= 3; i++) { document.getElementById("topping" + i).removeAttribute('required'); };
   ["combomain", "flavor", "topping", "waffle", "coffee", "icecream-1", "icecream-2", "icecream-3", "topping-1", "topping-2", "topping-3", "alaice", "alatop", "alacoffee", "alawater", "combala"].forEach(e => hide(e));
@@ -214,5 +217,3 @@ function send(){
     .then(data=>console.log(data))
     .catch(err=>console.log(err));
 }
-
-document.getElementById("confirm_button").addEventListener('click', () => send());
