@@ -1,4 +1,4 @@
-const url = "http://localhost:8080";
+const url = "http://10.11.12.144:8080";
 
 /**
  * create an account with give id and password.
@@ -59,7 +59,6 @@ function deleteAccount(id,pw) {
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({id:id,pw:pw})
   })
-    .then(res=>res.json())
     .then(data=>console.log(data))
     .catch(err=>console.log(err));
 }
