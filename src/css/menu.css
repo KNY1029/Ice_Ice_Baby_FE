@@ -242,6 +242,74 @@
         font-size: 40px !important;
     }
 }
+@media (min-width:1000px){
+    .offcanvas{
+        width:1000px !important;
+    }
+    .offcanvas-title{
+        font-size: 50px;
+    }
+    .offcanvas-price{
+        font-size: 50px;
+        top: 25px !important;
+        right:80px !important;
+    }
+    .offcanvas-header > .btn-close{
+        font-size: 40px;
+    }
+    .combomain > div > h6,
+    .comboala > h6{
+        font-size: 40px;
+    }
+    #alaicecollaspe, #alatopcollaspe,
+    .input-group-text, .form-select, .form-control{
+        font-size: 35px !important;
+    }
+    .accordion-button::after{
+        width: 50px !important;
+        height: 50px !important;
+        background-size: 50px !important;
+    }
+    .offcanvas-body{
+        margin-bottom: 110px !important;
+    }
+    #button{
+        --bs-btn-font-size: 50px !important;
+        height:90px;
+        margin-bottom: 10px;
+    }
+    .modal{
+        --bs-modal-width:1000px !important;
+    }
+    .modal-header > h1, .modal-header,
+    .modal-footer > p{
+        font-size: 30px !important;
+    }
+    .modal-totalPrice{
+        left:120px !important;
+    }
+    .cartcard > .card-header{
+        font-size: 30px;
+    }
+    .cartcard > .card-header > .card-total{
+        right:60px !important;
+    }
+    h5{
+        font-size: 29px !important;
+    }
+    .card-text{
+        font-size: 28px !important;
+    }
+    .modal-footer > .btn{
+        font-size: 25px;
+    }
+    .modal-final, .modal-finalPrice{
+        font-size:30px;
+    }
+    .modal-finalPrice{
+        left:120px !important;
+    }
+}
 
 /*adding menu page*/
 .offcanvas-header{
@@ -304,8 +372,9 @@
 }
 .cartcard{
     display: flex;
-    margin-top:3%;
     font-family: 'KCC-Hanbit';
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .cartcard > .card-header{
     font-family: 'TTHakgyoansimTtwimteulR';
@@ -345,6 +414,18 @@
     font-family: 'PyeongChangPeace-Bold';
 }
 .modal-totalPrice{
+    position:absolute;
+    left:70px;
+    text-align:left;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.modal-final{
+    position:absolute;
+    left:20px;
+    text-align:left;
+    font-family: 'PyeongChangPeace-Bold';
+}
+.modal-finalPrice{
     position:absolute;
     left:70px;
     text-align:left;
