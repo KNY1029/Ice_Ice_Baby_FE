@@ -283,3 +283,7 @@
     padding: .375rem .75rem !important;
     background-image: none !important;
 }
+
+p.card-price{
+    margin-bottom: 0px;
+}

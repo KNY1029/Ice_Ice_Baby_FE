@@ -119,7 +119,7 @@ main{
 #infod{
     position: absolute;
     top:5px;
-    left:90px;
+    left:80px;
 }
 #infot{
     font-size: 10px;
@@ -160,7 +160,7 @@ main{
 }
 #infopaid{
     position: absolute;
-    right:100px;
+    right:220px;
     top:15px;
     font-size: 12px !important;
 }
@@ -179,6 +179,6 @@ main{
 }
 #infodesk{
     position: absolute;
-    right:160px;
+    right:100px;
     top:5px;
 }
