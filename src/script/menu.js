@@ -116,59 +116,75 @@ function Order(type, num, price, iceNum = zeros(3), topNum = zeros(7), iceAdd = 
 function addCart(order) {
   const div = document.createElement('div');
   div.innerHTML = `
-    <div class="card cartcard"><!--requirement: offcanvas의 addcart버튼 클릭시 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
-      <div class="card-header">
-          ${menu.type}
-          <p class="card-total">¥<span id="cardTotal">${menu.price}<span></p><!--product price-->
-          <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close" id="productclose" onclick="javasript:this.parentNode.parentNode.remove();totalMenu(-1,-1*Number(this.parentNode.parentNode.querySelector('span').textContent));"></button>
-      </div>
+<div class="card cartcard"><!--requirement: offcanvas의 addcart버튼 클릭시 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
+  <div class="card-header">
+    ${menu.type}
+    <p class="card-total">¥<span id="cardTotal">${menu.price}<span></p><!--product price-->
+    <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close" id="productclose" onclick="javasript:this.parentNode.parentNode.remove();totalMenu(-1,-1*Number(this.parentNode.parentNode.querySelector('span').textContent));"></button>
+  </div>
+  <div class="card-body">
+    ${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]!=0?`
+    <div class="card" id="producticecream">
       <div class="card-body">
-          <div class="card" id="producticecream">
-              <div class="card-body">
-                  <h5 class="card-title">Ice Cream</h5>
-                  <div class="row row-cols-2 row-cols-md-3">
-                  <div class="col"><p class="card-text" id="productflavor1">Vanilla: <span id="productFlavor1">${menu.iceNum[0]}</span></p></div>
-                  <div class="col"><p class="card-text" id="productflavor2">Chocolate: <span id="productFlavor2">${menu.iceNum[1]}</span></p></div>
-                  <div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">${menu.iceNum[2]}</span></p></div>
-                  </div>
-              </div>
-          </div>
-          <div class="card" id="producttoppings">
-              <div class="card-body">
-                  <h5 class="card-title">Toppings</h5>
-                  <div class="row">
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop1">Oreos: <span id="productTop1">${menu.topNum[0]}</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop2">Sprinkle: <span id="productTop2">${menu.topNum[1]}</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop3">Fudge Syrup: <span id="productTop3">${menu.topNum[2]}</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop4">Caramel Syrup: <span id="productTop4">${menu.topNum[3]}</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop5">Waffle Bit: <span id="productTop5">${menu.topNum[4]}</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop6">Waffle Cone: <span id="productTop6">${menu.topNum[5]}</span></p></div>
-                  <div class="col-12 col-md-8"><p class="card-text" id="producttop7">Whipped Topping: <span id="productTop7">${menu.topNum[6]}</span></p></div>
-                  </div>
-              </div>
-          </div>
-          <div class="card" id="productwaffle">
-              <div class="card-body">
-                  <h5 class="card-title" id="productwaffle1">Waffle: <span id="productWaffle1>${menu.waffleAdd}</span></h5>
-              </div>
-          </div>
-          <div class="card" id="productcoffee">
-              <div class="card-body">
-                  <h5 class="card-title">Coffee</h5>
-                  <div class="row row-cols-2">
-                  <div class="col"><p class="card-text" id="productcoffee1">Hot Coffee: <span id="productCoffee1">${menu.coffeeAdd[0]}</span></p></div>
-                  <div class="col"><p class="card-text" id="productcoffee2">Iced Coffee: <span id="productCoffee2">${menu.coffeeAdd[1]}</span></p></div>
-                  </div>
-              </div>
-          </div>
-          <div class="card" id="productwater">
-              <div class="card-body">
-                  <h5 class="card-title" id="productwater1">Water: <span id="productWater1">${menu.waterAdd}</span></h5>
-              </div>
-          </div>
+        <h5 class="card-title">Ice Cream</h5>
+        <div class="row row-cols-2 row-cols-md-3">
+    `:''}
+          ${menu.iceNum[0]!=0?`<div class="col"><p class="card-text" id="productflavor1">Vanilla: <span id="productFlavor1">${menu.iceNum[0]}</span></p></div>`:''}
+          ${menu.iceNum[1]!=0?`<div class="col"><p class="card-text" id="productflavor2">Chocolate: <span id="productFlavor2">${menu.iceNum[1]}</span></p></div>`:''}
+          ${menu.iceNum[2]!=0?`<div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">${menu.iceNum[2]}</span></p></div>`:''}
+    ${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]!=0?`
+        </div>
       </div>
     </div>
-  `;
+    `:''}
+    ${menu.topNum[0]+menu.topNum[1]+menu.topNum[2]+menu.topNum[3]+menu.topNum[4]+menu.topNum[5]+menu.topNum[6]!=0?`
+    <div class="card" id="producttoppings">
+      <div class="card-body">
+        <h5 class="card-title">Toppings</h5>
+        <div class="row">
+    `:''}
+          ${menu.topNum[0]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop1">Oreos: <span id="productTop1">${menu.topNum[0]}</span></p></div>`:''}
+          ${menu.topNum[1]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop2">Sprinkle: <span id="productTop2">${menu.topNum[1]}</span></p></div>`:''}
+          ${menu.topNum[2]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop3">Fudge Syrup: <span id="productTop3">${menu.topNum[2]}</span></p></div>`:''}
+          ${menu.topNum[3]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop4">Caramel Syrup: <span id="productTop4">${menu.topNum[3]}</span></p></div>`:''}
+          ${menu.topNum[4]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop5">Waffle Bit: <span id="productTop5">${menu.topNum[4]}</span></p></div>`:''}
+          ${menu.topNum[5]!=0?`<div class="col-6 col-md-4"><p class="card-text" id="producttop6">Waffle Cone: <span id="productTop6">${menu.topNum[5]}</span></p></div>`:''}
+          ${menu.topNum[6]!=0?`<div class="col-12 col-md-8"><p class="card-text" id="producttop7">Whipped Topping: <span id="productTop7">${menu.topNum[6]}</span></p></div>`:''}
+    ${menu.topNum[0]+menu.topNum[1]+menu.topNum[2]+menu.topNum[3]+menu.topNum[4]+menu.topNum[5]+menu.topNum[6]!=0?`
+        </div>
+      </div>
+    </div>
+    `:''}
+    ${menu.waffleAdd!=0?`
+    <div class="card" id="productwaffle">
+      <div class="card-body">
+        <h5 class="card-title" id="productwaffle1">Waffle: <span id="productWaffle1">${menu.waffleAdd}</span></h5>
+      </div>
+    </div>
+    `:''}
+    ${menu.coffeeAdd[0]+menu.coffeeAdd[1]!=0?`
+    <div class="card" id="productcoffee">
+      <div class="card-body">
+        <h5 class="card-title">Coffee</h5>
+        <div class="row row-cols-2">
+    `:''}
+          ${menu.coffeeAdd[0]!=0?`<div class="col"><p class="card-text" id="productcoffee1">Hot Coffee: <span id="productCoffee1">${menu.coffeeAdd[0]}</span></p></div>`:''}
+          ${menu.coffeeAdd[1]!=0?`<div class="col"><p class="card-text" id="productcoffee2">Iced Coffee: <span id="productCoffee2">${menu.coffeeAdd[1]}</span></p></div>`:''}
+    ${menu.coffeeAdd[0]+menu.coffeeAdd[1]!=0?`
+        </div>
+      </div>
+    </div>
+    `:''}
+    ${menu.waterAdd!=0?`
+    <div class="card" id="productwater">
+      <div class="card-body">
+        <h5 class="card-title" id="productwater1">Water: <span id="productWater1">${menu.waterAdd}</span></h5>
+      </div>
+    </div>
+    `:''}
+  </div>
+</div>
+`;
   document.getElementById('cartcards').append(div);
   document.querySelector('form').reset();
   totalMenu(1, menu.price);
