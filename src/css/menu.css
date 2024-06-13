@@ -300,6 +300,9 @@
     .card-text{
         font-size: 28px !important;
     }
+    .modal-footer > .btn{
+        font-size: 25px;
+    }
 }
 
 /*adding menu page*/
