@@ -461,3 +461,15 @@ p.card-price{
 .modal-id, .modal-idNum{
     font-size: 50px;
 }
+
+#QRimg{
+    max-width: 100%;
+    width:400px;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#id_logo{
+    max-width: 50%;
+}
