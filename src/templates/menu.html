@@ -356,7 +356,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseice" aria-expanded="false" aria-controls="collapseice">
-                                            Extra Ice Cream
+                                            <span id="alaicecollaspe">Extra Ice Cream</span>
                                         </button>
                                     </h2>
                                     <div id="collapseice" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -384,7 +384,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetop" aria-expanded="false" aria-controls="collapsetop">
-                                            Extra Topping
+                                            <span id="alatopcollaspe">Extra Topping</span>
                                         </button>
                                     </h2>
                                     <div id="collapsetop" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -478,9 +478,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p class="modal-finalPrice">가격</p>
-                            <p class="modal-left">잔액</p><!--total price-->
-                            QR image -> Password -> 번호 / 돈 수령 -> 코드 생성, 전송 -> 사용자 입력 -> 주문 접수
+                            <p class="modal-final">Total: </p>
+                            <p class="modal-finalPrice">¥<span id="finalPrice"></span></p>
+                            <img src="/src/assets/img/Ice_Ice_Baby_Logo.png" alt="QR code" id="QRimg">
                         </div>
                         <div class="modal-footer">
                         <button class="btn btn-secondary" data-bs-target="#cartModal" data-bs-toggle="modal">Back to Cart</button>
