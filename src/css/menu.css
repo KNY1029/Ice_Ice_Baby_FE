@@ -2,6 +2,7 @@
     position: fixed;
     bottom:3%;
     right:5%;
+    border-radius: 15px;
 }
 
 /*menu page*/
@@ -153,8 +154,8 @@
         font-size: 30px;
     }
     #cartButton > .btn-info{
-        font-size: 30px !important;
-        width: 120px;
+        font-size: 20px !important;
+        width: 80px;
     }
 }
 @media (min-height:750px) and (min-width:1000px){/*아이패드화면*/
@@ -203,10 +204,10 @@
 }
 @media (min-height:1000px) and (min-width:1000px){/*아이패드큰화면*/
     .combocard{
-        height:250px !important;
+        height:230px !important;
     }
     .alacard{
-        height:100px !important;
+        height:110px !important;
     }
     .combocard > .card-header{/*product name*/
         font-size: 30px;
@@ -223,10 +224,11 @@
         margin-top: 30px;
     }
     .alacard-title > h6{/*product name*/
-        font-size:25px !important;
+        font-size:26px !important;
+        top:15px;
     }
     .alacard-text{/*product price*/
-        top:40px;
+        top:55px;
         font-size:25px;
     }
     .combocard > .card-body > .btn-primary,
@@ -242,7 +244,7 @@
     }
     #cartButton > .btn-info{
         font-size: 40px !important;
-        width: 150px;
+        width: 160px;
     }
     .offcanvas{
         width:1000px !important;
