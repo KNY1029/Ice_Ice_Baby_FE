@@ -59,7 +59,6 @@ function deleteAccount(id,pw) {
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({id:id,pw:pw})
   })
-    .then(res=>res.json())
     .then(data=>console.log(data))
     .catch(err=>console.log(err));
 }
