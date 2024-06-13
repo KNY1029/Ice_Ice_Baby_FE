@@ -124,19 +124,19 @@ ${temp.iceNum[0] + temp.iceNum[1] + temp.iceNum[2] + temp.iceAdd[0] + temp.iceAd
   <div class="card-header">
     ${temp.type}
     <p class="card-total">¥<span id="cardTotal">${temp.price}<span></p><!--product price-->
-    <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close" id="productclose" onclick="javasript:this.parentNode.parentNode.remove();totalMenu(-1*Number(this.parentNode.parentNode.querySelector('span').textContent));"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close" id="productclose" onclick="javasript:this.parentNode.parentNode.remove();totalMenu(-1*Number(this.parentNode.parentNode.querySelector('span').textContent));orders=orders.filter(e=>{return e.index==${temp.index}})"></button>
   </div>
   <div class="card-body">
-    ${temp.iceNum[0] + temp.iceNum[1] + temp.iceNum[2] + temp.iceAdd[0] + temp.iceAdd[1] + temp.iceAdd[2] != 0 ? `
+    ${temp.iceNum[0] + temp.iceNum[1] + temp.iceNum[2] +temp.iceAdd[0] + temp.iceAdd[1] + temp.iceAdd[2] != 0 ? `
     <div class="card" id="producticecream">
       <div class="card-body">
         <h5 class="card-title">Ice Cream</h5>
         <div class="row">
     `: ''}
-          ${temp.iceNum[0] + temp.iceAdd[0] != 0 ? `<div class="col"><p class="card-text" id="productflavor1">Vanilla: <span id="productFlavor1">${temp.iceNum[0] + temp.iceAdd[0]}</span></p></div>` : ''}
-          ${temp.iceNum[1] + temp.iceAdd[1] != 0 ? `<div class="col"><p class="card-text" id="productflavor2">Chocolate: <span id="productFlavor2">${temp.iceNum[1] + temp.iceAdd[1]}</span></p></div>` : ''}
-          ${temp.iceNum[2] + temp.iceAdd[2] != 0 ? `<div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">${temp.iceNum[2] + temp.iceAdd[2]}</span></p></div>` : ''}
-    ${temp.iceNum[0] + temp.iceNum[1] + temp.iceNum[2] + temp.iceAdd[0] + temp.iceAdd[1] + temp.iceAdd[2] != 0 ? `
+          ${temp.iceNum[0]+temp.iceAdd[0] != 0 ? `<div class="col"><p class="card-text" id="productflavor1">Vanilla: <span id="productFlavor1">${temp.iceNum[0]+temp.iceAdd[0]}</span></p></div>` : ''}
+          ${temp.iceNum[1]+temp.iceAdd[1] != 0 ? `<div class="col"><p class="card-text" id="productflavor2">Chocolate: <span id="productFlavor2">${temp.iceNum[1]+temp.iceAdd[1]}</span></p></div>` : ''}
+          ${temp.iceNum[2]+temp.iceAdd[2] != 0 ? `<div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">${temp.iceNum[2]+temp.iceAdd[2]}</span></p></div>` : ''}
+    ${temp.iceNum[0] + temp.iceNum[1] + temp.iceNum[2] +temp.iceAdd[0] + temp.iceAdd[1] + temp.iceAdd[2] != 0 ? `
         </div>
       </div>
     </div>
