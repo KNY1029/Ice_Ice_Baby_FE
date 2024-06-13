@@ -303,6 +303,12 @@
     .modal-footer > .btn{
         font-size: 25px;
     }
+    .modal-final, .modal-finalPrice{
+        font-size:30px;
+    }
+    .modal-finalPrice{
+        left:120px !important;
+    }
 }
 
 /*adding menu page*/
