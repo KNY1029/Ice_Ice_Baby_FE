@@ -157,7 +157,7 @@ function addCart(order){
     <div class="card cartcard"><!--requirement: offcanvas의 addcart버튼 클릭시 형식(이름, 구성, 각 구성의 수량, 가격) 맞춰서 추가-->
       <div class="card-header">
           product title
-          <p class="card-total">¥<span id="cardTotal">x<span></p><!--product price-->
+          <p class="card-total">¥x</p><!--product total price--><!--requirement: card-price*quantity-->
           <button type="button" class="btn-close" data-bs-dismiss="card" aria-label="Close" id="productclose"></button>
       </div>
       <div class="card-body">
@@ -165,9 +165,9 @@ function addCart(order){
               <div class="card-body">
                   <h5 class="card-title">Ice Cream</h5>
                   <div class="row row-cols-2 row-cols-md-3">
-                  <div class="col"><p class="card-text" id="productflavor1">Vanilla: <span id="productFlavor1">x</span></p></div>
-                  <div class="col"><p class="card-text" id="productflavor2">Chocolate: <span id="productFlavor2">x</span></p></div>
-                  <div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">x</span></p></div>
+                  <div class="col"><p class="card-text" id="productflavor1">Vanilla: x</p></div>
+                  <div class="col"><p class="card-text" id="productflavor2">Chocolate: x</p></div>
+                  <div class="col"><p class="card-text" id="productflavor3">Strawberry: x</p></div>
                   </div>
               </div>
           </div>
@@ -175,37 +175,42 @@ function addCart(order){
               <div class="card-body">
                   <h5 class="card-title">Toppings</h5>
                   <div class="row">
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop1">Oreos: <span id="productTop1">x</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop2">Sprinkle: <span id="productTop2">x</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop3">Fudge Syrup: <span id="productTop3">x</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop4">Caramel Syrup: <span id="productTop4">x</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop5">Waffle Bit: <span id="productTop5">x</span></p></div>
-                  <div class="col-6 col-md-4"><p class="card-text" id="producttop6">Waffle Cone: <span id="productTop6">x</span></p></div>
-                  <div class="col-12 col-md-8"><p class="card-text" id="producttop7">Whipped Topping: <span id="productTop7">x</span></p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop1">Oreos: x</p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop2">Sprinkle: x</p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop3">Fudge Syrup: x</p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop4">Caramel Syrup: x</p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop5">Waffle Bit: x</p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop6">Waffle Cone: x</p></div>
+                  <div class="col-12 col-md-8"><p class="card-text" id="producttop7">Whipped Topping: x</p></div>
                   </div>
               </div>
           </div>
           <div class="card" id="productwaffle">
               <div class="card-body">
-                  <h5 class="card-title" id="productwaffle1">Waffle: <span id="productWaffle1>x</span></h5>
+                  <h5 class="card-title" id="productwaffle1">Waffle: x</h5>
               </div>
           </div>
           <div class="card" id="productcoffee">
               <div class="card-body">
                   <h5 class="card-title">Coffee</h5>
                   <div class="row row-cols-2">
-                  <div class="col"><p class="card-text" id="productcoffee1">Hot Coffee: <span id="productCoffee1">x</span></p></div>
-                  <div class="col"><p class="card-text" id="productcoffee2">Iced Coffee: <span id="productCoffee2">x</span></p></div>
+                  <div class="col"><p class="card-text" id="productcoffee1">Hot Coffee: x</p></div>
+                  <div class="col"><p class="card-text" id="productcoffee2">Iced Coffee: x</p></div>
                   </div>
               </div>
           </div>
           <div class="card" id="productwater">
               <div class="card-body">
-                  <h5 class="card-title" id="productwater1">Water: <span id="productWater1">x</span></h5>
+                  <h5 class="card-title" id="productwater1">Water: x</h5>
               </div>
           </div>
+      <p class="card-price">¥x</p><!--product price-->
       </div>
-    </div>
+      <div class="input-group numin">
+          <label class="input-group-text" for="quantity">Quantity</label>
+          <input type="number" class="form-control" min="0" step="1" value="1" id="quantity">
+      </div>
+  </div>
   `;
   document.getElementById('cartcards').append(div);
 }
