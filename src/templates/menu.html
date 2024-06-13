@@ -484,15 +484,21 @@
 
             <div class="modal fade confirmModal" id="confirmModal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="confirmModal" aria-hidden="true"><!--requirement: 계산 정보-->
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <p class="modal-id">ID: </p>
-                            <p class="modal-idNum"><span id="modal_id"></span></p>
-                        </div>
+                    <div class="row descriptionRow">
+                        <div class="col col-6"><div class="modal-content">
+                            <div class="modal-body">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <p class="modal-id">ID: </p>
+                                <p class="modal-idNum"><span id="modal_id"></span></p>
+                            </div>
+                        </div></div>
+                        <div class="col col-6"><img src="/src/assets/img/Ice_Ice_Baby_Logo.png" id="id_logo"></div>
+                        <div class="col col-12"><div id="description">
+                            <p>1. Take a picture of this screen</p>
+                            <p>2. Check the screen in front.</p>
+                            <p>3. Show the picture and pick it up.</p>
+                        </div></col>
                     </div>
-                    <img src="/src/assets/img/Ice_Ice_Baby_Logo.png" id="id_logo">
-                    <div id="description"></div>
                 </div>
             </div>
         </div>
