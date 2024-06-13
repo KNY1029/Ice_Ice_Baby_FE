@@ -34,10 +34,10 @@
     display: flex;
     font-family: 'KCC-Hanbit';
 }
-.ordered > .card-header{
+.ordered > .card-header, .completed > .card-header, .received > .card-header{
     background-color:mistyrose !important;
 }
-.ordered > .card-body{
+.ordered > .card-body, .received > .card-body{
     background-color:cornsilk;
 }
 .cartcard > .card-header{
@@ -78,17 +78,23 @@ main{
 .card{
     width: 100%;
 }
-.ordered{
+.ordered, .completed, .received{
     margin-top:10px;
     max-width: 900px;
 }
 @media (max-width:990px){
-    .ordered{
+    .ordered, .completed, .received{
         max-width: 450px !important;
     }
 }
 .ordered > .card-header{
     height: 50px;
+}
+.completed > .card-header{
+    height: 35px;
+}
+.received > .card-header{
+    height: 40px;
 }
 .cartcard{
     max-width: 420px;
@@ -108,7 +114,12 @@ main{
 #infop{
     position: absolute;
     top:5px;
-    left:100px;
+    left:80px;
+}
+#infod{
+    position: absolute;
+    top:5px;
+    left:90px;
 }
 #infot{
     font-size: 10px;
@@ -116,17 +127,57 @@ main{
     top:30px;
     left:10px;
 }
+.completed > .card-header > #infot{
+    font-size: 10px;
+    position: absolute;
+    top:3px;
+    left:180px;
+}
+.received > .card-header > #infot{
+    font-size: 10px;
+    position: absolute;
+    top:3px;
+    left:220px;
+}
+#infot2{
+    font-size: 10px;
+    position: absolute;
+    top:12px;
+    left:220px;
+}
+.completed > .card-header > #infot2{
+    font-size: 10px;
+    position: absolute;
+    top:19px;
+    left:180px;
+}
+#infot3{
+    font-size: 10px;
+    position: absolute;
+    top:22px;
+    left:220px;
+}
 #infopaid{
     position: absolute;
     right:100px;
     top:15px;
     font-size: 12px !important;
 }
-#infocompleted > .btn{
+#infocompleted > .btn, #inforeceived > .btn{
     font-size: 12px !important;
 }
 #infocompleted{
     position: absolute;
     right:10px;
     top:10px;
+}
+#inforeceived{
+    position: absolute;
+    right:10px;
+    top:3px;
+}
+#infodesk{
+    position: absolute;
+    right:160px;
+    top:5px;
 }

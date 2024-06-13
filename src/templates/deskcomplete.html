@@ -24,10 +24,13 @@
             <nav>
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                      <a class="nav-link" href="/src/templates/deskmain.html">Ordered List</a>
+                      <a class="nav-link" href="/src/templates/deskmain.html">Ordered</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="/src/templates/deskcomplete.html">Completed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/src/templates/deskreceived.html">Received</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/src/templates/deskcoupon.html">쿠폰충전</a>
@@ -37,6 +40,33 @@
         </header>
 
         <main>
+            <div class="card completed">
+                <div class="card-header">
+                    <!--<div class="row info">
+                        <div class="col-7"><div class="row">
+                            <div class="col col-5 infocol" id="infoid">ID: 123</div>
+                            <div class="col col-7 infocol" id="infop">Price: ¥xxx</div>
+                            <div class="col col-12 infocol" id="infot">Time: 2024.06.14. 01:01</div>
+                        </div></div>
+                        <div class="col col-2 infocol" id="infopaid"><div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="paiedCheck">
+                            <label class="form-check-label" for="paiedCheck">
+                                Paied
+                            </label>
+                            </div></div>
+                        <div class="col col-3 infocol" id="infocompleted">
+                            <button type="button" class="btn btn-secondary btn-sm">Completed</button>
+                        </div>
+                    </div>-->
+                    <div id="infoi">ID: 123</div>
+                    <div id="infod">Desk: 123</div>
+                    <div id="infot">Ordered Time: 2024.06.14. 01:01</div>
+                    <div id="infot2">Completed Time: 2024.06.14. 01:01</div>
+                    <div id="inforeceived">
+                        <button type="button" class="btn btn-secondary btn-sm">Received</button>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
