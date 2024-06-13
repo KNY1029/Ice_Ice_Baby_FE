@@ -214,6 +214,9 @@ function send(){
     body:JSON.stringify({order:orders})
   })
     .then(res=>res.json())
-    .then(data=>console.log(data))
+    .then(data=>{
+      console.log(data);
+      document.getElementById('modal_id').textContent=data.index;
+    })
     .catch(err=>console.log(err));
 }
