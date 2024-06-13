@@ -457,3 +457,7 @@
 p.card-price{
     margin-bottom: 0px;
 }
+
+.modal-id, .modal-idNum{
+    font-size: 50px;
+}
