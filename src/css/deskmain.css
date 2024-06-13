@@ -91,7 +91,7 @@ main{
     height: 50px;
 }
 .completed > .card-header{
-    height: 35px;
+    height: 40px;
 }
 .received > .card-header{
     height: 40px;
@@ -108,20 +108,31 @@ main{
 }
 #infoi{
     position: absolute;
-    top:5px;
+    top:15px;
+    left:10px;
+}
+.received > .card-header > #infoi,
+.completed > .card-header > #infoi{
+    position: absolute;
+    top:10px;
     left:10px;
 }
 #infop{
     position: absolute;
-    top:5px;
+    top:15px;
+    left:80px;
+}
+.received > .card-header > #infop{
+    position: absolute;
+    top:10px;
     left:80px;
 }
 #infod{
     position: absolute;
-    top:5px;
+    top:10px;
     left:80px;
 }
-#infot{
+/*#infot{
     font-size: 10px;
     position: absolute;
     top:30px;
@@ -157,7 +168,7 @@ main{
     position: absolute;
     top:23px;
     right:5px;
-}
+}*/
 #infopaid{
     position: absolute;
     right:220px;
@@ -175,7 +186,7 @@ main{
 #inforeceived{
     position: absolute;
     right:10px;
-    top:3px;
+    top:5px;
 }
 #infodesk{
     position: absolute;
