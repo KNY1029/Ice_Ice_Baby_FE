@@ -247,7 +247,7 @@
         width:1000px !important;
     }
     .offcanvas-title{
-        font-size: 50px;
+        font-size: 50px !important;
     }
     .offcanvas-price{
         font-size: 50px;
