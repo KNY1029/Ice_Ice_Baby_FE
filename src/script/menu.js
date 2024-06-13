@@ -190,10 +190,12 @@ ${temp.iceNum[0] + temp.iceNum[1] + temp.iceNum[2] + temp.iceAdd[0] + temp.iceAd
 </div>
 `: ''}
 `;
-  document.getElementById('cartcards').append(div);
-  document.querySelector('form').reset();
-  totalMenu(temp.price);
-  document.getElementById('canvas_close').click();
+  if(temp.iceNum[0] + temp.iceNum[1] + temp.iceNum[2] + temp.iceAdd[0] + temp.iceAdd[1] + temp.iceAdd[2] + temp.topNum[0] + temp.topNum[1] + temp.topNum[2] + temp.topNum[3] + temp.topNum[4] + temp.topNum[5] + temp.topNum[6] + temp.topAdd[0] + temp.topAdd[1] + temp.topAdd[2] + temp.topAdd[3] + temp.topAdd[4] + temp.topAdd[5] + temp.topAdd[6] + temp.waffleAdd + temp.coffeeAdd[0] + temp.coffeeAdd[1] + temp.waterAdd != 0){
+    document.getElementById('cartcards').append(div);
+    document.querySelector('form').reset();
+    totalMenu(temp.price);
+    document.getElementById('canvas_close').click();
+  }
 }
 function totalMenu(p) {
   document.getElementById('numAdded').textContent = orders.length;
