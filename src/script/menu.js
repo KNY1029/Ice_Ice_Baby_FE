@@ -126,6 +126,7 @@ function addCart(order) {
     ${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]!=0?`
     <div class="card" id="producticecream">
       <div class="card-body">
+<<<<<<< HEAD
         <h5 class="card-title">Ice Cream</h5>
         <div class="row row-cols-2 row-cols-md-3">
     `:''}
@@ -134,6 +135,51 @@ function addCart(order) {
           ${menu.iceNum[2]!=0?`<div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">${menu.iceNum[2]}</span></p></div>`:''}
     ${menu.iceNum[0]+menu.iceNum[1]+menu.iceNum[2]!=0?`
         </div>
+=======
+          <div class="card" id="producticecream">
+              <div class="card-body">
+                  <h5 class="card-title">Ice Cream</h5>
+                  <div class="row row-cols-2 row-cols-md-3">
+                  <div class="col"><p class="card-text" id="productflavor1">Vanilla: <span id="productFlavor1">${menu.iceNum[0]}</span></p></div>
+                  <div class="col"><p class="card-text" id="productflavor2">Chocolate: <span id="productFlavor2">${menu.iceNum[1]}</span></p></div>
+                  <div class="col"><p class="card-text" id="productflavor3">Strawberry: <span id="productFlavor3">${menu.iceNum[2]}</span></p></div>
+                  </div>
+              </div>
+          </div>
+          <div class="card" id="producttoppings">
+              <div class="card-body">
+                  <h5 class="card-title">Toppings</h5>
+                  <div class="row">
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop1">Oreos: <span id="productTop1">${menu.topNum[0]}</span></p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop2">Sprinkle: <span id="productTop2">${menu.topNum[1]}</span></p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop3">Fudge Syrup: <span id="productTop3">${menu.topNum[2]}</span></p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop4">Caramel Syrup: <span id="productTop4">${menu.topNum[3]}</span></p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop5">Waffle Bit: <span id="productTop5">${menu.topNum[4]}</span></p></div>
+                  <div class="col-6 col-md-4"><p class="card-text" id="producttop6">Waffle Cone: <span id="productTop6">${menu.topNum[5]}</span></p></div>
+                  <div class="col-12 col-md-8"><p class="card-text" id="producttop7">Whipped Topping: <span id="productTop7">${menu.topNum[6]}</span></p></div>
+                  </div>
+              </div>
+          </div>
+          <div class="card" id="productwaffle">
+              <div class="card-body">
+                  <h5 class="card-title" id="productwaffle1">Waffle: <span id="productWaffle1">${menu.waffleAdd}</span></h5>
+              </div>
+          </div>
+          <div class="card" id="productcoffee">
+              <div class="card-body">
+                  <h5 class="card-title">Coffee</h5>
+                  <div class="row row-cols-2">
+                  <div class="col"><p class="card-text" id="productcoffee1">Hot Coffee: <span id="productCoffee1">${menu.coffeeAdd[0]}</span></p></div>
+                  <div class="col"><p class="card-text" id="productcoffee2">Iced Coffee: <span id="productCoffee2">${menu.coffeeAdd[1]}</span></p></div>
+                  </div>
+              </div>
+          </div>
+          <div class="card" id="productwater">
+              <div class="card-body">
+                  <h5 class="card-title" id="productwater1">Water: <span id="productWater1">${menu.waterAdd}</span></h5>
+              </div>
+          </div>
+>>>>>>> 77a20a47fc9f7876edfa2ed6eaaba33aeef12d25
       </div>
     </div>
     `:''}
