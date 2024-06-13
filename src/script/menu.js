@@ -1,7 +1,7 @@
 var defaultPrice = 0, price = defaultPrice; totalPrice = 0;
 var temp; var orders = []; orderIndex = 0;
 window.onload = () => {
-  ["addBI", "addIIB", "addIWB", "addIAB", "addBIB", "addEI", "addET", "addC", "addW"].forEach(e => { document.getElementById(e).addEventListener('click', () => showAdd(e)); });
+  ["addBI", "addIIB", "addIWB", "addIAB", "addBIB", "addEI", "addC", "addW"].forEach(e => { document.getElementById(e).addEventListener('click', () => showAdd(e)); });
   document.querySelector('form').addEventListener('submit', e => {
     e.preventDefault();
     for (i = 1; i <= temp.num; i++) { temp.iceNum[document.getElementById("flavor" + i).options.selectedIndex - 1]++; temp.topNum[document.getElementById("topping" + i).options.selectedIndex - 1]++; };
@@ -68,13 +68,6 @@ function showAdd(btn) {
       defaultPrice = 0; price = defaultPrice; document.getElementById('Price').textContent = price;
       ["alaice", "combala"].forEach(e => show(e));
       ["accordionice"].forEach(e => hide(e));
-      addOrder(label, 0, price);
-      break;
-    case "addET":
-      label = "Extra Topping";
-      document.getElementById('Label').textContent = label;
-      defaultPrice = 0; price = defaultPrice; document.getElementById('Price').textContent = price;
-      ["alatop"].forEach(e => show(e));
       addOrder(label, 0, price);
       break;
     case "addC":
