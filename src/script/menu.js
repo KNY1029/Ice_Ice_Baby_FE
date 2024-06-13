@@ -195,7 +195,7 @@ ${temp.iceNum[0] + temp.iceNum[1] + temp.iceNum[2] + temp.iceAdd[0] + temp.iceAd
   totalMenu(temp.price);
   document.getElementById('canvas_close').click();
 }
-function totalMenu(p) {
+function totalMenu(p=0) {
   document.getElementById('numAdded').textContent = orders.length;
   totalPrice += p; document.getElementById('totalPrice').textContent = totalPrice;
 }
