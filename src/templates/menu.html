@@ -477,9 +477,22 @@
                         </div>
                         <div class="modal-footer">
                         <button class="btn btn-secondary" data-bs-target="#cartModal" data-bs-toggle="modal">Back to Cart</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="confirm_button">Confirm</button><!--requirement: 클릭시 뒷자리 입력 요구-->
+                        <button class="btn btn-danger" data-bs-target="#confirmModal" data-bs-toggle="modal" id="confirm_button">Confirm</button><!--requirement: 클릭시 뒷자리 입력 요구-->
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="modal fade confirmModal" id="confirmModal" tabindex="-1" aria-labelledby="confirmModal" aria-hidden="true"><!--requirement: 계산 정보-->
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <p class="modal-id">ID: </p>
+                            <p class="modal-idNum"><span id="modal_id"></span></p>
+                        </div>
+                    </div>
+                    <img src="/src/assets/img/Ice_Ice_Baby_Logo.png" alt="QR code" id="QRimg">
                 </div>
             </div>
         </div>
