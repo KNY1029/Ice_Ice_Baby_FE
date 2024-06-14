@@ -1,8 +1,9 @@
-const url = "http://localhost:192.168.0.100";
+const url = "http://172.30.0.69:8080";
 
 var defaultPrice = 0, price = defaultPrice; totalPrice = 0;
 var temp; var orders = []; orderIndex = 0;
 window.onload = () => {
+  document.getElementById("purchase_button").addEventListener('click', () => disableCart());
   ["addBI", "addIIB", "addIWB", "addIAB", "addBIB", "addEI", "addC", "addW"].forEach(e => { document.getElementById(e).addEventListener('click', () => showAdd(e)); });
   document.querySelector('form').addEventListener('submit', e => {
     e.preventDefault();
@@ -219,4 +220,8 @@ function send(){
       document.getElementById('modal_id').textContent=data.index;
     })
     .catch(err=>console.log(err));
+}
+function disableCart(){
+  if(Number(document.getElementById("totalPrice").textContent)==0){document.getElementById("confirm_button").setAttribute('disabled', true);}
+  if(Number(document.getElementById("totalPrice").textContent)!=0){document.getElementById("confirm_button").removeAttribute('disabled');}
 }

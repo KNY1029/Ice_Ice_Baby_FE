@@ -414,7 +414,7 @@
             </div>
             <!--카트 확인 버튼-->
             <div id="cartButton">
-                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#cartModal" id="cart_button">
                     Cart
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="numAdded">
                     0<!--requirement: 주문 수량 표시-->
@@ -437,7 +437,7 @@
                             <p class="modal-total">Total: </p>
                             <p class="modal-totalPrice">¥<span id="totalPrice">0</span></p><!--total price--><!--requirement: 전체 가격 표시-->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button class="btn btn-danger" data-bs-target="#purchaseModal" data-bs-toggle="modal">Purchase</button>
+                            <button class="btn btn-danger" data-bs-target="#purchaseModal" data-bs-toggle="modal" id="purchase_button">Purchase</button>
                         </div>
                     </div>
                 </div>
