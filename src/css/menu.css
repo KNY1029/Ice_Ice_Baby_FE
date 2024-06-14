@@ -463,8 +463,8 @@ p.card-price{
 }
 
 #QRimg{
-    max-width: 100%;
-    width:400px;
+    max-width: 90%;
+    width:350px;
     margin-top: 40px;
     display: block;
     margin-left: auto;
