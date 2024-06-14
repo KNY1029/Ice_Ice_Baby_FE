@@ -1,4 +1,4 @@
-const url = "http://localhost:192.168.0.100";
+const url = "http://localhost:8080";
 
 var defaultPrice = 0, price = defaultPrice; totalPrice = 0;
 var temp; var orders = []; orderIndex = 0;
