@@ -400,16 +400,6 @@
 .cartcard > .card-body > .card-price{
     font-family: 'PyeongChangPeace-Bold';
 }
-.numin{
-    position:absolute;
-    margin-bottom:0px;
-}
-.numin > .input-group-text{
-    background-color: turquoise;
-}
-.numin > input{
-    background-color: whitesmoke;
-}
 .modal-total{
     position:absolute;
     left:20px;
