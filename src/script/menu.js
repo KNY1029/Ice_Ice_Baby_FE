@@ -206,17 +206,3 @@ function totalMenu(p=0) {
   document.getElementById('numAdded').textContent = orders.length;
   totalPrice += p; document.getElementById('totalPrice').textContent = totalPrice;  document.getElementById('finalPrice').textContent = totalPrice;
 }
-
-function send(){
-  fetch(url+"/order",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({order:orders,html:document.getElementById('cartcards').innerHTML})
-  })
-    .then(res=>res.json())
-    .then(data=>{
-      console.log(data);
-      document.getElementById('modal_id').textContent=data.index;
-    })
-    .catch(err=>console.log(err));
-}
